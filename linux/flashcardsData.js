@@ -1,6 +1,7 @@
 const topicTitles = {
   Chapter1_System_Management_Domain: "Chapter 1 System Management Domain 1.0",
-  systemManagementFHS: "1.0 System Management: Filesystem Hierarchy Standard(FHS)"
+  systemManagementFHS: "1.0 System Management: Filesystem Hierarchy Standard(FHS)",
+  advancedSSH : "Advanced SSH"
 };
 
 const flashcardsData = {
@@ -64,74 +65,162 @@ const flashcardsData = {
   { question: "Which option to the mount command will mount all filesystems that are currently available in /etc/fstab?", answer: "C.-a - Mounts all filesystems listed in /etc/fstab." },
 
   { question: "Which option of the systemctl command will change a service so that it runs on the next boot of the system?", answer: "A.enable - Enables a service to start at boot." }
-],
+  ],
+
+  advancedSSH: [
+    {
+      question: "What are the main SSH authentication methods?",
+      answer: "The main SSH authentication methods are:\n\n1. Password: Basic method using username and password.\n2. SSH Key Pair: Asymmetric encryption with private key (source) and public key (target).\n3. Certificates: Provide additional security and ease of management.\n4. MFA (Multi-Factor Authentication): Combining multiple forms of authentication for better security."
+    },
+    {
+      question: "Explain SSH Key Pairs and provide commands for key management.",
+      answer: "SSH Key Pairs consist of:\n\n- Private Key: Stays on the source machine.\n- Public Key: Distributed to target machines for authentication.\n- Login Process: The private key encrypts a secret, which the target verifies using the public key.\n\nKey management commands:\n```\n# Generate RSA key pair\nssh-keygen -t rsa\n\n# Copy public key to target machine\nssh-copy-id -i ~/.ssh/id_rsa.pub user@target-host\n\n# Login using private key\nssh -i ~/.ssh/id_rsa user@target-host\n```"
+    },
+    {
+      question: "What is SSH Local Port Forwarding and how is it used?",
+      answer: "SSH Local Port Forwarding (-L) redirects local port traffic to a remote server.\n\nCommand syntax:\n```\nssh -L local-port:target-host:target-port user@remote-host\n```\n\nExample:\n```\nssh -L 8080:10.0.2.15:8000 user@fedoravm\n```\nThis forwards traffic from local port 8080 to remote server on port 8000."
+    },
+    {
+      question: "Explain SSH Reverse Port Forwarding and provide an example.",
+      answer: "SSH Reverse Port Forwarding (-R) allows a remote server to access local resources.\n\nCommand syntax:\n```\nssh -R remote-port:local-host:local-port user@remote-host\n```\n\nExample:\n```\nssh -R 8080:10.0.2.15:8000 user@laptop\n```\nThis allows access to local resources from the remote host."
+    },
+    {
+      question: "How do you set up a SOCKS5 proxy using SSH?",
+      answer: "SOCKS5 proxy allows tunneling all traffic through the SSH server.\n\nCommand to create a SOCKS5 proxy:\n```\nssh -D local-port user@remote-host\n```\n\nExample:\n```\nssh -D 3128 user@fedoravm\n```\nThis creates a SOCKS5 proxy on local port 3128.\n\nTo browse through the proxy:\n```\ncurl --preproxy http://localhost:3128 http://target-site\n```"
+    },
+    {
+      question: "What is X11 Tunneling in SSH and how is it used?",
+      answer: "X11 Tunneling is used for forwarding graphical applications from a remote server to the local system.\n\nCommand:\n```\nssh -Y user@remote-host \"xclock\"\n```\n\nNote: Ensure you have an X11 server running (e.g., XQuartz on macOS or XMing on Windows)."
+    },
+    {
+      question: "How do you use ssh-agent for key management?",
+      answer: "ssh-agent holds private keys, enabling passwordless authentication.\n\nCommands:\n```\n# Start the agent\neval $(ssh-agent)\n\n# Add private key to the agent\nssh-add ~/.ssh/id_rsa\n```\n\nAfter this, SSH will use the key stored in the agent without asking for a password on each login."
+    },
+    {
+      question: "How can you restrict SSH access to specific user groups?",
+      answer: "To restrict SSH access to specific user groups (e.g., 'sshusers'):\n\n1. Edit sshd_config to allow only the 'sshusers' group.\n2. Add your user to the 'sshusers' group.\n3. Restart the SSH daemon and test that other users cannot log in.\n\nNote: Specific commands may vary depending on the system."
+    },
+    {
+      question: "How can you use SSH as a proxy for Nmap port scanning?",
+      answer: "You can use SSH as a proxy for Nmap port scanning using Proxychains and a SOCKS5 proxy.\n\nSteps:\n1. Open a SOCKS5 proxy using SSH:\n```\nssh -D 3128 user@remote-host\n```\n\n2. Configure proxychains to use SOCKS5:\n```\nsocks5 localhost 3128\n```\n\n3. Run an Nmap scan through the proxy:\n```\nproxychains nmap -Pn -p 8000 -sT target-IP\n```"
+    },
+    {
+      question: "What are the components of an SSH key pair and where are they stored?",
+      answer: "An SSH key pair consists of two components:\n\n1. Private Key: This is kept on the source machine (the machine you're logging in from). It should be kept secret and secure.\n\n2. Public Key: This is distributed to target machines where you want to log in. It's typically stored in the ~/.ssh/authorized_keys file on the target machine.\n\nOn the source machine, by default:\n- The private key is stored as ~/.ssh/id_rsa\n- The public key is stored as ~/.ssh/id_rsa.pub\n\nThe public key can be safely shared, while the private key should never be shared or transferred to other machines."
+    }
+
+  ],
 
   systemManagementFHS: [
     { 
       question: "What is /boot used for?", 
-      answer: "Contains static files for booting, e.g., the Linux kernel.\n\nExample command:\nls /boot"
+      answer: "Contains static files for booting, including:\n- Linux kernel\n- Initial RAM disk (initrd)\n- Bootloader config (e.g., GRUB)\n\nLinux+ key point: Critical for system boot process\n\nExample command:\n```\nls /boot\n```"
     },
     { 
       question: "What is /proc used for?", 
-      answer: "Virtual filesystem providing process and kernel information as files.\n\nExample command:\ncat /proc/cpuinfo"
+      answer: "Virtual filesystem providing process and kernel information as files. Contains:\n- Runtime system information\n- Process details\n\nLinux+ key point: Used for system monitoring and debugging\n\nExample commands:\n```\ncat /proc/cpuinfo\nps aux\n```"
     },
     { 
       question: "What is /sys used for?", 
-      answer: "Virtual filesystem providing system and hardware information.\n\nExample command:\nls /sys"
+      answer: "Virtual filesystem exposing kernel's view of hardware and system information.\n\nLinux+ key point: Useful for hardware information and management\n\nExample commands:\n```\nls /sys/block\ncat /sys/class/net/eth0/address\n```"
     },
     { 
       question: "What is /var used for?", 
-      answer: "Contains variable data like logs, spool files, and temporary files.\n\nExample command:\nls /var/log"
+      answer: "Contains variable data including:\n- Logs (/var/log)\n- Spool files (/var/spool)\n- Temporary files (/var/tmp)\n- Cache data (/var/cache)\n\nLinux+ key point: Important for system administration and troubleshooting\n\nExample commands:\n```\nls /var/log\ntail -f /var/log/syslog\n```"
     },
     { 
       question: "What is /usr used for?", 
-      answer: "Stores user binaries, libraries, and documentation.\n\nExample command:\nls /usr/bin"
+      answer: "Secondary hierarchy for read-only user data. Contains:\n- User binaries (/usr/bin)\n- System binaries (/usr/sbin)\n- Libraries (/usr/lib)\n- Documentation (/usr/share/doc)\n\nLinux+ key point: Main location for installed software\n\nExample command:\n```\nls /usr/bin\n```"
     },
     { 
       question: "What is /lib used for?", 
-      answer: "Contains shared libraries and kernel modules.\n\nExample command:\nls /lib"
+      answer: "Contains shared libraries and kernel modules. May include:\n- /lib (32-bit libraries)\n- /lib64 (64-bit libraries)\n\nLinux+ key point: Critical for system and application functionality\n\nExample commands:\n```\nls /lib\nldd /bin/ls\n```"
     },
     { 
       question: "What is /dev used for?", 
-      answer: "Contains device files for accessing hardware.\n\nExample command:\nls /dev"
+      answer: "Contains device files for hardware access. Includes:\n- Block devices (e.g., /dev/sda)\n- Character devices (e.g., /dev/tty)\n\nLinux+ key point: Essential for hardware interaction\n\nExample commands:\n```\nls -l /dev\nfile /dev/sda\n```"
     },
     { 
       question: "What is /etc used for?", 
-      answer: "System-wide configuration files.\n\nExample command:\nls /etc"
+      answer: "Contains system-wide configuration files. Key files:\n- /etc/passwd (user accounts)\n- /etc/fstab (filesystem mounts)\n- /etc/ssh/sshd_config (SSH server config)\n\nLinux+ key point: Critical for system configuration\n\nExample command:\n```\nls /etc\n```"
     },
     { 
       question: "What is /opt used for?", 
-      answer: "Optional software packages.\n\nExample command:\nls /opt"
+      answer: "Contains optional software packages. Used for:\n- Third-party applications\n- Self-contained software packages\n\nLinux+ key point: Common location for manually installed software\n\nExample command:\n```\nls /opt\n```"
     },
     { 
       question: "What is /bin used for?", 
-      answer: "Contains essential command binaries.\n\nExample command:\nls /bin"
+      answer: "Contains essential command binaries. Includes:\n- Basic system commands (ls, cp, mv)\n- Shell interpreters (bash, sh)\n\nLinux+ key point: Critical for basic system functionality\n\nExample command:\n```\nls /bin\n```"
     },
     { 
       question: "What is /sbin used for?", 
-      answer: "Contains system binaries (administrative commands).\n\nExample command:\nls /sbin"
+      answer: "Contains system binaries (administrative commands). Includes:\n- System management tools (fdisk, ifconfig)\n- System initialization scripts\n\nLinux+ key point: Used for system administration tasks\n\nExample command:\n```\nls /sbin\n```"
     },
     { 
       question: "What is /home used for?", 
-      answer: "Contains user home directories.\n\nExample command:\nls /home"
+      answer: "Contains user home directories. Stores:\n- User-specific files and configs\n- User data and documents\n\nLinux+ key point: Main location for user data\n\nExample commands:\n```\nls /home\necho $HOME\n```"
     },
     { 
       question: "What is /media used for?", 
-      answer: "Contains mount points for removable media.\n\nExample command:\nls /media"
+      answer: "Contains mount points for removable media. Used for:\n- USB drives\n- CD/DVD drives\n\nLinux+ key point: Automatic mounting location for removable devices\n\nExample command:\n```\nls /media\n```"
     },
     { 
       question: "What is /mnt used for?", 
-      answer: "Temporary mount points.\n\nExample command:\nls /mnt"
+      answer: "Temporary mount points. Used for:\n- Manually mounted filesystems\n- Network shares\n\nLinux+ key point: Common location for manually mounted filesystems\n\nExample commands:\n```\nls /mnt\nmount /dev/sdb1 /mnt\n```"
     },
     { 
       question: "What is /root used for?", 
-      answer: "Home directory for the root user.\n\nExample command:\nls /root"
+      answer: "Home directory for the root user. Contains:\n- Root user's personal files and configs\n\nLinux+ key point: Separate from /home for security reasons\n\nExample command:\n```\nls -la /root\n```"
     },
     { 
       question: "What is /tmp used for?", 
-      answer: "Contains temporary files.\n\nExample command:\nls /tmp"
+      answer: "Contains temporary files. Features:\n- Cleared on reboot\n- World-writable\n\nLinux+ key point: Used for temporary storage by applications and users\n\nExample commands:\n```\nls /tmp\nmktemp -d\n```"
     }
   ],
+
+  advancedSSH: [
+    {
+      question: "What are the main SSH authentication methods?",
+      answer: "The main SSH authentication methods are:\n\n1. Password: Basic method using username and password.\n2. SSH Key Pair: Asymmetric encryption with private key (source) and public key (target).\n3. Certificates: Provide additional security and ease of management.\n4. MFA (Multi-Factor Authentication): Combining multiple forms of authentication for better security."
+    },
+    {
+      question: "Explain SSH Key Pairs and provide commands for key management.",
+      answer: "SSH Key Pairs consist of:\n\n- Private Key: Stays on the source machine.\n- Public Key: Distributed to target machines for authentication.\n- Login Process: The private key encrypts a secret, which the target verifies using the public key.\n\nKey management commands:\n```\n# Generate RSA key pair\nssh-keygen -t rsa\n\n# Copy public key to target machine\nssh-copy-id -i ~/.ssh/id_rsa.pub user@target-host\n\n# Login using private key\nssh -i ~/.ssh/id_rsa user@target-host\n```"
+    },
+    {
+      question: "What is SSH Local Port Forwarding and how is it used?",
+      answer: "SSH Local Port Forwarding (-L) redirects local port traffic to a remote server.\n\nCommand syntax:\n```\nssh -L local-port:target-host:target-port user@remote-host\n```\n\nExample:\n```\nssh -L 8080:10.0.2.15:8000 user@fedoravm\n```\nThis forwards traffic from local port 8080 to remote server on port 8000."
+    },
+    {
+      question: "Explain SSH Reverse Port Forwarding and provide an example.",
+      answer: "SSH Reverse Port Forwarding (-R) allows a remote server to access local resources.\n\nCommand syntax:\n```\nssh -R remote-port:local-host:local-port user@remote-host\n```\n\nExample:\n```\nssh -R 8080:10.0.2.15:8000 user@laptop\n```\nThis allows access to local resources from the remote host."
+    },
+    {
+      question: "How do you set up a SOCKS5 proxy using SSH?",
+      answer: "SOCKS5 proxy allows tunneling all traffic through the SSH server.\n\nCommand to create a SOCKS5 proxy:\n```\nssh -D local-port user@remote-host\n```\n\nExample:\n```\nssh -D 3128 user@fedoravm\n```\nThis creates a SOCKS5 proxy on local port 3128.\n\nTo browse through the proxy:\n```\ncurl --preproxy http://localhost:3128 http://target-site\n```"
+    },
+    {
+      question: "What is X11 Tunneling in SSH and how is it used?",
+      answer: "X11 Tunneling is used for forwarding graphical applications from a remote server to the local system.\n\nCommand:\n```\nssh -Y user@remote-host \"xclock\"\n```\n\nNote: Ensure you have an X11 server running (e.g., XQuartz on macOS or XMing on Windows)."
+    },
+    {
+      question: "How do you use ssh-agent for key management?",
+      answer: "ssh-agent holds private keys, enabling passwordless authentication.\n\nCommands:\n```\n# Start the agent\neval $(ssh-agent)\n\n# Add private key to the agent\nssh-add ~/.ssh/id_rsa\n```\n\nAfter this, SSH will use the key stored in the agent without asking for a password on each login."
+    },
+    {
+      question: "How can you restrict SSH access to specific user groups?",
+      answer: "To restrict SSH access to specific user groups (e.g., 'sshusers'):\n\n1. Edit sshd_config to allow only the 'sshusers' group.\n2. Add your user to the 'sshusers' group.\n3. Restart the SSH daemon and test that other users cannot log in.\n\nNote: Specific commands may vary depending on the system."
+    },
+    {
+      question: "How can you use SSH as a proxy for Nmap port scanning?",
+      answer: "You can use SSH as a proxy for Nmap port scanning using Proxychains and a SOCKS5 proxy.\n\nSteps:\n1. Open a SOCKS5 proxy using SSH:\n```\nssh -D 3128 user@remote-host\n```\n\n2. Configure proxychains to use SOCKS5:\n```\nsocks5 localhost 3128\n```\n\n3. Run an Nmap scan through the proxy:\n```\nproxychains nmap -Pn -p 8000 -sT target-IP\n```"
+    },
+    {
+      question: "What are the components of an SSH key pair and where are they stored?",
+      answer: "An SSH key pair consists of two components:\n\n1. Private Key: This is kept on the source machine (the machine you're logging in from). It should be kept secret and secure.\n\n2. Public Key: This is distributed to target machines where you want to log in. It's typically stored in the ~/.ssh/authorized_keys file on the target machine.\n\nOn the source machine, by default:\n- The private key is stored as ~/.ssh/id_rsa\n- The public key is stored as ~/.ssh/id_rsa.pub\n\nThe public key can be safely shared, while the private key should never be shared or transferred to other machines."
+    }
+
+  ]
 
 
 /*  whatAreAlgorithms : [
