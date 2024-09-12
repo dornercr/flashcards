@@ -9,184 +9,184 @@ const topicTitles = {
 
 const flashcardsData = {
     dataStructuresAndAlgorithms : [
-    { 
-      question: "What is Big O Notation?", 
+    {
+      question: "What is Big O Notation?",
       answer: "Measures algorithm efficiency by how time or space grows with input size.\n\nKey Point: Critical for evaluating and comparing algorithm performance\n\nExample:\n```\nO(1) - Constant time\nO(n) - Linear time\nO(n^2) - Quadratic time\n```"
     },
-    { 
-      question: "What is an Array?", 
+    {
+      question: "What is an Array?",
       answer: "Linear structure storing elements of the same type in contiguous memory, accessed by index.\n\nKey Point: Basic structure in many algorithms\n\nCode Example:\n```\n// Create an array\nlet arr = [1, 2, 3, 4, 5];\n// Access element at index 2\nconsole.log(arr[2]);  // Output: 3\n```"
     },
-    { 
-      question: "What is a Linked List?", 
+    {
+      question: "What is a Linked List?",
       answer: "A sequence of nodes, each containing data and a reference to the next.\n\nKey Point: Useful for dynamic data structures\n\nCode Example:\n```\nclass Node {\n  constructor(data) {\n    this.data = data;\n    this.next = null;\n  }\n}\n\nclass LinkedList {\n  constructor() {\n    this.head = null;\n  }\n  add(data) {\n    let newNode = new Node(data);\n    if (!this.head) {\n      this.head = newNode;\n    } else {\n      let current = this.head;\n      while (current.next) {\n        current = current.next;\n      }\n      current.next = newNode;\n    }\n  }\n}\n```"
     },
-    { 
-      question: "What is a Stack?", 
+    {
+      question: "What is a Stack?",
       answer: "LIFO structure where elements are added/removed from the top.\n\nKey Point: Used for backtracking algorithms\n\nCode Example:\n```\nclass Stack {\n  constructor() {\n    this.stack = [];\n  }\n  push(data) {\n    this.stack.push(data);\n  }\n  pop() {\n    return this.stack.pop();\n  }\n}\n```"
     },
-    { 
-      question: "What is a Queue?", 
+    {
+      question: "What is a Queue?",
       answer: "FIFO structure where elements are added at the rear and removed from the front.\n\nKey Point: Used in scheduling tasks\n\nCode Example:\n```\nclass Queue {\n  constructor() {\n    this.queue = [];\n  }\n  enqueue(data) {\n    this.queue.push(data);\n  }\n  dequeue() {\n    return this.queue.shift();\n  }\n}\n```"
     },
-    { 
-      question: "What is a Binary Tree?", 
+    {
+      question: "What is a Binary Tree?",
       answer: "A hierarchical structure where each node has up to two children, used for search and sort.\n\nKey Point: Fundamental structure for search algorithms\n\nCode Example:\n```\nclass TreeNode {\n  constructor(data) {\n    this.data = data;\n    this.left = null;\n    this.right = null;\n  }\n}\n\nclass BinaryTree {\n  constructor() {\n    this.root = null;\n  }\n  insert(data) {\n    let newNode = new TreeNode(data);\n    if (!this.root) {\n      this.root = newNode;\n    } else {\n      this.insertNode(this.root, newNode);\n    }\n  }\n  insertNode(node, newNode) {\n    if (newNode.data < node.data) {\n      if (!node.left) {\n        node.left = newNode;\n      } else {\n        this.insertNode(node.left, newNode);\n      }\n    } else {\n      if (!node.right) {\n        node.right = newNode;\n      } else {\n        this.insertNode(node.right, newNode);\n      }\n    }\n  }\n}\n```"
     },
-    { 
-      question: "What is a Binary Search Tree (BST)?", 
+    {
+      question: "What is a Binary Search Tree (BST)?",
       answer: "Binary tree with left < node < right, enabling efficient search, insert, delete.\n\nKey Point: Efficient for search operations\n\nCode Example:\n```\nclass BST {\n  constructor() {\n    this.root = null;\n  }\n  insert(data) {\n    let newNode = new TreeNode(data);\n    if (!this.root) {\n      this.root = newNode;\n    } else {\n      this.insertNode(this.root, newNode);\n    }\n  }\n  insertNode(node, newNode) {\n    if (newNode.data < node.data) {\n      if (!node.left) {\n        node.left = newNode;\n      } else {\n        this.insertNode(node.left, newNode);\n      }\n    } else {\n      if (!node.right) {\n        node.right = newNode;\n      } else {\n        this.insertNode(node.right, newNode);\n      }\n    }\n  }\n}\n```"
     },
-    { 
-      question: "What is a Heap?", 
+    {
+      question: "What is a Heap?",
       answer: "A tree that maintains max/min property, often used in priority queues.\n\nKey Point: Useful for priority queues and sorting algorithms\n\nExample:\n```\nMin-Heap: Parent nodes <= child nodes\nMax-Heap: Parent nodes >= child nodes\n```"
     },
-    { 
-      question: "What is a Hash Table?", 
+    {
+      question: "What is a Hash Table?",
       answer: "Maps keys to values using a hash function for fast lookups.\n\nKey Point: Provides efficient key-value storage\n\nCode Example:\n```\nclass HashTable {\n  constructor(size) {\n    this.table = new Array(size);\n    this.size = size;\n  }\n  hash(key) {\n    return key % this.size;\n  }\n  set(key, value) {\n    let index = this.hash(key);\n    this.table[index] = value;\n  }\n  get(key) {\n    let index = this.hash(key);\n    return this.table[index];\n  }\n}\n```"
     },
-    { 
-      question: "What is a Graph?", 
+    {
+      question: "What is a Graph?",
       answer: "A set of vertices connected by edges, representing relationships or networks.\n\nKey Point: Used to represent networks like social connections or routes\n\nExample:\n```\nGraph types: Directed, Undirected, Weighted, Unweighted\n```"
     },
-    { 
-      question: "What is a Directed Acyclic Graph (DAG)?", 
+    {
+      question: "What is a Directed Acyclic Graph (DAG)?",
       answer: "A directed graph with no cycles, used in tasks like scheduling.\n\nKey Point: Critical in applications like task scheduling and version control\n\nExample:\n```\nApplications: Job scheduling, data processing pipelines\n```"
     },
-    { 
-      question: "What is Dynamic Programming?", 
+    {
+      question: "What is Dynamic Programming?",
       answer: "Breaks problems into subproblems and stores results to avoid recomputation.\n\nKey Point: Efficient for optimization problems\n\nExample:\n```\nUse Case: Solving Fibonacci sequence or Knapsack problem\n```"
     },
-    { 
-      question: "What is Divide and Conquer?", 
+    {
+      question: "What is Divide and Conquer?",
       answer: "Divides a problem, solves subproblems, and combines results.\n\nKey Point: Common in sorting algorithms\n\nExample:\n```\nAlgorithms: Merge Sort, Quick Sort\n```"
     },
-    { 
-      question: "What is a Sorting Algorithm?", 
+    {
+      question: "What is a Sorting Algorithm?",
       answer: "Arranges elements in order, e.g., Quick Sort, Merge Sort.\n\nKey Point: Sorting is fundamental in computer science\n\nExample:\n```\nSorting algorithms: Quick Sort, Merge Sort, Bubble Sort\n```"
     },
-    { 
-      question: "What is a Searching Algorithm?", 
+    {
+      question: "What is a Searching Algorithm?",
       answer: "Finds specific data, e.g., Binary Search or Linear Search.\n\nKey Point: Searching is crucial for locating data efficiently\n\nExample:\n```\nAlgorithms: Binary Search, Linear Search\n```"
     },
-    { 
-      question: "What is Recursion?", 
+    {
+      question: "What is Recursion?",
       answer: "A function calling itself to solve smaller instances of the problem.\n\nKey Point: Recursion is useful for solving problems that can be divided into subproblems\n\nCode Example:\n```\nfunction factorial(n) {\n  if (n === 1) return 1;\n  return n * factorial(n - 1);\n}\n```"
     },
-    { 
-      question: "What is a Greedy Algorithm?", 
+    {
+      question: "What is a Greedy Algorithm?",
       answer: "Solves problems by making the locally optimal choice at each step.\n\nKey Point: Often faster but not always optimal\n\nExample:\n```\nUse Case: Coin change problem, Huffman coding\n```"
     },
-    { 
-      question: "What is Backtracking?", 
+    {
+      question: "What is Backtracking?",
       answer: "Builds a solution incrementally, abandoning unfit solutions.\n\nKey Point: Useful for constraint satisfaction problems\n\nExample:\n```\nUse Case: Solving mazes, Sudoku\n```"
     },
-    { 
-      question: "What is Depth-First Search (DFS)?", 
+    {
+      question: "What is Depth-First Search (DFS)?",
       answer: "Explores as far as possible along each branch before backtracking.\n\nKey Point: Used for graph traversal\n\nCode Example:\n```\nfunction DFS(node) {\n  if (node === null) return;\n  console.log(node.data);\n  DFS(node.left);\n  DFS(node.right);\n}\n```"
     },
-    { 
-      question: "What is Breadth-First Search (BFS)?", 
+    {
+      question: "What is Breadth-First Search (BFS)?",
       answer: "Explores nodes level by level, moving horizontally.\n\nKey Point: Used for graph traversal and shortest path\n\nCode Example:\n```\nfunction BFS(root) {\n  let queue = [];\n  queue.push(root);\n  while (queue.length > 0) {\n    let current = queue.shift();\n    console.log(current.data);\n    if (current.left) queue.push(current.left);\n    if (current.right) queue.push(current.right);\n  }\n}\n```"
     },
-    { 
-      question: "What is a Trie?", 
+    {
+      question: "What is a Trie?",
       answer: "A tree structure for storing strings, enabling efficient prefix searches.\n\nKey Point: Useful for auto-complete or spell check\n\nExample:\n```\nUsed in text prediction, auto-complete, dictionaries\n```"
     },
-    { 
-      question: "What is Memoization?", 
+    {
+      question: "What is Memoization?",
       answer: "Stores function results to avoid redundant computations.\n\nKey Point: Enhances efficiency in recursive algorithms\n\nExample:\n```\nUse Case: Solving Fibonacci sequence\n```"
     },
-    { 
-      question: "What is a Priority Queue?", 
+    {
+      question: "What is a Priority Queue?",
       answer: "Dequeues elements based on priority, often implemented with a heap.\n\nKey Point: Useful for scheduling tasks\n\nCode Example:\n```\nclass PriorityQueue {\n  constructor() {\n    this.items = [];\n  }\n  enqueue(element, priority) {\n    this.items.push({ element, priority });\n    this.items.sort((a, b) => a.priority - b.priority);\n  }\n  dequeue() {\n    return this.items.shift();\n  }\n}\n```"
     },
-    { 
-      question: "What is Amortized Analysis?", 
+    {
+      question: "What is Amortized Analysis?",
       answer: "Averages time over a sequence of operations to measure long-term efficiency.\n\nKey Point: Important for analyzing algorithms with varying performance\n\nExample:\n```\nUse Case: Resizing arrays, Hash tables\n```"
     }
   ],
 
 
 whatAreAlgorithms: [
-  { 
-    question: "What are algorithms?", 
+  {
+    question: "What are algorithms?",
     answer: "A set of instructions to solve a problem or perform a task.\n\nKey Point: Fundamental building blocks of computer science and programming."
   },
-  { 
-    question: "What are the four principles of algorithms?", 
+  {
+    question: "What are the four principles of algorithms?",
     answer: "The four principles of algorithms are:\n\n1. Correctness\n2. Efficiency\n3. Clarity\n4. Finiteness\n\nKey Point: These principles ensure algorithms are reliable, performant, understandable, and terminable."
   },
-  { 
-    question: "Why are algorithms important?", 
+  {
+    question: "Why are algorithms important?",
     answer: "Algorithms are important because they:\n\n1. Optimize processes\n2. Make decisions\n3. Form the foundation of technology\n\nKey Point: Algorithms drive efficiency and functionality in computing and beyond."
   },
-  { 
-    question: "What are the types of algorithms?", 
+  {
+    question: "What are the types of algorithms?",
     answer: "Common types of algorithms include:\n\n1. Brute force\n2. Divide and Conquer\n3. Dynamic Programming\n4. Greedy\n5. Backtracking\n\nKey Point: Each type has its own strengths and is suited for different problem domains."
   },
-  { 
-    question: "What is a simple algorithm example?", 
+  {
+    question: "What is a simple algorithm example?",
     answer: "A simple algorithm example is finding the maximum value in an array by iterating through it.\n\nPseudo-code example:\n```\nfunction findMax(array):\n    max = array[0]\n    for each element in array:\n        if element > max:\n            max = element\n    return max\n```\n\nKey Point: Even simple algorithms can solve common programming problems efficiently."
   },
-  { 
-    question: "How do algorithms relate to data structures?", 
+  {
+    question: "How do algorithms relate to data structures?",
     answer: "Algorithms and data structures are closely related:\n\n1. Algorithms manipulate data\n2. Choice of data structure affects algorithm efficiency\n\nKey Point: Selecting the right data structure can significantly impact an algorithm's performance."
   },
-  { 
-    question: "What is pseudocode?", 
+  {
+    question: "What is pseudocode?",
     answer: "Pseudocode is a simplified way to outline an algorithm's logic.\n\nCharacteristics:\n1. Uses plain language\n2. Focuses on logic, not syntax\n3. Helps in planning before actual coding\n\nKey Point: Pseudocode bridges the gap between human thinking and formal programming languages."
   },
-  { 
-    question: "What's the difference between an algorithm and a program?", 
+  {
+    question: "What's the difference between an algorithm and a program?",
     answer: "The key differences are:\n\n1. An algorithm is a plan or logic\n2. A program is the implementation of an algorithm\n3. Algorithms are language-independent; programs are in specific languages\n\nKey Point: Algorithms are the blueprint, while programs are the constructed building."
   },
-  { 
-    question: "What is algorithm complexity?", 
+  {
+    question: "What is algorithm complexity?",
     answer: "Algorithm complexity:\n\n1. Measures resource use (time/space) as input size grows\n2. Often expressed in Big O notation\n3. Helps compare efficiency of different algorithms\n\nKey Point: Understanding complexity is crucial for optimizing performance in large-scale applications."
   },
-  { 
-    question: "What are iterative and recursive algorithms?", 
+  {
+    question: "What are iterative and recursive algorithms?",
     answer: "Iterative and recursive algorithms differ in approach:\n\n1. Iterative: Uses loops to repeat steps\n2. Recursive: Calls itself to solve smaller instances of the problem\n\nKey Point: Both can solve the same problems, but may differ in efficiency and readability."
   },
-  { 
-    question: "What's an example of recursion?", 
+  {
+    question: "What's an example of recursion?",
     answer: "An example of recursion is calculating the Fibonacci sequence:\n\n```\nfunction fibonacci(n):\n    if n <= 1:\n        return n\n    else:\n        return fibonacci(n-1) + fibonacci(n-2)\n```\n\nKey Point: Recursion often provides elegant solutions to problems that have a recursive nature."
   },
-  { 
-    question: "What is a brute force algorithm?", 
+  {
+    question: "What is a brute force algorithm?",
     answer: "A brute force algorithm:\n\n1. Tries all possible solutions\n2. Simple to implement\n3. Often inefficient for large inputs\n\nKey Point: While straightforward, brute force is typically a last resort due to its potential inefficiency."
   },
-  { 
-    question: "What is a heuristic algorithm?", 
+  {
+    question: "What is a heuristic algorithm?",
     answer: "A heuristic algorithm:\n\n1. Finds a good solution quickly\n2. Used when exact solutions are impractical\n3. May not guarantee the best solution\n\nKey Point: Heuristics trade optimality for speed, useful in complex problem spaces."
   },
-  { 
-    question: "What's the difference between deterministic and non-deterministic algorithms?", 
+  {
+    question: "What's the difference between deterministic and non-deterministic algorithms?",
     answer: "The key differences are:\n\n1. Deterministic: Always produces the same output for a given input\n2. Non-deterministic: May produce different outputs for the same input\n\nKey Point: Non-deterministic algorithms often involve elements of randomness or parallelism."
   },
-  { 
-    question: "What is a probabilistic algorithm?", 
+  {
+    question: "What is a probabilistic algorithm?",
     answer: "A probabilistic algorithm:\n\n1. Uses randomization in its logic\n2. May produce different results on different runs\n3. Often used for hard problems where deterministic solutions are inefficient\n\nKey Point: Probabilistic algorithms can offer efficient solutions to complex problems, trading certainty for speed."
   },
-  { 
-    question: "What is an example of divide and conquer?", 
+  {
+    question: "What is an example of divide and conquer?",
     answer: "Merge Sort is a classic example of divide and conquer:\n\n1. Divides the data into smaller parts\n2. Sorts the smaller parts\n3. Merges the sorted parts\n\nKey Point: Divide and conquer often leads to efficient algorithms for large-scale problems."
   },
-  { 
-    question: "What is an optimization algorithm?", 
+  {
+    question: "What is an optimization algorithm?",
     answer: "An optimization algorithm:\n\n1. Finds the best solution from all feasible solutions\n2. Maximizes or minimizes a given function\n3. Used in fields like operations research and machine learning\n\nKey Point: Optimization algorithms are crucial in solving real-world problems with multiple constraints."
   },
-  { 
-    question: "What's the purpose of sorting algorithms?", 
+  {
+    question: "What's the purpose of sorting algorithms?",
     answer: "Sorting algorithms serve to:\n\n1. Organize data in a specific order (e.g., ascending, descending)\n2. Improve efficiency of subsequent operations (e.g., searching)\n3. Facilitate data analysis and presentation\n\nKey Point: Efficient sorting is fundamental to many computer science applications."
   },
-  { 
-    question: "What are common applications of algorithms?", 
+  {
+    question: "What are common applications of algorithms?",
     answer: "Algorithms are widely applied in:\n\n1. Data analysis\n2. Search engines\n3. Encryption\n4. Artificial Intelligence\n5. Optimization problems\n6. Computer graphics\n\nKey Point: Algorithms underpin most technological advancements and digital services."
   },
-  { 
-    question: "How do machine learning algorithms differ from traditional algorithms?", 
+  {
+    question: "How do machine learning algorithms differ from traditional algorithms?",
     answer: "Key differences:\n\n1. Traditional algorithms follow fixed steps\n2. Machine learning algorithms learn and improve from data\n3. ML algorithms can adapt to new inputs without being explicitly programmed\n\nKey Point: Machine learning algorithms introduce a level of adaptability and intelligence not present in traditional algorithms."
   }
 ],

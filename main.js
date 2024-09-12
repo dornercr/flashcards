@@ -1,6 +1,7 @@
 const studyGuides = [
     { id: 'algorithms', title: 'Algorithms', path: './algorithms/index.html' },
     { id: 'linux', title: 'Linux', path: './linux/index.html' },
+    { id: 'vim', title: 'VIM', path: './vim/index.html' },
     // Add more study guides here
 ];
 
