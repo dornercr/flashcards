@@ -175,7 +175,7 @@ const Flashcards = () => {
   return (
       <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md mx-auto">
-          <h1 className="text-3xl font-extrabold text-gray-900 text-center mb-8">Linux Flashcards</h1>
+          <h1 className="text-3xl font-extrabold text-gray-900 text-center mb-8">Python Flashcards</h1>
 
           {/* Topic selector and search bar */}
           <div className="mb-6 space-y-4">
