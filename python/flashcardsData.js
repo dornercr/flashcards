@@ -5,6 +5,7 @@ const topicTitles = {
   pythonFunctions: "Python Functions",
   pythonModules: "Python Modules",
   Chapter1_PythonBasicsMnemonics: "Python Basics Mnemonics",
+  pythonBuiltinFunctions: "Python BuiltinFunctions",
 
 
 };
@@ -536,40 +537,185 @@ const flashcardsData = {
     }
   ],
   Chapter1_PythonBasicsMnemonics: [
-    { question: "Smart Monkeys Can Fly Planes", answer: "S - Single-line Comment: # This is a comment\nM - Multi-line Comment/Docstring: '''This is a multi-line comment.'''\nC - Concatenation: greeting = 'Hello' + ' ' + 'World'\nF - F-String Formatting: f'{name} is {age} years old.'\nP - Print: print('Hello, World!')" },
-
-    { question: "I Find Snakes By Ponds", answer: "I - Integer: x = 5\nF - Float: pi = 3.14\nS - String: name = 'Charles'\nB - Boolean: is_sunny = True\nP - Print: print('Displaying data.')" },
-
-    { question: "Variables Are Really Necessary Tools", answer: "V - Variable Assignment: x = 10\nA - Assign Variables: x = 'Hello'\nR - Reassigning: x = 10; x = 'Ten'\nN - Naming Convention: student_name = 'Alice'\nT - Type-Sensitive: age = 25; Age = 30 (different variables)" },
-
-    { question: "I Find Smooth Prints", answer: "I - Integer Conversion: age = int('25')\nF - Float Conversion: height_float = float(170)\nS - String Conversion: year_str = str(2024)\nP - Print: print('The value is', year_str)" },
-
-    { question: "Data Prints To Variables", answer: "D - Data Types: int, float, str, bool\nP - Print: print(name, age, pi)\nT - Type Conversion: num_int = int('25')\nV - Variables: student_name = 'Charles'" },
-
-    { question: "Lists Allow Managing Simple Lists", answer: "L - List Creation: numbers = [1, 2, 3]\nA - Access Elements: fruits = ['apple', 'banana', 'cherry']; print(fruits[0])\nM - Modifying Lists: fruits[1] = 'blueberry'; fruits.append('orange')\nS - Slicing Lists: print(numbers[0:3])\nL - List Comprehensions: squares = [x**2 for x in range(1, 6)]" },
-
-    { question: "Tuples Can Always Unpack Anywhere", answer: "T - Tuple Creation: point = (3, 4)\nC - Cannot Modify: Tuples are immutable\nA - Accessing Elements: print(point[0])\nU - Unpacking Tuples: x, y = point\nA - Advantages of Tuples: Faster and more secure due to immutability" },
-
-    { question: "Sets Allow Removing Or Sets", answer: "S - Set Creation: fruits = {'apple', 'banana', 'cherry'}\nA - Adding Elements: fruits.add('orange')\nR - Removing Elements: fruits.remove('banana')\nO - Operations on Sets: union (|), intersection (&), difference (-)\nS - Set Unique Elements: Automatically removes duplicates" },
-
-    { question: "Dictionaries Are Mapping Unique Keys", answer: "D - Dictionary Creation: person = {'name': 'John', 'age': 30}\nA - Accessing Values: print(person['name'])\nM - Modifying Dictionaries: person['job'] = 'Engineer'\nU - Using del and pop(): del person['age']; job = person.pop('job')\nK - Key Methods: keys(), values(), items()" },
-
-    { question: "If Implements Fancy Execution", answer: "I - If Statement: if x > 5: print('x is greater than 5')\nE - Else Statement: else: print('x is not greater than 5')\nF - Elif Statement: elif x > 5: print('x is greater than 5 but less than or equal to 10')\nE - Execution: Determines which block of code to execute based on conditions" },
-
-    { question: "For Loops Facilitate Iteration", answer: "F - For Loop Syntax: for item in sequence: # Code to execute\nL - Looping with range(): for i in range(5): print(i)\nF - For Loops on Strings: for letter in 'Python': print(letter)\nI - Iteration: Repeats a block of code for each item in a sequence" },
-
-    { question: "While Waits Warily", answer: "W - While Loop Syntax: while condition: # Code to execute\nW - Watch for Infinite Loops: Ensure the condition can become False\nW - While with Else: Executes code when loop condition becomes False\nW - Warily: Be cautious of unintended infinite loops" },
-
-    { question: "Break Continues Passing Control", answer: "B - Break: Exits the loop prematurely\nC - Continue: Skips the rest of the current iteration\nP - Pass: Does nothing, used as a placeholder\nC - Control: Manages the flow within loops" },
-
-    { question: "Nesting Navigates Numerous Loops", answer: "N - Nested Loops: Loops within loops\nN - Navigating Break: Only exits the innermost loop\nN - Numerous Iterations: Can create complex patterns of execution\nL - Loops: Can be combined for more complex control flow" },
-
-    { question: "Else Executes Eventually", answer: "E - Else in Loops: Executes when loop terminates naturally\nE - Example (For): for i in range(5): print(i)\nelse: print('Loop finished')\nE - Example (While): while x < 3: print(x); x += 1\nelse: print('Loop completed')\nE - Eventually: Confirms loop ran through all iterations without breaking" }
-
-
+    {
+      "question": "Smart Monkeys Can Fly Planes",
+      "answer": "S - Single-line Comment: Text after # for inline explanations\nM - Multi-line Comment/Docstring: Text in ''' ''' for longer explanations\nC - Concatenation: Joining strings with +\nF - F-String: Formatted string literals for easy variable insertion\nP - Print: Function to output text to console\n\n```\n# Comment\n'''Docstring'''\nfull_name = 'John' + ' Doe'\nage = 30\nprint(f'{full_name} is {age}')\n```"
+    },
+    {
+      "question": "I Find Snakes By Ponds",
+      "answer": "I - Integer: Whole number (e.g., 5)\nF - Float: Decimal number (e.g., 3.14)\nS - String: Text in quotes (e.g., 'hello')\nB - Boolean: True or False value\nP - Print: Display output function\n\n```\nx = 5\npi = 3.14\nname = 'Python'\nis_cool = True\nprint(x, pi, name, is_cool)\n```"
+    },
+    {
+      "question": "Variables Are Really Necessary Tools",
+      "answer": "V - Variable Assignment: Binding names to values\nA - Assign Variables: Creating or updating variables\nR - Reassigning: Changing a variable's value\nN - Naming Convention: Rules for clear variable names\nT - Type-Sensitive: Case matters in variable names\n\n```\nx = 10\nx = 'hello'  # Reassignment\nuser_name = 'Alice'\nPRICE = 19.99  # Constants often use uppercase\n```"
+    },
+    {
+      "question": "I Find Smooth Prints",
+      "answer": "I - Integer Conversion: Convert to whole number\nF - Float Conversion: Convert to decimal number\nS - String Conversion: Convert to text\nP - Print: Output to console\n\n```\nage = int('25')\nheight = float('1.75')\nyear = str(2023)\nprint(f'Age: {age}, Height: {height}m, Year: {year}')\n```"
+    },
+    {
+      "question": "Lists Allow Managing Simple Lists",
+      "answer": "L - List Creation: Ordered, mutable collections\nA - Access Elements: Retrieve items by index\nM - Modifying Lists: Change, add, or remove items\nS - Slicing Lists: Extract portions of lists\nL - List Comprehensions: Concise list creation\n\n```\nnumbers = [1, 2, 3, 4, 5]\nprint(numbers[0])  # Access\nnumbers.append(6)  # Modify\nprint(numbers[1:4])  # Slice\nsquares = [x**2 for x in range(5)]  # Comprehension\n```"
+    },
+    {
+      "question": "Tuples Can Always Unpack Anywhere",
+      "answer": "T - Tuple Creation: Ordered, immutable collections\nC - Cannot Modify: Unchangeable after creation\nA - Accessing Elements: Retrieve items by index\nU - Unpacking: Assign tuple elements to variables\nA - Advantages: Efficient for fixed data\n\n```\npoint = (3, 4)\nprint(point[0])  # Access\nx, y = point  # Unpack\ncoordinates = (*point, 5)  # Create new tuple\n```"
+    },
+    {
+      "question": "Sets Allow Removing Or Sets",
+      "answer": "S - Set Creation: Unordered collections of unique elements\nA - Adding Elements: Insert new unique items\nR - Removing Elements: Delete items from the set\nO - Operations: Perform union, intersection, difference\nS - Set Unique Elements: Automatically eliminate duplicates\n\n```\nfruits = {'apple', 'banana', 'cherry'}\nfruits.add('date')\nfruits.remove('banana')\nprint(fruits | {'grape', 'apple'})  # Union\n```"
+    },
+    {
+      "question": "Dictionaries Are Mapping Unique Keys",
+      "answer": "D - Dictionary Creation: Key-value pair collections\nA - Accessing Values: Retrieve values by keys\nM - Modifying Dictionaries: Add, change, or remove pairs\nU - Using del and pop(): Remove key-value pairs\nK - Key Methods: Access keys, values, and items\n\n```\nperson = {'name': 'John', 'age': 30}\nprint(person['name'])\nperson['job'] = 'Engineer'\ndel person['age']\nprint(person.keys())\n```"
+    },
+    {
+      "question": "If Implements Fancy Execution",
+      "answer": "I - If Statement: Execute code conditionally\nE - Else Statement: Alternative execution path\nF - Elif Statement: Additional conditions\nE - Execution: Control flow based on conditions\n\n```\nx = 10\nif x > 5:\n    print('Greater than 5')\nelif x < 5:\n    print('Less than 5')\nelse:\n    print('Equal to 5')\n```"
+    },
+    {
+      "question": "For Loops Facilitate Iteration",
+      "answer": "F - For Loop Syntax: Iterate over sequences\nL - Looping with range(): Generate number sequences\nF - For Loops on Strings: Iterate over characters\nI - Iteration: Repeat code for each item\n\n```\nfor i in range(5):\n    print(i)\nfor char in 'Python':\n    print(char)\n```"
+    },
+    {
+      "question": "While Waits Warily",
+      "answer": "W - While Loop Syntax: Execute while condition is true\nW - Watch for Infinite Loops: Ensure termination\nW - While with Else: Execute when loop condition is false\nW - Warily: Use caution to avoid unintended behavior\n\n```\ncount = 0\nwhile count < 5:\n    print(count)\n    count += 1\nelse:\n    print('Loop completed')\n```"
+    },
+    {
+      "question": "Break Continues Passing Control",
+      "answer": "B - Break: Exit the loop immediately\nC - Continue: Skip to the next iteration\nP - Pass: Do nothing, placeholder statement\nC - Control: Manage loop execution flow\n\n```\nfor i in range(10):\n    if i == 5:\n        break\n    if i % 2 == 0:\n        continue\n    print(i)\n```"
+    },
+    {
+      "question": "Cool Owls Sit Flapping Merrily",
+      "answer": "C - Class: Blueprint for creating objects\nO - Objects: Instances of a class\nS - State: Attributes that store object data\nF - Functions: Methods that define object behavior\nM - Messages: Objects interact through method calls\n\n```\nclass Bird:\n    def __init__(self, species):\n        self.species = species\n    def fly(self):\n        return f'{self.species} is flying'\n\nowl = Bird('Owl')\nprint(owl.fly())\n```"
+    },
+    {
+      "question": "Eggshells Protect Inner Contents",
+      "answer": "E - Encapsulation: Bundling data and methods\nP - Private: Restrict access to internal details\nI - Internal details: Hide implementation specifics\nC - Control: Manage access through methods\n\n```\nclass Egg:\n    def __init__(self):\n        self.__content = 'yolk'\n    def crack(self):\n        return self.__content\n\negg = Egg()\nprint(egg.crack())\n```"
+    },
+    {
+      "question": "Iggy Picks Apples from Trees",
+      "answer": "I - Inheritance: Derive attributes and methods from another class\nP - Parent: Base class that shares properties\nA - Access: Child classes use parent's attributes and methods\nT - Tree: Hierarchy of classes\n\n```\nclass Fruit:\n    def __init__(self, name):\n        self.name = name\n\nclass Apple(Fruit):\n    def taste(self):\n        return f'{self.name} is sweet'\n\nfuji = Apple('Fuji')\nprint(fuji.taste())\n```"
+    },
+    {
+      "question": "Parrots Mimic Funny Words",
+      "answer": "P - Polymorphism: Same interface, different implementations\nM - Mimic: Objects of different types respond to same method\nF - Forms: Various classes implement same method differently\nW - Words: Method names shared across classes\n\n```\nclass Dog:\n    def speak(self):\n        return 'Woof!'\n\nclass Cat:\n    def speak(self):\n        return 'Meow!'\n\nanimals = [Dog(), Cat()]\nfor animal in animals:\n    print(animal.speak())\n```"
+    },
+    {
+      "question": "Aliens Cover Dark Secrets",
+      "answer": "A - Abstraction: Simplify complex systems\nC - Cover: Hide unnecessary details\nD - Details: Focus on essential features\nS - Secrets: Encapsulate implementation details\n\n```\nfrom abc import ABC, abstractmethod\n\nclass Shape(ABC):\n    @abstractmethod\n    def area(self):\n        pass\n\nclass Circle(Shape):\n    def __init__(self, radius):\n        self.radius = radius\n    def area(self):\n        return 3.14 * self.radius ** 2\n\ncircle = Circle(5)\nprint(circle.area())\n```"
+    },
+    {
+      "question": "Apples Shine More During Pleasant Sunsets",
+      "answer": "A: Addition (+) - Combine two numbers\nS: Subtraction (-) - Find the difference\nM: Multiplication (*) - Repeat addition\nD: Division (/) - Split into equal parts\nP: Parentheses () - Group operations\nS: Solve expressions - Calculate final result\n\n```\nresult = (10 + 5) * 2 / 3 - 1\nprint(result)  # Output: 9.0\n```"
+    },
+    {
+      "question": "Friendly Dogs Resolve Conflicts Quickly",
+      "answer": "F: Floor Division (//) - Divide and round down\nD: Divide - Standard division\nR: Remainder (%) - Get leftover after division\nC: Calculate - Perform the operation\nQ: Quotient - Result of division\n\n```\nprint(17 // 5)  # Floor division: 3\nprint(17 / 5)   # Standard division: 3.4\nprint(17 % 5)   # Remainder: 2\n```"
+    },
+    {
+      "question": "Energetic Rabbits Race Nobly Skyward",
+      "answer": "E: Exponent (**) - Raise to a power\nR: Result - Outcome of exponentiation\nN: Number - Base in exponentiation\nS: Square - Special case of exponent 2\n\n```\nprint(2 ** 3)  # 2 to the power of 3: 8\nprint(5 ** 2)  # 5 squared: 25\n```"
+    },
+    {
+      "question": "Unique Scorecards Let Results Shine",
+      "answer": "U: Underscore (_) - Stores last expression result\nS: Special variable - Used in interactive mode\nL: Last result - Access previous calculation\nR: Reuse - Utilize previous output\nS: Simplify - Make complex calculations easier\n\n```\n# In Python interactive mode:\n2 + 3\n# Output: 5\nprint(_)  # Prints 5\n```"
+    },
+    {
+      "question": "Clever Navigators Journey Into Mathematics",
+      "answer": "C: Complex numbers - Numbers with real and imaginary parts\nN: Notation - Use 'j' for imaginary unit\nJ: Join - Combine real and imaginary parts\nI: Imaginary - Non-real component\nM: Manipulate - Perform operations on complex numbers\n\n```\nz = 3 + 4j\nprint(z.real)  # Real part: 3.0\nprint(z.imag)  # Imaginary part: 4.0\n```"
+    },
+    {
+      "question": "Strings Cleverly Weave Narratives Effortlessly",
+      "answer": "S: String - Sequence of characters\nC: Concatenate - Join strings\nW: Wrapping - Enclose in quotes\nN: Newline - Line break in strings\nE: Escape characters - Special string characters\n\n```\ntext = 'Hello' + ' World'\nmulti_line = '''This is a\nmulti-line string'''\npath = r'C:\\Users\\Name'  # Raw string\n```"
+    },
+    {
+      "question": "Remarkable Creatures Navigate Swiftly",
+      "answer": "R: Range - Generate sequence of numbers\nC: Create - Produce a series of values\nN: Numbers - Integers in sequence\nS: Start, Stop, Step - Parameters for range\n\n```\nfor i in range(0, 10, 2):\n    print(i)  # Prints even numbers 0 to 8\n```"
+    },
+    {
+      "question": "Peaceful Tigers Wait Awkwardly",
+      "answer": "P: Pass - No-operation placeholder\nT: Temporary - Used for future code\nW: Wait - Do nothing and continue\nA: Avoid errors - Prevent syntax errors in empty blocks\n\n```\ndef function_to_be_implemented():\n    pass\n\nwhile False:\n    pass  # Infinite loop that does nothing\n```"
+    },
+    {
+      "question": "Mischievous Cats Take Swiftly",
+      "answer": "M: Match - Pattern matching statement\nC: Cases - Different patterns to match\nT: Test - Check value against patterns\nS: Switch - Similar to switch in other languages\n\n```\ndef describe_type(item):\n    match item:\n        case int():\n            return \"It's an integer\"\n        case str():\n            return \"It's a string\"\n        case _:\n            return \"It's something else\"\n\nprint(describe_type(5))  # Output: It's an integer\n```"
+    },
+    {
+      "question": "Diligent Foxes Train Resourcefully",
+      "answer": "D: Define - Create a function\nF: Function - Reusable block of code\nT: Take parameters - Accept inputs\nR: Return - Provide output\n\n```\ndef greet(name):\n    return f'Hello, {name}!'\n\nprint(greet('Alice'))  # Output: Hello, Alice!\n```"
+    },
+    {
+      "question": "Agile Kittens Adapt Uniquely",
+      "answer": "A: Arguments - Inputs to functions\nK: Keyword arguments - Named parameters\nA: Arbitrary arguments (*args) - Variable number of arguments\nU: Unpacking - Distribute iterable into arguments\n\n```\ndef func(a, b, *args, **kwargs):\n    print(a, b, args, kwargs)\n\nfunc(1, 2, 3, 4, x=5, y=6)\n# Output: 1 2 (3, 4) {'x': 5, 'y': 6}\n```"
+    },
+    {
+      "question": "Stylish Elephants Look Really Classy",
+      "answer": "S: Style - Coding conventions\nE: Elegant - Clean and readable code\nL: Length - Appropriate line length\nR: Readable - Easy to understand\nC: Consistent - Uniform formatting\n\n```\n# Following PEP 8 guidelines\ndef calculate_area(length, width):\n    \"\"\"Calculate the area of a rectangle.\"\"\"\n    return length * width\n\narea = calculate_area(5, 3)\nprint(f'The area is {area}')\n```"
+    }
 
   ],
-  
+
+  "pythonBuiltinFunctions": [
+    {
+      "question": "What are the functions related to 'Abe Asks All Anxious Ants'?",
+      "answer": "The functions are abs(), aiter(), all(), anext(), and any().\n\nKey Points:\n- abs() returns the absolute value of a number\n- aiter() returns an asynchronous iterator\n- all() checks if all elements in an iterable are true\n- anext() retrieves the next item from an asynchronous iterator\n- any() checks if any element in an iterable is true\n\nExamples:\n```python\nprint(abs(-5))  # Output: 5\nasync def async_gen():\n    yield 1\n    yield 2\nasync def main():\n    aiter_obj = aiter(async_gen())\n    print(await anext(aiter_obj))  # Output: 1\nimport asyncio\nasyncio.run(main())\nprint(all([True, True, False]))  # Output: False\nprint(any([False, True, False]))  # Output: True\n```"
+    },
+    {
+      "question": "What are the functions related to 'Astronauts Build Bright Bytearrays'?",
+      "answer": "The functions are ascii(), bin(), bool(), breakpoint(), and bytearray().\n\nKey Points:\n- ascii() returns a string with escaped non-ASCII characters\n- bin() converts an integer to a binary string\n- bool() returns a Boolean value\n- breakpoint() drops into the debugger\n- bytearray() returns a new array of bytes\n\nExamples:\n```python\nprint(ascii('Python©'))  # Output: 'Python\\u00a9'\nprint(bin(10))  # Output: '0b1010'\nprint(bool(0))  # Output: False\nbreakpoint()  # Enters the debugger (in interactive environments)\nprint(bytearray('hello', 'utf-8'))  # Output: bytearray(b'hello')\n```"
+    },
+    {
+      "question": "What are the functions related to 'Brilliant Coders Catch Class Compilations'?",
+      "answer": "The functions are bytes(), callable(), chr(), classmethod(), and compile().\n\nKey Points:\n- bytes() returns a new 'bytes' object\n- callable() checks if an object appears callable\n- chr() returns a character from a Unicode code point\n- classmethod() converts a method into a class method\n- compile() compiles source into a code or AST object\n\nExamples:\n```python\nprint(bytes('hello', 'utf-8'))  # Output: b'hello'\nprint(callable(print))  # Output: True\nprint(chr(97))  # Output: 'a'\n\nclass MyClass:\n    @classmethod\n    def my_class_method(cls):\n        return 'class method'\nprint(MyClass.my_class_method())  # Output: 'class method'\n\ncode_obj = compile('a = 5', '<string>', 'exec')\nexec(code_obj)\nprint(a)  # Output: 5\n```"
+    },
+    {
+      "question": "What are the functions related to 'Complex Dragons Destroy Diverse Dictionaries'?",
+      "answer": "The functions are complex(), delattr(), dict(), dir(), and divmod().\n\nKey Points:\n- complex() returns a complex number\n- delattr() deletes a named attribute from an object\n- dict() creates a new dictionary\n- dir() returns a list of valid attributes for an object\n- divmod() returns quotient and remainder of division\n\nExamples:\n```python\nprint(complex(1, 2))  # Output: (1+2j)\nclass MyClass:\n    def __init__(self):\n        self.x = 10\nmy_obj = MyClass()\ndelattr(my_obj, 'x')\nprint(hasattr(my_obj, 'x'))  # Output: False\nprint(dict(a=1, b=2))  # Output: {'a': 1, 'b': 2}\nprint(dir([]))  # Output: ['append', 'clear', ...]\nprint(divmod(7, 2))  # Output: (3, 1)\n```"
+    },
+    {
+      "question": "What are the functions related to 'Each Elephant Enjoys Filtering Floats'?",
+      "answer": "The functions are enumerate(), eval(), exec(), filter(), and float().\n\nKey Points:\n- enumerate() returns an enumerate object\n- eval() evaluates a Python expression\n- exec() executes a string or code object\n- filter() filters elements in an iterable\n- float() converts to a floating-point number\n\nExamples:\n```python\nprint(list(enumerate(['a', 'b', 'c'])))  # Output: [(0, 'a'), (1, 'b'), (2, 'c')]\nprint(eval('2 + 2'))  # Output: 4\nexec('a = 5')\nprint(a)  # Output: 5\nprint(list(filter(lambda x: x > 2, [1, 2, 3, 4])))  # Output: [3, 4]\nprint(float('3.14'))  # Output: 3.14\n```"
+    },
+    {
+      "question": "What are the functions related to 'Foxes Frequently Get Global Hats'?",
+      "answer": "The functions are format(), frozenset(), getattr(), globals(), and hasattr().\n\nKey Points:\n- format() returns a formatted representation of a value\n- frozenset() returns a new frozenset object\n- getattr() returns the value of a named attribute\n- globals() returns the current global symbol table\n- hasattr() checks if an object has a specific attribute\n\nExamples:\n```python\nprint(format(1234, ','))  # Output: '1,234'\nprint(frozenset([1, 2, 3]))  # Output: frozenset({1, 2, 3})\nprint(getattr([], 'append'))  # Output: <built-in method append of list object at ...>\nprint(globals())  # Output: {...}\nprint(hasattr([], 'append'))  # Output: True\n```"
+    },
+    {
+      "question": "What are the functions related to 'Harry Helps Heroes Identify Input'?",
+      "answer": "The functions are hash(), help(), hex(), id(), and input().\n\nKey Points:\n- hash() returns the hash value of an object\n- help() invokes the built-in help system\n- hex() converts an integer to a hexadecimal string\n- id() returns the identity of an object\n- input() reads a string from user input\n\nExamples:\n```python\nprint(hash('apple'))  # Output: 8603030478340088834 (may vary)\nhelp(print)  # Displays documentation for print()\nprint(hex(255))  # Output: '0xff'\nprint(id({}))  # Output: 140737488355328 (may vary)\nname = input('Enter your name: ')\nprint('Hello, ' + name)\n```"
+    },
+    {
+      "question": "What are the functions related to 'Interesting Iguanas Inspect Iterated Length'?",
+      "answer": "The functions are int(), isinstance(), issubclass(), iter(), and len().\n\nKey Points:\n- int() converts a number or string to an integer\n- isinstance() checks if an object is an instance of a class\n- issubclass() checks if a class is a subclass of another class\n- iter() returns an iterator object\n- len() returns the length of an object\n\nExamples:\n```python\nprint(int('10'))  # Output: 10\nprint(isinstance(5, int))  # Output: True\nprint(issubclass(bool, int))  # Output: True\nprint(iter([1, 2, 3]))  # Output: <list_iterator object at ...>\nprint(len([1, 2, 3]))  # Output: 3\n```"
+    },
+    {
+      "question": "What are the functions related to 'Lists Lend Mighty Max Memory'?",
+      "answer": "The functions are list(), locals(), map(), max(), and memoryview().\n\nKey Points:\n- list() creates a list from an iterable\n- locals() returns a dictionary of the current local symbol table\n- map() applies a function to every item of an iterable\n- max() returns the largest item in an iterable\n- memoryview() returns a memory view object\n\nExamples:\n```python\nprint(list('abc'))  # Output: ['a', 'b', 'c']\nprint(locals())  # Output: {...}\nprint(list(map(str.upper, ['a', 'b', 'c'])))  # Output: ['A', 'B', 'C']\nprint(max([1, 2, 3]))  # Output: 3\nprint(memoryview(b'abc'))  # Output: <memory at ...>\n```"
+    },
+    {
+      "question": "What are the functions related to 'Mighty Knights Observe Obscure Octopi'?",
+      "answer": "The functions are min(), next(), object(), oct(), and open().\n\nKey Points:\n- min() returns the smallest item in an iterable\n- next() retrieves the next item from an iterator\n- object() returns a new featureless object\n- oct() converts an integer to an octal string\n- open() opens a file and returns a file object\n\nExamples:\n```python\nprint(min([1, 2, 3]))  # Output: 1\nprint(next(iter([1, 2, 3])))  # Output: 1\nprint(object())  # Output: <object object at ...>\nprint(oct(8))  # Output: '0o10'\nwith open('file.txt', 'r') as f:\n    print(f.read())  # Reads and prints file content\n```"
+    },
+    {
+      "question": "What are the functions related to 'Octopuses Powerfully Print Precious Ranges'?",
+      "answer": "The functions are ord(), pow(), print(), property(), and range().\n\nKey Points:\n- ord() returns the Unicode code point for a character\n- pow() returns base raised to the power of exp\n- print() outputs to the console\n- property() returns a property attribute\n- range() returns an immutable sequence of numbers\n\nExamples:\n```python\nprint(ord('a'))  # Output: 97\nprint(pow(2, 3))  # Output: 8\nprint('Hello, World!')  # Output: Hello, World!\n\nclass C:\n    @property\n    def x(self):\n        return 'property value'\nprint(C().x)  # Output: 'property value'\nprint(list(range(5)))  # Output: [0, 1, 2, 3, 4]\n```"
+    },
+    {
+      "question": "What are the functions related to 'Rabbits Rarely Round Silent Steps'?",
+      "answer": "The functions are repr(), reversed(), round(), set(), and setattr().\n\nKey Points:\n- repr() returns a printable representation of an object\n- reversed() returns a reverse iterator\n- round() rounds a number to a given precision\n- set() creates a set object\n- setattr() sets the value of an object's attribute\n\nExamples:\n```python\nprint(repr('Hello'))  # Output: \"'Hello'\"\nprint(list(reversed([1, 2, 3])))  # Output: [3, 2, 1]\nprint(round(3.14159, 2))  # Output: 3.14\nprint(set([1, 2, 2, 3]))  # Output: {1, 2, 3}\nclass MyClass:\n    pass\nobj = MyClass()\nsetattr(obj, 'x', 5)\nprint(obj.x)  # Output: 5\n```"
+    },
+    {
+      "question": "What are the functions related to 'Slice Some Sticky Stringy Sushi'?",
+      "answer": "The functions are slice(), sorted(), staticmethod(), str(), and sum().\n\nKey Points:\n- slice() returns a slice object\n- sorted() returns a new sorted list\n- staticmethod() transforms a method into a static method\n- str() returns a string version of an object\n- sum() sums the items of an iterable\n\nExamples:\n```python\nprint(slice(5))  # Output: slice(None, 5, None)\nprint(sorted([3, 1, 2]))  # Output: [1, 2, 3]\n\nclass C:\n    @staticmethod\n    def f():\n        return 'static method'\nprint(C.f())  # Output: 'static method'\nprint(str(123))  # Output: '123'\nprint(sum([1, 2, 3]))  # Output: 6\n```"
+    },
+    {
+      "question": "What are the functions related to 'Superheroes Travel To Very Zany Zones'?",
+      "answer": "The functions are super(), tuple(), type(), vars(), and zip().\n\nKey Points:\n- super() returns a proxy object for delegation to a parent/sibling class\n- tuple() creates a tuple\n- type() returns the type of an object or creates a new type\n- vars() returns the __dict__ attribute of an object\n- zip() creates an iterator of tuples\n\nExamples:\n```python\nclass B:\n    def f(self): print('B')\nclass C(B):\n    def f(self):\n        super().f()\n        print('C')\nC().f()  # Output: B, then C\nprint(tuple([1, 2, 3]))  # Output: (1, 2, 3)\nprint(type(5))  # Output: <class 'int'>\nprint(vars())  # Output: {...}\nprint(list(zip([1, 2], ['a', 'b'])))  # Output: [(1, 'a'), (2, 'b')]\n```"
+    }
+  ]
+
+
 
 
 
