@@ -713,7 +713,7 @@ const flashcardsData = {
       "question": "What are the functions related to 'Superheroes Travel To Very Zany Zones'?",
       "answer": "The functions are super(), tuple(), type(), vars(), and zip().\n\nKey Points:\n- super() returns a proxy object for delegation to a parent/sibling class\n- tuple() creates a tuple\n- type() returns the type of an object or creates a new type\n- vars() returns the __dict__ attribute of an object\n- zip() creates an iterator of tuples\n\nExamples:\n```python\nclass B:\n    def f(self): print('B')\nclass C(B):\n    def f(self):\n        super().f()\n        print('C')\nC().f()  # Output: B, then C\nprint(tuple([1, 2, 3]))  # Output: (1, 2, 3)\nprint(type(5))  # Output: <class 'int'>\nprint(vars())  # Output: {...}\nprint(list(zip([1, 2], ['a', 'b'])))  # Output: [(1, 'a'), (2, 'b')]\n```"
     }
-  ]
+  ],
 
 
 
