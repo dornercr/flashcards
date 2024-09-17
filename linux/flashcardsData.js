@@ -9,7 +9,14 @@ const topicTitles = {
 
 };
 
-const flashcardsData = {
+{
+    "question": "Curious Cats Enjoy Good Laughs",
+    "answer": "C - Compare: Check if things are the same or different\nC - Cats: Things we're comparing\nE - Equal to: Same as (==)\nG - Greater than: Bigger than (>)\nL - Less than: Smaller than (<)\n\n```\nx = 5\ny = 10\nprint(x == y)  # Shows: False\nprint(x < y)   # Shows: True\nprint(x > y)   # Shows: False\n```"
+},
+{
+    "question": "Awesome Owls Nap Daily",
+    "answer": "A - And: Both things must be true\nO - Or: At least one thing must be true\nN - Not: The opposite is true\nD - Decide: Figure out if something is true or false\n\n```\nis_sunny = True\nis_warm = False\n\nprint(is_sunny and is_warm)  # Shows: False\nprint(is_sunny or is_warm)   # Shows: True\nprint(not is_sunny)          # Shows: False\n```"
+}
   Chapter1_System_Management_Domain: [
   { question: "Which command is used to load a module and its dependencies automatically?", answer: "A.modprobe - Loads kernel modules and resolves dependencies." },
 

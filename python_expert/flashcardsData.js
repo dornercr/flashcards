@@ -1,8 +1,8 @@
 const topicTitles = {
-  pythonBasicSyntax : "Basic Syntax and Variables",
-  pythonDataStructures: "Python Data Structures: Lists, tuples, sets, dictionaries",
-  pythonControlFlow : "Control Flow: If statements, loops, break, continue, pass",
-  pythonFunctions: "Python Functions",
+  pythonBasics : "Python Basics",
+  pythonDataStructures: "Python Data Structures",
+  functions : "Python Functions",
+  oop: "Object Oriented Programming",
   pythonModules: "Python Modules",
   Chapter1_PythonBasicsMnemonics: "Python Basics Mnemonics",
   pythonBuiltinFunctions: "Python BuiltinFunctions",
@@ -14,407 +14,160 @@ const topicTitles = {
 };
 
 const flashcardsData = {
-  pythonBasicSyntax: [
+  pythonBasics: [
     {
-      "question": "What is the purpose of comments in Python?",
-      "answer": "Comments are used to explain code, make notes, or temporarily disable lines of code. They are ignored by the interpreter.\n\nKey Point: Use comments to improve code readability.\n\nExample:\n```\n# This is a comment\n```"
+      "question": "IEND: Iguanas Eat New Ducks",
+      "answer": "I - Interpreted: Python is an interpreted language with dynamic typing, meaning you don't need to declare types\nE - Execution: Code is executed line by line\nN - No Compile: Python doesn't need compilation\nD - Dynamic: Variables can change types during runtime\n\n```\nx = 5  # int\nx = \"Hello\"  # str (dynamic typing)\nprint(x)\n```"
     },
     {
-      "question": "How do you write a single-line comment in Python?",
-      "answer": "Single-line comments in Python are written by placing the # symbol at the start of the comment.\n\nKey Point: The # symbol tells the interpreter to ignore the rest of the line.\n\nExample:\n```\n# This is a single-line comment\n```"
+      "question": "SITS: Snakes Indent To Survive",
+      "answer": "S - Syntax: Python uses indentation (tabs or spaces) to define blocks of code\nI - Indentation: Indentation level must be consistent\nT - Tabs or Spaces: Python accepts both, but don't mix\nS - Structure: Block structures like loops and conditionals rely on indentation\n\n```\nif True:\n    print(\"Indented Block\")\n```"
     },
     {
-      "question": "How do you print a message in Python?",
-      "answer": "You use the print() function to display a message.\n\nKey Point: The print function outputs text to the console.\n\nExample:\n```\nprint('Hello, World!')\n```"
+      "question": "VDBF: Vultures Dance Before Flight",
+      "answer": "V - Variables: Store data values\nD - Data Types: Python handles int, float, str, and bool types\nB - Booleans: True or False\nF - Float: Decimal numbers\n\n```\nx = 10  # int\ny = 3.14  # float\nname = \"Alice\"  # str\nactive = True  # bool\n```"
     },
     {
-      "question": "What are the basic data types in Python?",
-      "answer": "The basic data types in Python are:\n- `int` for integers\n- `float` for floating-point numbers\n- `str` for strings (text)\n- `bool` for Boolean values (True or False).\n\nKey Point: Python supports a variety of data types to handle different kinds of information."
+      "question": "CDNE: Cats Draw Neat Explanations",
+      "answer": "C - Comments: Use # to add explanations for the code\nD - Documentation: Use \"\"\" \"\"\" for multi-line documentation\nN - Notes: Comments don't affect code execution\nE - Explain: Keep your code understandable with comments\n\n```\n# This is a single-line comment\n\"\"\"\nThis is a multi-line comment\nused for documentation.\n\"\"\"\n```"
     },
     {
-      "question": "How do you create a variable in Python?",
-      "answer": "Variables in Python are created by assigning a value to a name. The syntax is `variable_name = value`.\n\nKey Point: Variable names must start with a letter or an underscore.\n\nExample:\n```\nage = 25\n```"
+      "question": "PBIN: Penguins Bring Input Nicely",
+      "answer": "P - Print: Use print() to display information\nB - Basic I/O: Input is gathered with input()\nI - Input: Input is always treated as a string\nN - Nicely Output: Use print statements to format outputs\n\n```\nname = input(\"Enter your name: \")\nprint(f\"Hello, {name}\")\n```"
     },
     {
-      "question": "What is an integer data type?",
-      "answer": "The integer (int) data type represents whole numbers, both positive and negative, without a decimal point.\n\nKey Point: Integers are used for counting and indexing.\n\nExample:\n```\nx = 42\n```"
+      "question": "AOEW: Apples Oranges Eat Well",
+      "answer": "A - Arithmetic: Python supports basic math operations like +, -, *, and /\nO - Operations: Arithmetic operators like +, -, *, and /\nE - Exponent: Use ** for exponentiation\nW - Whole Division: Use // for integer division\n\n```\na = 10 + 5\nb = 10 ** 2  # Exponentiation\nc = 9 // 2  # Integer division\n```"
     },
     {
-      "question": "What is the difference between an int and a float?",
-      "answer": "An int represents whole numbers (e.g., 5), while a float represents numbers with a decimal point (e.g., 5.5).\n\nKey Point: Use floats when you need precision for decimal values."
+      "question": "CLOM: Cats Love Oranges More",
+      "answer": "C - Comparison: Operators like ==, !=, <, and > compare values\nL - Logical: Combine conditions with and, or, not\nO - Operators: == checks equality, > checks greater than\nM - More Conditions: Logical operators help with combining conditions\n\n```\na = 5\nprint(a > 3 and a < 10)  # True\n```"
     },
     {
-      "question": "How do you check the data type of a variable in Python?",
-      "answer": "You can use the `type()` function to check the data type of a variable.\n\nKey Point: `type()` reveals the data type of any object in Python.\n\nExample:\n```\nx = 10\nprint(type(x))  # Output: <class 'int'>\n```"
+      "question": "IEEC: If Elsa Eats Cookies",
+      "answer": "I - If: Executes a block of code if a condition is True\nE - Elif: Checks another condition if the previous if condition was False\nE - Else: Executes if all previous conditions were False\nC - Compare: Use comparison operators within conditionals\n\n```\nx = 7\nif x > 10:\n    print(\"Big\")\nelif x > 5:\n    print(\"Medium\")\nelse:\n    print(\"Small\")\n```"
     },
     {
-      "question": "What is a string in Python?",
-      "answer": "A string (str) is a sequence of characters enclosed in either single (') or double (\") quotes.\n\nKey Point: Strings can store text-based information.\n\nExample:\n```\nname = \"Alice\"\n```"
+      "question": "LWTC: Lions Walk To Catch",
+      "answer": "L - Loops: Python uses loops to repeat code\nW - While: Loops that run as long as a condition is True\nT - Times: Use for loops to iterate a set number of times or over sequences\nC - Continue: Use loops to control flow and repetition\n\n```\nfor i in range(5):\n    print(i)\nwhile i < 5:\n    i += 1\n```"
     },
     {
-      "question": "How do you declare a Boolean variable in Python?",
-      "answer": "A Boolean variable stores one of two values: True or False.\n\nKey Point: Booleans are used to represent truth values in logic.\n\nExample:\n```\nis_student = True\n```"
-    },
-    {
-      "question": "Can variables in Python change their type after being assigned?",
-      "answer": "Yes, Python is dynamically typed, meaning variables can change their type after being assigned.\n\nKey Point: Python allows reassignment of variables to different types.\n\nExample:\n```\nx = 5  # int\nx = 'Hello'  # str\n```"
-    },
-    {
-      "question": "What does the print() function do?",
-      "answer": "The print() function outputs text or variable values to the console.\n\nKey Point: Use `print()` to display information during code execution.\n\nExample:\n```\nname = \"Alice\"\nprint(name)  # Output: Alice\n```"
-    },
-    {
-      "question": "How do you assign multiple variables in a single line in Python?",
-      "answer": "You can assign multiple variables in a single line by separating them with commas.\n\nKey Point: Multiple assignment saves space and simplifies code.\n\nExample:\n```\nx, y, z = 1, 2, 3\n```"
-    },
-    {
-      "question": "What is the difference between single and double quotes for strings in Python?",
-      "answer": "There is no difference between using single (') and double (\") quotes for strings in Python. Either can be used, but they must match at the beginning and end.\n\nKey Point: Use matching quotes consistently."
-    },
-    {
-      "question": "How do you create a multi-line string in Python?",
-      "answer": "Multi-line strings are created using triple quotes (''' or \"\"\").\n\nKey Point: Triple quotes allow text to span multiple lines.\n\nExample:\n```\nmulti_line_string = \"\"\"This is\na multi-line\nstring.\"\"\"\n```"
-    },
-    {
-      "question": "What will happen if you try to assign a variable name starting with a number?",
-      "answer": "Python will raise a `SyntaxError` because variable names cannot begin with numbers.\n\nKey Point: Variable names must start with a letter or underscore.\n\nExample:\n```\n1st_var = 5  # This will cause an error\n```"
-    },
-    {
-      "question": "How do you include quotes inside a string in Python?",
-      "answer": "You can include quotes inside a string by using the opposite type of quote or escaping the quote with a backslash (\\).\n\nKey Point: Escaping or using opposite quotes prevents syntax errors.\n\nExample:\n```\nquote = \"She said, 'Hello!'\"\nescaped_quote = 'She said, \"Hello!\"'\n```"
-    },
-    {
-      "question": "What is the difference between = and == in Python?",
-      "answer": "`=` is the assignment operator, used to assign values to variables. `==` is the equality operator, used to check if two values are equal.\n\nKey Point: `=` assigns, `==` compares.\n\nExample:\n```\nx = 5  # assignment\nx == 5  # equality check\n```"
-    },
-    {
-      "question": "Can a variable name contain spaces in Python?",
-      "answer": "No, variable names cannot contain spaces. You should use underscores (_) to separate words.\n\nKey Point: Use underscores for readability in variable names.\n\nExample:\n```\nmy_variable = 10\n```"
-    },
-    {
-      "question": "What happens if you try to print a variable that hasn’t been defined?",
-      "answer": "Python will raise a `NameError`, indicating that the variable is not defined.\n\nKey Point: Ensure variables are defined before using them.\n\nExample:\n```\nprint(undeclared_variable)  # This will raise a NameError\n```"
+      "question": "BCPC: Bunnies Can Play Calmly",
+      "answer": "B - Break: Stop the loop early\nC - Continue: Skip the current iteration\nP - Pass: Do nothing, just move on\nC - Control: Use break, continue, and pass to manage loop flow\n\n```\nfor i in range(5):\n    if i == 2:\n        continue\n    if i == 4:\n        break\n    print(i)\n```"
     }
+
   ],
 
   pythonDataStructures: [
     {
-      "question": "What is a list in Python?",
-      "answer": "A list is an ordered, mutable collection of items that can hold different types of elements. Lists are defined using square brackets `[]`.\n\nKey Point: Lists can contain any type of data and can be modified.\n\nExample:\n```\nmy_list = [1, 2, 3, 'apple']\n```"
+      "question": "Lions Chase Smart Monkeys",
+      "answer": "L - Lists: Mutable, ordered collection of items. Supports indexing, slicing, and various methods\nC - Creation: Use square brackets to create\nS - Slicing: Extract sub-lists using list[start:end]\nM - Methods: Common methods include append(), remove(), and sort()\n\n```\nmy_list = [1, 2, 3]\nmy_list.append(4)  # Adds 4 to the list\nprint(my_list[1:3])  # Slicing\n```"
     },
     {
-      "question": "How do you create an empty list?",
-      "answer": "You can create an empty list using empty square brackets `[]` or by calling the `list()` function.\n\nKey Point: Both methods create an empty list, but the syntax is different.\n\nExample:\n```\nempty_list = []\n# or\nempty_list = list()\n```"
+      "question": "Tigers Inhabit Only Trees",
+      "answer": "T - Tuples: Immutable, ordered collection of items\nI - Immutability: Cannot change after creation\nO - Ordered: Items remain in the order they were added\nT - Tuple Creation: Use parentheses to create a tuple\n\n```\nmy_tuple = (1, 2, 3)\nprint(my_tuple[0])\n```"
     },
     {
-      "question": "How do you access elements in a list?",
-      "answer": "You can access elements in a list using their index, starting from 0 for the first element.\n\nKey Point: List indices start at 0 in Python.\n\nExample:\n```\nmy_list = [10, 20, 30]\nprint(my_list[0])  # Output: 10\n```"
+      "question": "Dogs Know Many Secrets",
+      "answer": "D - Dictionaries: Key-value pairs, unordered collection\nK - Keys: Unique identifiers for each item\nM - Methods: Common methods include get(), items(), and keys()\nS - Search: Access values using their keys\n\n```\nmy_dict = {\"name\": \"Alice\", \"age\": 25}\nprint(my_dict.get(\"name\"))\n```"
     },
     {
-      "question": "What is a tuple in Python?",
-      "answer": "A tuple is an ordered, immutable collection of items. Tuples are defined using parentheses `()`.\n\nKey Point: Tuples cannot be changed once created.\n\nExample:\n```\nmy_tuple = (1, 2, 3, 'banana')\n```"
+      "question": "Squirrels Operate Mysteriously Often",
+      "answer": "S - Sets: Unordered collection with no duplicates\nO - Operations: Union (|), intersection (&), and difference (-)\nM - Methods: Common methods include add(), remove(), and clear()\nO - Objects: Sets only store unique items\n\n```\nmy_set = {1, 2, 3}\nmy_set.add(4)\n```"
     },
     {
-      "question": "How are lists different from tuples?",
-      "answer": "The main difference is that lists are mutable (they can be changed after creation), while tuples are immutable (they cannot be changed after creation)."
+      "question": "Lemons Create Quick Drinks",
+      "answer": "L - List Comprehensions: Concise way to create lists\nC - Conditions: Can include conditions to filter items\nQ - Quick: Efficient, single-line expressions\nD - Dynamic: Build lists dynamically\n\n```\nsquares = [x ** 2 for x in range(5)]\n```"
     },
     {
-      "question": "How do you create an empty tuple?",
-      "answer": "You can create an empty tuple using empty parentheses `()` or by calling the `tuple()` function.\n\nKey Point: Both methods create an empty tuple, with different syntax.\n\nExample:\n```\nempty_tuple = ()\n# or\nempty_tuple = tuple()\n```"
+      "question": "Ducks Swim Far Quickly",
+      "answer": "D - Dictionary Comprehensions: Create dictionaries in a concise way\nS - Syntactic: Uses similar syntax to list comprehensions\nF - Filters: Can include filters and conditions\nQ - Quick: Efficient for building dictionaries\n\n```\nsquares_dict = {x: x ** 2 for x in range(5)}\n```"
     },
     {
-      "question": "How do you change a value in a list?",
-      "answer": "You can change a value in a list by accessing the element via its index and assigning a new value to it.\n\nKey Point: Lists allow changes to elements after creation.\n\nExample:\n```\nmy_list = [1, 2, 3]\nmy_list[1] = 10\nprint(my_list)  # Output: [1, 10, 3]\n```"
+      "question": "Snakes Move Silently Always",
+      "answer": "S - String Manipulation: Modify strings using methods like replace(), upper(), and lower()\nM - Methods: Common methods include split(), join(), and strip()\nS - Slicing: Slice strings like lists\nA - Attributes: Strings are immutable\n\n```\nmy_string = \"Hello, World\"\nprint(my_string.lower())\n```"
     },
     {
-      "question": "Can you change the value of a tuple after it is created?",
-      "answer": "No, tuples are immutable, so their values cannot be changed after they are created."
+      "question": "Bears Know Many Facts",
+      "answer": "B - Basic Sequence Functions: Use len() for length, max() and min() for max/min values\nK - Keys: Useful for lists, tuples, and other sequences\nM - Methods: len(), max(), and min() are common\nF - Flexible: These functions work on most sequences\n\n```\nmy_list = [1, 2, 3]\nprint(len(my_list), max(my_list), min(my_list))\n```"
     },
     {
-      "question": "What is a set in Python?",
-      "answer": "A set is an unordered collection of unique items. Sets are defined using curly braces `{}` or by calling the `set()` function.\n\nKey Point: Sets automatically remove duplicates.\n\nExample:\n```\nmy_set = {1, 2, 3, 3, 4}  # Output: {1, 2, 3, 4}\n```"
-    },
-    {
-      "question": "How do sets handle duplicate elements?",
-      "answer": "Sets automatically remove duplicate elements, so each item in a set is unique.\n\nKey Point: No duplicates are allowed in sets.\n\nExample:\n```\nmy_set = {1, 2, 2, 3}\nprint(my_set)  # Output: {1, 2, 3}\n```"
-    },
-    {
-      "question": "How do you create an empty set?",
-      "answer": "You must use the `set()` function to create an empty set, as using `{}` creates an empty dictionary.\n\nKey Point: `{}` creates a dictionary, not a set.\n\nExample:\n```\nempty_set = set()\n```"
-    },
-    {
-      "question": "What is a dictionary in Python?",
-      "answer": "A dictionary is an unordered collection of key-value pairs. Keys are unique, and values can be of any type. Dictionaries are defined using curly braces `{}` with keys and values separated by a colon `:`.\n\nKey Point: Dictionaries use key-value pairs for mapping.\n\nExample:\n```\nmy_dict = {'name': 'Alice', 'age': 25}\n```"
-    },
-    {
-      "question": "How do you access values in a dictionary?",
-      "answer": "You can access values in a dictionary using their keys.\n\nKey Point: Dictionary values are accessed by their unique keys.\n\nExample:\n```\nmy_dict = {'name': 'Alice', 'age': 25}\nprint(my_dict['name'])  # Output: Alice\n```"
-    },
-    {
-      "question": "Can dictionary keys be mutable types like lists?",
-      "answer": "No, dictionary keys must be immutable, such as strings, numbers, or tuples. Lists and other mutable types cannot be used as keys."
-    },
-    {
-      "question": "How do you add an element to a dictionary?",
-      "answer": "You can add elements to a dictionary by assigning a new key-value pair.\n\nKey Point: Use assignment to add a key-value pair to a dictionary.\n\nExample:\n```\nmy_dict = {'name': 'Alice'}\nmy_dict['age'] = 25\nprint(my_dict)  # Output: {'name': 'Alice', 'age': 25}\n```"
-    },
-    {
-      "question": "How do you remove a key-value pair from a dictionary?",
-      "answer": "You can remove a key-value pair using the `del` statement or the `pop()` method.\n\nKey Point: Removing keys requires either `del` or `pop()`.\n\nExample:\n```\nmy_dict = {'name': 'Alice', 'age': 25}\ndel my_dict['age']\nprint(my_dict)  # Output: {'name': 'Alice'}\n```"
-    },
-    {
-      "question": "What is the difference between a list and a set?",
-      "answer": "The main differences are:\n- Lists are ordered and can contain duplicate elements.\n- Sets are unordered and cannot contain duplicates."
-    },
-    {
-      "question": "Can you convert a list to a set?",
-      "answer": "Yes, you can convert a list to a set using the `set()` function, which will remove any duplicate values from the list.\n\nKey Point: Converting to a set removes duplicates.\n\nExample:\n```\nmy_list = [1, 2, 2, 3]\nmy_set = set(my_list)\nprint(my_set)  # Output: {1, 2, 3}\n```"
-    },
-    {
-      "question": "How do you check if a key exists in a dictionary?",
-      "answer": "You can use the `in` keyword to check if a key exists in a dictionary.\n\nKey Point: Use `in` to check for key presence in a dictionary.\n\nExample:\n```\nmy_dict = {'name': 'Alice', 'age': 25}\nprint('name' in my_dict)  # Output: True\n```"
-    },
-    {
-      "question": "Can you change the value associated with a key in a dictionary?",
-      "answer": "Yes, you can change the value by reassigning a new value to the key.\n\nKey Point: Dictionary values can be updated by reassigning.\n\nExample:\n```\nmy_dict = {'name': 'Alice', 'age': 25}\nmy_dict['age'] = 26\nprint(my_dict)  # Output: {'name': 'Alice', 'age': 26}\n```"
-    },
-    {
-      "question": "How do you remove duplicates from a list?",
-      "answer": "You can remove duplicates by converting the list to a set and then back to a list.\n\nKey Point: Sets automatically remove duplicates.\n\nExample:\n```\nmy_list = [1, 2, 2, 3]\nmy_list = list(set(my_list))\nprint(my_list)  # Output: [1, 2, 3]\n```"
-    },
-    {
-      "question": "How do you merge two dictionaries?",
-      "answer": "You can merge two dictionaries using the `update()` method or by using the `|` operator (Python 3.9+).\n\nKey Point: `update()` or `|` can merge dictionaries.\n\nExample:\n```\ndict1 = {'a': 1, 'b': 2}\ndict2 = {'b': 3, 'c': 4}\ndict1.update(dict2)\nprint(dict1)  # Output: {'a': 1, 'b': 3, 'c': 4}\n```"
-    },
-    {
-      "question": "Can you change an element in a set?",
-      "answer": "No, sets are unordered and do not allow indexing, so you cannot directly change an element. However, you can remove an element and add a new one."
-    },
-    {
-      "question": "What happens if you try to access a key that doesn’t exist in a dictionary?",
-      "answer": "Python will raise a `KeyError` if you try to access a key that doesn't exist in a dictionary."
-    },
-    {
-      "question": "How do you add multiple elements to a list at once?",
-      "answer": "You can add multiple elements to a list using the `extend()` method or by concatenating the list with another list using `+`.\n\nKey Point: `extend()` adds multiple items to a list at once.\n\nExample:\n```\nmy_list = [1, 2, 3]\nmy_list.extend([4, 5])\nprint(my_list)  # Output: [1, 2, 3, 4, 5]\n```"
+      "question": "Eagles Zip Through Valleys",
+      "answer": "E - Enumerate: Returns index and value when looping through sequences\nZ - Zip: Combines elements from multiple iterables\nT - Tuples: zip() returns tuples of paired elements\nV - Versatile: Works with lists, tuples, etc\n\n```\nmy_list = ['a', 'b', 'c']\nfor i, value in enumerate(my_list):\n    print(i, value)\n\nnumbers = [1, 2, 3]\nletters = ['a', 'b', 'c']\nprint(list(zip(numbers, letters)))\n```"
     }
   ],
 
-  pythonControlFlow: [
+  functions: [
     {
-      "question": "What is an if statement used for in Python?",
-      "answer": "An if statement is used to execute a block of code only if a specified condition is true.\n\nKey Point: Use `if` to control code execution based on conditions.\n\nExample:\n```\nif x > 10:\n    print('x is greater than 10')\n```"
+      "question": "Dogs Run Very Fast",
+      "answer": "D - Defining Functions: Use `def` to define a function, and `return` to output a value\nR - Return: Send data back from the function\nV - Values: Functions can return multiple values\nF - Function Body: Indentation is required to structure the function's body\n\nUse Case: Functions are used to organize code, make it reusable, and break down complex tasks into smaller, manageable parts.\n\n```\ndef calculate_rectangle_area(length, width):\n    return length * width\n\narea = calculate_rectangle_area(5, 3)\nprint(f\"The area is {area} square units\")\n# Output: The area is 15 square units\n```"
     },
     {
-      "question": "What is the syntax for an if-else statement in Python?",
-      "answer": "The if-else statement provides an alternative block of code to execute if the if condition is false.\n\nKey Point: `else` executes when the `if` condition is false.\n\nExample:\n```\nif x > 10:\n    print('x is greater than 10')\nelse:\n    print('x is less than or equal to 10')\n```"
+      "question": "Penguins Keep Position Steady",
+      "answer": "P - Parameters: Variables in a function definition\nK - Keyword Arguments: Specify argument names when calling a function\nP - Positional Arguments: Arguments passed based on position\nS - Syntax: Positional arguments come before keyword arguments\n\nUse Case: Keyword arguments improve readability and allow for default values, while positional arguments are useful for required parameters.\n\n```\ndef greet(name, greeting=\"Hello\", punctuation=\"!\"):\n    return f\"{greeting}, {name}{punctuation}\"\n\nprint(greet(\"Alice\"))\nprint(greet(\"Bob\", greeting=\"Hi\", punctuation=\".\"))\n# Output:\n# Hello, Alice!\n# Hi, Bob.\n```"
     },
     {
-      "question": "What is an elif statement?",
-      "answer": "The `elif` (short for 'else if') statement allows you to check multiple conditions after an initial if condition.\n\nKey Point: `elif` can be used to handle multiple conditions.\n\nExample:\n```\nif x > 10:\n    print('x is greater than 10')\nelif x == 10:\n    print('x is equal to 10')\nelse:\n    print('x is less than 10')\n```"
+      "question": "Vultures Guard Little Snacks",
+      "answer": "V - Variable Scope: Variables inside functions are local by default\nG - Global Variables: Accessible anywhere in the code\nL - Local Variables: Defined within a function and only accessible there\nS - Scope: The location where a variable can be accessed\n\nUse Case: Understanding scope helps prevent naming conflicts and manages data access across your program.\n\n```\nglobal_var = 10\n\ndef modify_global():\n    global global_var\n    global_var = 20\n\ndef use_local():\n    local_var = 30\n    print(f\"Local variable: {local_var}\")\n\nprint(f\"Before: {global_var}\")\nmodify_global()\nprint(f\"After: {global_var}\")\nuse_local()\n# Output:\n# Before: 10\n# After: 20\n# Local variable: 30\n```"
     },
     {
-      "question": "What is a for loop in Python?",
-      "answer": "A for loop is used to iterate over a sequence (like a list, tuple, or range) and execute a block of code for each item in the sequence.\n\nKey Point: `for` loops iterate through sequences.\n\nExample:\n```\nfor item in [1, 2, 3]:\n    print(item)\n```"
+      "question": "Ducks Prefer Nearby Baths",
+      "answer": "D - Default Parameters: Assign default values to parameters in a function\nP - Parameters: Passed values\nN - Nearby: Suggests the close relationship between parameters and their default values\nB - Baths: Implies a natural, built-in feature (like default parameters in functions)\n\nUse Case: Default parameters allow functions to have optional arguments, making them more flexible and easier to use.\n\n```\ndef power(base, exponent=2):\n    return base ** exponent\n\nprint(power(3))     # Uses default exponent\nprint(power(3, 3))  # Overrides default exponent\n# Output:\n# 9\n# 27\n```"
     },
     {
-      "question": "How does a while loop work in Python?",
-      "answer": "A while loop repeatedly executes a block of code as long as the given condition is true.\n\nKey Point: `while` loops repeat until the condition is false.\n\nExample:\n```\ncount = 0\nwhile count < 5:\n    print(count)\n    count += 1\n```"
+      "question": "Anteaters Knead Extra Waffles",
+      "answer": "A - *args: Collect multiple positional arguments into a tuple\nK - **kwargs: Collect multiple keyword arguments into a dictionary\nE - Extra: Used when you don't know the number of arguments\nW - Waffles: Implies flexibility (like how *args and **kwargs allow flexible argument passing)\n\nUse Case: *args and **kwargs are useful when you need to write functions that can accept a variable number of arguments or keyword arguments.\n\n```\ndef flexible_function(*args, **kwargs):\n    print(f\"Positional arguments: {args}\")\n    print(f\"Keyword arguments: {kwargs}\")\n\nflexible_function(1, 2, 3, name=\"Alice\", age=30)\n# Output:\n# Positional arguments: (1, 2, 3)\n# Keyword arguments: {'name': 'Alice', 'age': 30}\n```"
     },
     {
-      "question": "What is the purpose of the break statement?",
-      "answer": "The break statement is used to exit a loop prematurely, even if the loop’s condition is still true or there are remaining items to iterate over.\n\nKey Point: `break` exits loops early.\n\nExample:\n```\nfor num in range(10):\n    if num == 5:\n        break\n    print(num)\n```"
+      "question": "Little Acrobats Flip Amazingly",
+      "answer": "L - Lambda Functions: Anonymous, inline functions using `lambda`\nA - Acrobats: Represents the versatility of lambda functions\nF - Flip: Suggests quick, one-line operations\nA - Amazingly: Implies the impressive capability despite their simplicity\n\nUse Case: Lambda functions are great for simple operations, especially when used with higher-order functions like map(), filter(), or sort().\n\n```\nnumbers = [1, 2, 3, 4, 5]\nsquared = list(map(lambda x: x**2, numbers))\nprint(squared)\n\neven_numbers = list(filter(lambda x: x % 2 == 0, numbers))\nprint(even_numbers)\n# Output:\n# [1, 4, 9, 16, 25]\n# [2, 4]\n```"
     },
     {
-      "question": "What is the continue statement used for?",
-      "answer": "The continue statement skips the current iteration of the loop and moves on to the next iteration.\n\nKey Point: `continue` skips the rest of the current loop iteration.\n\nExample:\n```\nfor num in range(5):\n    if num == 3:\n        continue\n    print(num)\n```"
-    },
-    {
-      "question": "How do you use the pass statement in Python?",
-      "answer": "The pass statement is a placeholder used when a statement is required syntactically, but no code needs to be executed.\n\nKey Point: `pass` is a no-operation statement.\n\nExample:\n```\nfor num in range(5):\n    if num == 3:\n        pass  # Do nothing for now\n    else:\n        print(num)\n```"
-    },
-    {
-      "question": "Can an if statement be used without an else clause?",
-      "answer": "Yes, an if statement can be used without an else clause. The code inside the if block is executed if the condition is true, and the rest of the program continues if it's false."
-    },
-    {
-      "question": "How do you create an infinite loop using a while loop?",
-      "answer": "You can create an infinite loop by setting a while loop condition that is always true.\n\nKey Point: Infinite loops have a condition that is always true.\n\nExample:\n```\nwhile True:\n    print('This loop will run forever')\n```"
-    },
-    {
-      "question": "How do you exit an infinite loop?",
-      "answer": "You can exit an infinite loop by using the break statement or by stopping the program manually (e.g., with Ctrl + C in a terminal).\n\nKey Point: `break` can terminate infinite loops.\n\nExample:\n```\nwhile True:\n    print('This runs indefinitely')\n    break\n```"
-    },
-    {
-      "question": "What is the difference between break and continue in loops?",
-      "answer": "`break` exits the loop entirely, while `continue` skips the current iteration and continues with the next iteration of the loop."
-    },
-    {
-      "question": "How do you use a for loop to iterate over a range of numbers?",
-      "answer": "You can use the `range()` function to generate a sequence of numbers to iterate over in a for loop.\n\nKey Point: `range()` generates a sequence of numbers.\n\nExample:\n```\nfor i in range(5):\n    print(i)\n```"
-    },
-    {
-      "question": "Can you nest if statements in Python?",
-      "answer": "Yes, you can nest if statements to check multiple conditions.\n\nKey Point: Nested `if` statements allow for more specific conditions.\n\nExample:\n```\nx = 5\nif x > 0:\n    if x < 10:\n        print('x is between 0 and 10')\n```"
-    },
-    {
-      "question": "What happens if a while loop condition never becomes False?",
-      "answer": "If a while loop condition never becomes False, the loop will continue to run indefinitely, creating an infinite loop."
-    },
-    {
-      "question": "Can a for loop iterate over a string?",
-      "answer": "Yes, a for loop can iterate over the characters in a string.\n\nKey Point: Strings are iterable in Python.\n\nExample:\n```\nfor char in 'hello':\n    print(char)\n```"
-    },
-    {
-      "question": "How do you use the else statement with loops in Python?",
-      "answer": "The else statement in a loop runs when the loop finishes without encountering a break statement.\n\nKey Point: `else` after a loop executes if no `break` occurs.\n\nExample:\n```\nfor i in range(3):\n    print(i)\nelse:\n    print('Loop finished')\n```"
-    },
-    {
-      "question": "What happens when a break statement is used inside a while loop?",
-      "answer": "When a break statement is encountered inside a while loop, it immediately exits the loop, regardless of the loop’s condition.\n\nKey Point: `break` exits the loop, bypassing the loop condition.\n\nExample:\n```\nwhile True:\n    print('In loop')\n    break\n```"
-    },
-    {
-      "question": "Can you use the continue statement in a while loop?",
-      "answer": "Yes, the continue statement can be used in a while loop to skip the rest of the code in the current iteration and proceed to the next one.\n\nKey Point: `continue` skips to the next iteration.\n\nExample:\n```\ncount = 0\nwhile count < 5:\n    count += 1\n    if count == 3:\n        continue\n    print(count)\n```"
-    },
-    {
-      "question": "How do you iterate over both the index and the value of a list in a for loop?",
-      "answer": "You can use the `enumerate()` function to get both the index and the value of a list.\n\nKey Point: `enumerate()` provides both index and value.\n\nExample:\n```\nmy_list = ['a', 'b', 'c']\nfor index, value in enumerate(my_list):\n    print(index, value)\n```"
-    },
-    {
-      "question": "What happens if you place a pass statement in a loop?",
-      "answer": "When the pass statement is encountered, nothing happens, and the loop moves to the next iteration. It’s used as a placeholder.\n\nKey Point: `pass` skips execution, doing nothing.\n\nExample:\n```\nfor i in range(3):\n    pass  # Placeholder for future code\nprint('Loop finished')\n```"
-    },
-    {
-      "question": "Can you combine if, elif, and else statements inside a loop?",
-      "answer": "Yes, you can combine if, elif, and else statements inside a loop to execute different blocks of code based on conditions during iteration.\n\nKey Point: Combined conditionals allow complex decision-making within loops.\n\nExample:\n```\nfor num in range(5):\n    if num == 2:\n        print('Found 2')\n    elif num == 4:\n        print('Found 4')\n    else:\n        print('Other number')\n```"
-    },
-    {
-      "question": "How do you manually increment a counter in a while loop?",
-      "answer": "You manually increment a counter by using an assignment operation inside the loop.\n\nKey Point: Counters must be manually updated in `while` loops.\n\nExample:\n```\ncount = 0\nwhile count < 5:\n    print(count)\n    count += 1\n```"
+      "question": "Horses Make Farmers Rich",
+      "answer": "H - Higher-order Functions: Functions that accept other functions as arguments\nM - map(): Apply a function to each item in an iterable\nF - filter(): Filter items based on a condition\nR - reduce(): Apply a function cumulatively to reduce an iterable to a single value\n\nUse Case: Higher-order functions allow for more concise and functional programming styles, often replacing traditional loops.\n\n```\nfrom functools import reduce\n\nnumbers = [1, 2, 3, 4, 5]\n\n# map example\ndoubled = list(map(lambda x: x * 2, numbers))\nprint(f\"Doubled: {doubled}\")\n\n# filter example\neven = list(filter(lambda x: x % 2 == 0, numbers))\nprint(f\"Even numbers: {even}\")\n\n# reduce example\nsum_all = reduce(lambda x, y: x + y, numbers)\nprint(f\"Sum of all numbers: {sum_all}\")\n\n# Output:\n# Doubled: [2, 4, 6, 8, 10]\n# Even numbers: [2, 4]\n# Sum of all numbers: 15\n```"
     }
   ],
 
-  pythonFunctions: [
+  oop: [
     {
-      "question": "How do you define a function in Python?",
-      "answer": "You define a function in Python using the `def` keyword, followed by the function name and parentheses `()`. The function body is indented.\n\nKey Point: Functions allow code reuse.\n\nExample:\n```\ndef my_function():\n    print('Hello, World!')\n```"
+      "question": "Cats Jump Around Happily",
+      "answer": "C - Classes: Blueprints for creating objects\nJ - Jump: Objects are instances of classes\nA - Attributes: Classes define attributes and behavior\nH - Happy: Objects \"instantiate\" from the class\n\nUse Case: Classes are used to create custom data types with their own attributes and methods.\n\n```\nclass Car:\n    def __init__(self, brand):\n        self.brand = brand\n\nmy_car = Car(\"Toyota\")\nprint(my_car.brand)\n# Output: Toyota\n```"
     },
     {
-      "question": "What does the return statement do in a function?",
-      "answer": "The return statement is used to exit a function and send a value back to the caller.\n\nKey Point: `return` sends data back from a function.\n\nExample:\n```\ndef add(a, b):\n    return a + b\n```"
+      "question": "Ice Creams Are Yummy",
+      "answer": "I - Instance Variables: Belong to each instance\nC - Class Variables: Shared across all instances\nA - Access: Use self to access instance variables\nY - Yield: Class variables apply to all objects\n\nUse Case: Instance variables allow each object to have its own data, while class variables share data across all instances.\n\n```\nclass Car:\n    wheels = 4  # Class variable\n    def __init__(self, brand):\n        self.brand = brand  # Instance variable\n\nmy_car = Car(\"Toyota\")\nyour_car = Car(\"Honda\")\nprint(my_car.brand, my_car.wheels)\nprint(your_car.brand, your_car.wheels)\n# Output:\n# Toyota 4\n# Honda 4\n```"
     },
     {
-      "question": "Can a function return multiple values in Python?",
-      "answer": "Yes, a function can return multiple values by returning them as a tuple.\n\nKey Point: Multiple values are returned as a tuple.\n\nExample:\n```\ndef get_coordinates():\n    return (10, 20)\n```"
+      "question": "Monkeys In School Climb",
+      "answer": "M - Methods: Functions that belong to a class\nI - Instance Methods: Operate on an instance\nS - Static Methods: Independent of class/instance\nC - Class Methods: Operate on class data\n\nUse Case: Different types of methods allow for various operations within a class, from instance-specific to class-wide operations.\n\n```\nclass Math:\n    @staticmethod\n    def add(x, y):\n        return x + y\n\nprint(Math.add(2, 3))\n# Output: 5\n```"
     },
     {
-      "question": "What is the difference between return and print in a function?",
-      "answer": "`return` sends a value back to the caller and terminates the function, while `print` simply outputs a value to the console without affecting the function's flow or return value."
+      "question": "Self Helps Organize Classes",
+      "answer": "S - self: Refers to the instance of the class\nH - Helper: Used to access instance attributes and methods\nO - Organize: Mandatory in instance methods\nC - Class: self differentiates instance methods from class methods\n\nUse Case: 'self' allows methods to access and modify instance-specific data.\n\n```\nclass Car:\n    def __init__(self, brand):\n        self.brand = brand\n\n    def start(self):\n        return f\"{self.brand} started\"\n\nmy_car = Car(\"Toyota\")\nprint(my_car.start())\n# Output: Toyota started\n```"
     },
     {
-      "question": "What is a function argument in Python?",
-      "answer": "A function argument is a value passed to a function when it is called. Arguments are placed inside the parentheses of the function call.\n\nKey Point: Arguments are inputs to functions.\n\nExample:\n```\ndef greet(name):\n    print(f'Hello, {name}')\n```"
+      "question": "Cows Need Immediate Fields",
+      "answer": "C - Constructors: Special method __init__ runs when an object is created\nN - New Object: Automatically initializes the new object\nI - Instance: Initializes instance attributes\nF - Fields: Sets up fields or data\n\nUse Case: Constructors allow you to initialize object attributes when the object is created.\n\n```\nclass Car:\n    def __init__(self, brand, color):\n        self.brand = brand\n        self.color = color\n\nmy_car = Car(\"Toyota\", \"Red\")\nprint(f\"My car is a {my_car.color} {my_car.brand}\")\n# Output: My car is a Red Toyota\n```"
     },
     {
-      "question": "What is a default argument in Python?",
-      "answer": "A default argument is a parameter that assumes a default value if no argument is passed for it when the function is called.\n\nKey Point: Default arguments allow function flexibility.\n\nExample:\n```\ndef greet(name='John'):\n    print(f'Hello, {name}')\n```"
+      "question": "Insects Fly Around Trees",
+      "answer": "I - Inheritance: One class derives from another\nF - Father Class: The base class\nA - Adding: Derived classes can add new behavior\nT - Tree: Hierarchical class structure\n\nUse Case: Inheritance allows you to create new classes based on existing classes, promoting code reuse.\n\n```\nclass Animal:\n    def speak(self):\n        return \"Animal sound\"\n\nclass Dog(Animal):\n    def speak(self):\n        return \"Bark\"\n\ndog = Dog()\nprint(dog.speak())\n# Output: Bark\n```"
     },
     {
-      "question": "What are keyword arguments in Python functions?",
-      "answer": "Keyword arguments are arguments that are passed to a function using the parameter names explicitly.\n\nKey Point: Keyword arguments make function calls clearer.\n\nExample:\n```\ndef greet(name, message):\n    print(f'{message}, {name}')\ngreet(name='Alice', message='Good morning')\n```"
+      "question": "Polly Overrides Harry's Hat",
+      "answer": "P - Polymorphism: Objects of different types respond to the same method call\nO - Overriding: Derived classes can override methods of the base class\nH - Hierarchy: Supports different class hierarchies\nH - Handling: The same method works on different object types\n\nUse Case: Polymorphism allows you to use objects of different classes through a common interface.\n\n```\nclass Animal:\n    def speak(self):\n        return \"Animal sound\"\n\nclass Cat(Animal):\n    def speak(self):\n        return \"Meow\"\n\nclass Dog(Animal):\n    def speak(self):\n        return \"Bark\"\n\nanimals = [Cat(), Dog()]\nfor animal in animals:\n    print(animal.speak())\n# Output:\n# Meow\n# Bark\n```"
     },
     {
-      "question": "What is the difference between positional arguments and keyword arguments?",
-      "answer": "Positional arguments are passed to a function in the order they are defined, while keyword arguments are passed by explicitly naming the parameters."
+      "question": "Encapsulate Big Private Apples",
+      "answer": "E - Encapsulation: Protect internal state of the object\nB - Boundaries: Methods act as boundaries for data\nP - Private Attributes: Attributes can be private using _ or __\nA - Access Control: Limits external access to the object's data\n\nUse Case: Encapsulation helps in hiding the internal details of a class and protecting data from unauthorized access.\n\n```\nclass Car:\n    def __init__(self, brand):\n        self.__brand = brand  # Private attribute\n\n    def get_brand(self):\n        return self.__brand\n\nmy_car = Car(\"Toyota\")\nprint(my_car.get_brand())\n# Output: Toyota\n```"
     },
     {
-      "question": "What are *args in a function definition?",
-      "answer": "`*args` allows a function to accept a variable number of positional arguments. The arguments are passed as a tuple.\n\nKey Point: `*args` makes functions flexible.\n\nExample:\n```\ndef sum_numbers(*args):\n    return sum(args)\n```"
+      "question": "Abstract Shapes Create Designs",
+      "answer": "A - Abstraction: Hides implementation details\nS - Shape: Define abstract methods in base classes\nC - Create: Subclasses implement these methods\nD - Design: Encourages designing flexible systems\n\nUse Case: Abstraction allows you to define a common interface for a set of subclasses, enforcing certain methods to be implemented.\n\n```\nfrom abc import ABC, abstractmethod\n\nclass Animal(ABC):\n    @abstractmethod\n    def speak(self):\n        pass\n\nclass Dog(Animal):\n    def speak(self):\n        return \"Bark\"\n\ndog = Dog()\nprint(dog.speak())\n# Output: Bark\n```"
     },
     {
-      "question": "What are **kwargs in a function definition?",
-      "answer": "`**kwargs` allows a function to accept a variable number of keyword arguments. The arguments are passed as a dictionary.\n\nKey Point: `**kwargs` allows dynamic keyword arguments.\n\nExample:\n```\ndef print_info(**kwargs):\n    for key, value in kwargs.items():\n        print(f'{key}: {value}')\n```"
-    },
-    {
-      "question": "Can you use *args and **kwargs in the same function?",
-      "answer": "Yes, you can use both `*args` and `**kwargs` in the same function. `*args` must come before `**kwargs` in the function definition.\n\nKey Point: Use both for ultimate flexibility.\n\nExample:\n```\ndef display_info(*args, **kwargs):\n    print(args)\n    print(kwargs)\n```"
-    },
-    {
-      "question": "What is the benefit of using *args in a function?",
-      "answer": "The benefit of using `*args` is that it allows the function to accept any number of positional arguments, making the function more flexible."
-    },
-    {
-      "question": "What is the benefit of using **kwargs in a function?",
-      "answer": "`**kwargs` allows the function to handle a variable number of keyword arguments, providing flexibility when you don’t know the exact arguments in advance."
-    },
-    {
-      "question": "How do you specify a return type for a function in Python?",
-      "answer": "You can specify the return type of a function using type hints. However, this does not enforce the return type.\n\nKey Point: Type hints improve code readability.\n\nExample:\n```\ndef add(a: int, b: int) -> int:\n    return a + b\n```"
-    },
-    {
-      "question": "What happens if a function does not have a return statement?",
-      "answer": "If a function does not have a return statement, it returns `None` by default."
-    },
-    {
-      "question": "How do you call a function with arguments in Python?",
-      "answer": "You call a function with arguments by passing the values in parentheses after the function name.\n\nKey Point: Call functions by specifying arguments.\n\nExample:\n```\ndef greet(name):\n    print(f'Hello, {name}')\ngreet('Alice')\n```"
-    },
-    {
-      "question": "What is function recursion in Python?",
-      "answer": "Function recursion occurs when a function calls itself to solve a smaller instance of the same problem.\n\nKey Point: Recursion is useful for divide-and-conquer problems.\n\nExample:\n```\ndef factorial(n):\n    if n == 1:\n        return 1\n    else:\n        return n * factorial(n - 1)\n```"
-    },
-    {
-      "question": "Can you modify a global variable inside a function?",
-      "answer": "Yes, you can modify a global variable inside a function using the `global` keyword.\n\nKey Point: The `global` keyword allows global variable modification.\n\nExample:\n```\nx = 10\ndef modify_global():\n    global x\n    x = 20\n```"
-    },
-    {
-      "question": "How do you create an anonymous function in Python?",
-      "answer": "You can create an anonymous function using the `lambda` keyword. Lambda functions are used for simple, single-expression functions.\n\nKey Point: `lambda` creates concise anonymous functions.\n\nExample:\n```\nadd = lambda a, b: a + b\n```"
-    },
-    {
-      "question": "Can a function return another function?",
-      "answer": "Yes, a function can return another function in Python.\n\nKey Point: Functions can return other functions.\n\nExample:\n```\ndef outer_function():\n    def inner_function():\n        return 'Hello from inner'\n    return inner_function\n```"
-    },
-    {
-      "question": "What happens if you pass too many arguments to a function?",
-      "answer": "If a function is called with more arguments than it is defined to accept, Python raises a `TypeError`."
-    },
-    {
-      "question": "Can you have a function with no parameters in Python?",
-      "answer": "Yes, you can define a function with no parameters in Python.\n\nKey Point: Functions don't always need parameters.\n\nExample:\n```\ndef greet():\n    print('Hello, World!')\n```"
-    },
-    {
-      "question": "What is the purpose of function docstrings in Python?",
-      "answer": "Docstrings are used to provide documentation about a function. They are placed immediately after the function definition and can be accessed using the `__doc__` attribute.\n\nKey Point: Use docstrings to document your code.\n\nExample:\n```\ndef greet():\n    '''This function greets the user.'''\n    print('Hello!')\n```"
-    },
-    {
-      "question": "What is function overloading in Python?",
-      "answer": "Python does not support traditional function overloading (having multiple functions with the same name but different parameters). However, you can achieve similar behavior using default arguments or `*args` and `**kwargs`."
-    },
-    {
-      "question": "Can you assign a function to a variable in Python?",
-      "answer": "Yes, you can assign a function to a variable and call it using that variable.\n\nKey Point: Functions can be treated as variables.\n\nExample:\n```\ndef greet():\n    print('Hello')\nsay_hello = greet\nsay_hello()\n```"
-    },
-    {
-      "question": "How do you return multiple values from a function?",
-      "answer": "You can return multiple values by separating them with commas, and they will be returned as a tuple.\n\nKey Point: Functions can return multiple values as a tuple.\n\nExample:\n```\ndef get_coordinates():\n    return 10, 20\nx, y = get_coordinates()\n```"
-    },
-    {
-      "question": "What is a higher-order function?",
-      "answer": "A higher-order function is a function that takes another function as an argument or returns a function as its result.\n\nKey Point: Higher-order functions manipulate other functions.\n\nExample:\n```\ndef apply_function(func, value):\n    return func(value)\n```"
-    },
-    {
-      "question": "Can you use a function as an argument in Python?",
-      "answer": "Yes, you can pass a function as an argument to another function in Python.\n\nKey Point: Functions can be passed as arguments.\n\nExample:\n```\ndef greet(name):\n    return f'Hello, {name}'\ndef call_function(func, value):\n    return func(value)\nprint(call_function(greet, 'Alice'))\n```"
-    },
-    {
-      "question": "How do you define a function with keyword-only arguments?",
-      "answer": "You can enforce keyword-only arguments by placing a `*` in the function definition.\n\nKey Point: Keyword-only arguments increase clarity.\n\nExample:\n```\ndef func(a, *, b):\n    return a + b\n```"
-    },
-    {
-      "question": "What happens if you use return without a value in a function?",
-      "answer": "If you use return without a value, the function returns `None`.\n\nKey Point: `return` without a value returns `None`.\n\nExample:\n```\ndef do_nothing():\n    return\nprint(do_nothing())  # Output: None\n```"
+      "question": "Special People Read Strings",
+      "answer": "S - Special Methods: Methods like __str__ and __repr__ provide custom behavior for special functions\nP - Print: __str__ controls how objects are printed\nR - Representation: __repr__ provides an unambiguous string representation\nS - Strings: These methods work with string representations of objects\n\nUse Case: Special methods allow you to define how objects of your class behave in various Python operations.\n\n```\nclass Car:\n    def __init__(self, brand):\n        self.brand = brand\n\n    def __str__(self):\n        return f\"Car brand: {self.brand}\"\n\nmy_car = Car(\"Toyota\")\nprint(my_car)\n# Output: Car brand: Toyota\n```"
     }
   ],
   pythonModules: [
