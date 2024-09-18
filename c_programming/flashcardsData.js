@@ -1,5 +1,5 @@
 const topicTitles = {
-  pythonBasics : "Python Basics",
+  cProgramming : "CC4E Chapter 1",
   pythonDataStructures: "Python Data Structures",
   functions : "Python Functions",
   oop: "Object Oriented Programming",
@@ -15,46 +15,46 @@ const topicTitles = {
 };
 
 const flashcardsData = {
-  pythonBasics: [
+  cProgramming: [
     {
-      "question": "IEND: Iguanas Eat New Ducks",
-      "answer": "I - Interpreted: Python is an interpreted language with dynamic typing, meaning you don't need to declare types\nE - Execution: Code is executed line by line\nN - No Compile: Python doesn't need compilation\nD - Dynamic: Variables can change types during runtime\n\n```\nx = 5  # int\nx = \"Hello\"  # str (dynamic typing)\nprint(x)\n```"
+      "question": "CPDF: Cats Play During Fall",
+      "answer": "1.1 Getting Started\n\nCode: Write the C program.\nExample:\n```\n#include <stdio.h>\nint main() {\n    printf(\"hello, world\\n\");\n    return 0;\n}\n```\n\nPrint: Use printf() to display output.\nExample:\n```\nprintf(\"hello, world\\n\");\n```\n\nDebug: Remove parts of the code to see compiler error messages.\nExample:\n```\n// Removing #include <stdio.h>\nint main() {\n    printf(\"hello, world\\n\");\n    return 0;\n}\n```\n\nFinish: Compile and run the program.\nExample:\n```\ngcc hello.c -o hello\n./hello\n```"
     },
     {
-      "question": "SITS: Snakes Indent To Survive",
-      "answer": "S - Syntax: Python uses indentation (tabs or spaces) to define blocks of code\nI - Indentation: Indentation level must be consistent\nT - Tabs or Spaces: Python accepts both, but don't mix\nS - Structure: Block structures like loops and conditionals rely on indentation\n\n```\nif True:\n    print(\"Indented Block\")\n```"
+      "question": "VCUP: Very Cool Umbrellas Protect",
+      "answer": "1.2 Variables and Arithmetic\n\nVariables: Declare and initialize variables.\nExample:\n```\nint lower = 0, upper = 300, step = 20;\n```\n\nCalculate: Perform arithmetic calculations like temperature conversion.\nExample:\n```\nfloat fahr = lower;\nfloat celsius = (5.0 / 9.0) * (fahr - 32.0);\n```\n\nUnderstand: Recognize the difference between integer and floating-point division.\nExample:\n```\nint result_int = 5 / 9; // Integer division: 0\nfloat result_float = 5.0 / 9.0; // Floating-point division: 0.555...\n```\n\nPrint: Output formatted results using printf().\nExample:\n```\nprintf(\"%4.0f %6.1f\\n\", fahr, celsius);\n```"
     },
     {
-      "question": "VDBF: Vultures Dance Before Flight",
-      "answer": "V - Variables: Store data values\nD - Data Types: Python handles int, float, str, and bool types\nB - Booleans: True or False\nF - Float: Decimal numbers\n\n```\nx = 10  # int\ny = 3.14  # float\nname = \"Alice\"  # str\nactive = True  # bool\n```"
+      "question": "LARS: Lions Are Really Strong",
+      "answer": "1.3 The For Statement\n\nLoop: Use the for loop for repeated actions.\nExample:\n```\nfor (int fahr = 0; fahr <= 300; fahr += 20) {\n    printf(\"%4d %6.1f\\n\", fahr, (5.0 / 9.0) * (fahr - 32));\n}\n```\n\nAction: Setup with initialization, condition, and increment.\nExample:\n```\nfor (initialization; condition; increment) {\n    // loop body\n}\n```\n\nReverse: Print in reverse order (Exercise 1-5).\nExample:\n```\nfor (int fahr = 300; fahr >= 0; fahr -= 20) {\n    printf(\"%4d %6.1f\\n\", fahr, (5.0 / 9.0) * (fahr - 32));\n}\n```\n\nStructure: Simplify repeated actions with for loops.\nExample:\n```\nfor (int i = 0; i < 10; i++) {\n    printf(\"%d \", i);\n}\n```"
     },
     {
-      "question": "CDNE: Cats Draw Neat Explanations",
-      "answer": "C - Comments: Use # to add explanations for the code\nD - Documentation: Use \"\"\" \"\"\" for multi-line documentation\nN - Notes: Comments don't affect code execution\nE - Explain: Keep your code understandable with comments\n\n```\n# This is a single-line comment\n\"\"\"\nThis is a multi-line comment\nused for documentation.\n\"\"\"\n```"
+      "question": "SCNF: Sunny Cookies Never Fail",
+      "answer": "1.4 Symbolic Constants\n\nSymbols: Use #define to declare symbolic constants.\nExample:\n```\n#define LOWER 0\n#define UPPER 300\n#define STEP 20\n```\n\nConstants: Replace \"magic numbers\" with named constants.\nExample:\n```\nfor (int fahr = LOWER; fahr <= UPPER; fahr += STEP)\n```\n\nNames: Give constants meaningful names to improve readability.\nExample:\n```\n#define MAX_ARRAY_SIZE 100\nint arr[MAX_ARRAY_SIZE];\n```\n\nFinalize: Use symbolic constants in your loop.\nExample:\n```\nfor (int fahr = LOWER; fahr <= UPPER; fahr += STEP) {\n    printf(\"%4d %6.1f\\n\", fahr, (5.0 / 9.0) * (fahr - 32));\n}\n```"
     },
     {
-      "question": "PBIN: Penguins Bring Input Nicely",
-      "answer": "P - Print: Use print() to display information\nB - Basic I/O: Input is gathered with input()\nI - Input: Input is always treated as a string\nN - Nicely Output: Use print statements to format outputs\n\n```\nname = input(\"Enter your name: \")\nprint(f\"Hello, {name}\")\n```"
+      "question": "GPEC: Green Peas Eat Carrots",
+      "answer": "1.5 Character Input and Output\n\nGet: Use getchar() to read a character from input.\nExample:\n```\nint c;\nc = getchar();\n```\n\nPut: Use putchar(c) to output the character read.\nExample:\n```\nputchar(c);\n```\n\nEOF: Read input until EOF (End of File).\nExample:\n```\nwhile ((c = getchar()) != EOF)\n    putchar(c);\n```\n\nCount: Write a program to count blanks, tabs, and newlines (Exercise 1-6).\nExample:\n```\nint blanks = 0, tabs = 0, newlines = 0;\nwhile ((c = getchar()) != EOF) {\n    if (c == ' ') ++blanks;\n    else if (c == '\\t') ++tabs;\n    else if (c == '\\n') ++newlines;\n}\nprintf(\"Blanks: %d, Tabs: %d, Newlines: %d\\n\", blanks, tabs, newlines);\n```"
     },
     {
-      "question": "AOEW: Apples Oranges Eat Well",
-      "answer": "A - Arithmetic: Python supports basic math operations like +, -, *, and /\nO - Operations: Arithmetic operators like +, -, *, and /\nE - Exponent: Use ** for exponentiation\nW - Whole Division: Use // for integer division\n\n```\na = 10 + 5\nb = 10 ** 2  # Exponentiation\nc = 9 // 2  # Integer division\n```"
+      "question": "AEHD: Ants Enjoy Happy Days",
+      "answer": "1.6 Arrays\n\nArray: A collection of variables of the same type stored in a contiguous memory location.\nElements: Individual values stored in an array.\nHold: Arrays hold data in sequential order.\nData: Arrays store data like integers, floats, or characters.\n\nExample:\n```\n#include <stdio.h>\n\nint main() {\n    int arr[5] = {1, 2, 3, 4, 5}; // Array declaration and initialization\n    for (int i = 0; i < 5; i++) {\n        printf(\"%d \", arr[i]);  // Accessing array elements\n    }\n    return 0;\n}\n\n// Output: 1 2 3 4 5\n```"
     },
     {
-      "question": "CLOM: Cats Love Oranges More",
-      "answer": "C - Comparison: Operators like ==, !=, <, and > compare values\nL - Logical: Combine conditions with and, or, not\nO - Operators: == checks equality, > checks greater than\nM - More Conditions: Logical operators help with combining conditions\n\n```\na = 5\nprint(a > 3 and a < 10)  # True\n```"
+      "question": "FCRV: Friendly Cats Run Valiantly",
+      "answer": "1.7 Functions\n\nFunction: A block of code that performs a task.\nCall: Functions can be called (invoked) in the program.\nReturn: Functions can return a value.\nValues: Functions accept values called arguments.\n\nExample:\n```\n#include <stdio.h>\n\nint square(int x) {   // Function definition\n    return x * x;     // Returning a value\n}\n\nint main() {\n    int result = square(5);  // Function call\n    printf(\"%d\", result);    // Print the result\n    return 0;\n}\n\n// Output: 25\n```"
     },
     {
-      "question": "IEEC: If Elsa Eats Cookies",
-      "answer": "I - If: Executes a block of code if a condition is True\nE - Elif: Checks another condition if the previous if condition was False\nE - Else: Executes if all previous conditions were False\nC - Compare: Use comparison operators within conditionals\n\n```\nx = 7\nif x > 10:\n    print(\"Big\")\nelif x > 5:\n    print(\"Medium\")\nelse:\n    print(\"Small\")\n```"
+      "question": "APVS: Apples Pears Vanilla Strawberries",
+      "answer": "1.8 Arguments - Call by Value\n\nArguments: Values passed into functions.\nPass: Arguments are passed by value in C.\nValue: Function gets a copy of the argument, not the original.\nSafely: Original values are not modified.\n\nExample:\n```\n#include <stdio.h>\n\nvoid modify(int x) {  // Function accepting argument by value\n    x = x + 10;       // Modifies the local copy of x\n}\n\nint main() {\n    int num = 5;\n    modify(num);      // Passes value of num (5), not the reference\n    printf(\"%d\", num); // Original num remains unchanged\n    return 0;\n}\n\n// Output: 5\n```"
     },
     {
-      "question": "LWTC: Lions Walk To Catch",
-      "answer": "L - Loops: Python uses loops to repeat code\nW - While: Loops that run as long as a condition is True\nT - Times: Use for loops to iterate a set number of times or over sequences\nC - Continue: Use loops to control flow and repetition\n\n```\nfor i in range(5):\n    print(i)\nwhile i < 5:\n    i += 1\n```"
+      "question": "CFSF: Cheery Friends Smile Freely",
+      "answer": "1.9 Character Arrays\n\nCharacters: Arrays of characters are used to form strings.\nForm: Strings are formed using character arrays.\nStrings: A sequence of characters terminated by a null character.\nFast: Operations on character arrays are fast and efficient.\n\nExample:\n```\n#include <stdio.h>\n\nint main() {\n    char str[] = \"Hello\";    // Character array (string)\n    printf(\"%s\", str);       // Printing the string\n    return 0;\n}\n\n// Output: Hello\n```"
     },
     {
-      "question": "BCPC: Bunnies Can Play Calmly",
-      "answer": "B - Break: Stop the loop early\nC - Continue: Skip the current iteration\nP - Pass: Do nothing, just move on\nC - Control: Use break, continue, and pass to manage loop flow\n\n```\nfor i in range(5):\n    if i == 2:\n        continue\n    if i == 4:\n        break\n    print(i)\n```"
+      "question": "GVSA: Good Vets Save Animals",
+      "answer": "1.10 Scope; External Variables\n\nGlobal: External variables are declared outside any function.\nVariables: Global variables are accessible across multiple functions.\nStay: Global variables remain in memory for the program's lifetime.\nAccessible: They are accessible from any function in the file.\n\nExample:\n```\n#include <stdio.h>\n\nint globalVar = 10;  // Global variable\n\nvoid printGlobal() {\n    printf(\"%d\", globalVar);  // Access global variable\n}\n\nint main() {\n    printGlobal();  // Function call\n    return 0;\n}\n\n// Output: 10\n```"
     }
 
   ],

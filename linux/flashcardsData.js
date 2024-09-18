@@ -5,18 +5,13 @@ const topicTitles = {
   Chapter1_BasicCommands: "Chapter 1 Commands:",
   Chapter2_AdvancedCommands: "Advanced Commands",
   Chapter3_SystemAdministration: "System Administration",
-  Chapter4_NetworkAdministration: "Network Administration"
+  Chapter4_NetworkAdministration: "Network Administration",
+  systemManagement: "1.0 System Management"
+
 
 };
 
-{
-    "question": "Curious Cats Enjoy Good Laughs",
-    "answer": "C - Compare: Check if things are the same or different\nC - Cats: Things we're comparing\nE - Equal to: Same as (==)\nG - Greater than: Bigger than (>)\nL - Less than: Smaller than (<)\n\n```\nx = 5\ny = 10\nprint(x == y)  # Shows: False\nprint(x < y)   # Shows: True\nprint(x > y)   # Shows: False\n```"
-},
-{
-    "question": "Awesome Owls Nap Daily",
-    "answer": "A - And: Both things must be true\nO - Or: At least one thing must be true\nN - Not: The opposite is true\nD - Decide: Figure out if something is true or false\n\n```\nis_sunny = True\nis_warm = False\n\nprint(is_sunny and is_warm)  # Shows: False\nprint(is_sunny or is_warm)   # Shows: True\nprint(not is_sunny)          # Shows: False\n```"
-}
+const flashcardsData = {
   Chapter1_System_Management_Domain: [
   { question: "Which command is used to load a module and its dependencies automatically?", answer: "A.modprobe - Loads kernel modules and resolves dependencies." },
 
@@ -77,7 +72,7 @@ const topicTitles = {
   { question: "Which option to the mount command will mount all filesystems that are currently available in /etc/fstab?", answer: "C.-a - Mounts all filesystems listed in /etc/fstab." },
 
   { question: "Which option of the systemctl command will change a service so that it runs on the next boot of the system?", answer: "A.enable - Enables a service to start at boot." }
-  ],
+],
 
   advancedSSH: [
     {
@@ -325,8 +320,31 @@ const topicTitles = {
 
       { question: "Subnets Subdivide Sensibly.", answer: "ipcalc - perform simple manipulation of IP addresses\nsipcalc - console based IP subnet calculator\nsubnetcalc - IPv4/IPv6 subnet calculator\nnetmask - helps determine network masks\ncidr - classless inter-domain routing calculator" },
 
-      { question: "Packets Pass Purposefully.", answer: "tcpdump - dump traffic on a network\nwireshark - interactively dump and analyze network traffic\nngrep - network packet analyzer\nscapy - packet manipulation program\ntshark - dump and analyze network traffic" }
-      ]
+      { question: "Packets Pass Purposefully.", answer: "tcpdump - dump traffic on a network\nwireshark - interactively dump and analyze network traffic\nngrep - network packet analyzer\nscapy - packet manipulation program\ntshark - dump and analyze network traffic" },
+
+  ],
+
+    systemManagement: [
+    {
+        "question": "Brave Dogs Eat Odd Leaves",
+        "answer": "/boot: Boot files for system startup\n/dev: Device files for hardware\n/etc: Etcetera, system-wide configurations\n/opt: Optional software packages\n/lib: Libraries for system functionality\n\n[Rest of the content remains the same as in the original]"
+    },
+    {
+        "question": "Lions Defend Every Outpost Bravely",
+        "answer": "/lib: Libraries for shared system resources\n/dev: Device files for hardware access\n/etc: Etcetera, configuration files\n/opt: Optional software installations\n/bin: Binaries for essential commands\n\n[Rest of the content remains the same as in the original]"
+    },
+    {
+        "question": "Silly Hippos Make Merry Robots",
+        "answer": "/sbin: System binaries for administration\n/home: Home directories for users\n/media: Media mounts for removable devices\n/mnt: Mount point for temporary filesystems\n/root: Root user's home directory\n\n[Rest of the content remains the same as in the original]"
+    },
+    {
+        "question": "Tigers Use Very Powerful Senses",
+        "answer": "/tmp: Temporary file storage\n/usr: User system resources and applications\n/var: Variable data like logs and databases\n/proc: Process and hardware information\n/sys: System devices and hardware configuration\n\n[Rest of the content remains the same as in the original]"
+    },
+    linuxPlusModule1: [
+    
+]
+]
 
 
   /*  whatAreAlgorithms : [
