@@ -1,6 +1,6 @@
 const topicTitles = {
   cProgramming : "CC4E Chapter 1",
-  pythonDataStructures: "Python Data Structures",
+  cProgrammingOverview: "C Programming Overview",
   functions : "Python Functions",
   oop: "Object Oriented Programming",
   sortingAlgorithms: "Sorting Algorithms",
@@ -59,42 +59,46 @@ const flashcardsData = {
 
   ],
 
-  pythonDataStructures: [
+  cProgrammingOverview: [
     {
-      "question": "Lions Chase Smart Monkeys",
-      "answer": "L - Lists: Mutable, ordered collection of items. Supports indexing, slicing, and various methods\nC - Creation: Use square brackets to create\nS - Slicing: Extract sub-lists using list[start:end]\nM - Methods: Common methods include append(), remove(), and sort()\n\n```\nmy_list = [1, 2, 3]\nmy_list.append(4)  # Adds 4 to the list\nprint(my_list[1:3])  # Slicing\n```"
+      "question": "Cats Run Fast Everywhere",
+      "answer": "Introduction to C:\nC - Compilers and systems were built using C\nR - Ritchie created C\nF - Fast language for system programming\nE - Everywhere, C runs on multiple platforms\n\n```\n#include <stdio.h>\nint main() {\n   printf(\"Hello, World\\n\");\n   return 0;\n}\n```"
     },
     {
-      "question": "Tigers Inhabit Only Trees",
-      "answer": "T - Tuples: Immutable, ordered collection of items\nI - Immutability: Cannot change after creation\nO - Ordered: Items remain in the order they were added\nT - Tuple Creation: Use parentheses to create a tuple\n\n```\nmy_tuple = (1, 2, 3)\nprint(my_tuple[0])\n```"
+      "question": "Open Compilers Speed Networks",
+      "answer": "Why Use C?:\nO - Operating Systems like UNIX are written in C\nC - Compilers for many languages are developed in C\nS - Speed: C is fast and efficient\nN - Networks: C builds network utilities\n\n```\n#include <stdio.h>\nint main() {\n   int a, b, sum;\n   printf(\"Enter two numbers: \");\n   scanf(\"%d %d\", &a, &b);\n   sum = a + b;\n   printf(\"Sum: %d\\n\", sum);\n   return 0;\n}\n```"
     },
     {
-      "question": "Dogs Know Many Secrets",
-      "answer": "D - Dictionaries: Key-value pairs, unordered collection\nK - Keys: Unique identifiers for each item\nM - Methods: Common methods include get(), items(), and keys()\nS - Search: Access values using their keys\n\n```\nmy_dict = {\"name\": \"Alice\", \"age\": 25}\nprint(my_dict.get(\"name\"))\n```"
+      "question": "Efficient Programs Handle Stuff",
+      "answer": "Advantages of C:\nE - Efficient: C is fast and efficient\nP - Portable: C programs run on multiple platforms\nH - Hardware: C allows hardware control\nS - Structured: C supports structured programming\n\n```\n#include <stdio.h>\n#define PI 3.14159\nint main() {\n   float radius = 5.0;\n   float area = PI * radius * radius;\n   printf(\"Area of the circle: %f\\n\", area);\n   return 0;\n}\n```"
     },
     {
-      "question": "Squirrels Operate Mysteriously Often",
-      "answer": "S - Sets: Unordered collection with no duplicates\nO - Operations: Union (|), intersection (&), and difference (-)\nM - Methods: Common methods include add(), remove(), and clear()\nO - Objects: Sets only store unique items\n\n```\nmy_set = {1, 2, 3}\nmy_set.add(4)\n```"
+      "question": "Memory Leaks Cause Hassles",
+      "answer": "Drawbacks of C:\nM - Manual Memory management is required\nL - Lacks Object-Oriented Programming features\nC - Careful resource handling needed\nH - Handling errors manually can be tricky\n\n```\n#include <stdio.h>\n#include <stdlib.h>\nint main() {\n   int *ptr;\n   ptr = (int*)malloc(sizeof(int));\n   if (ptr == NULL) {\n      printf(\"Memory allocation failed\\n\");\n      return 1;\n   }\n   *ptr = 42;\n   printf(\"Value: %d\\n\", *ptr);\n   free(ptr);\n   return 0;\n}\n```"
     },
     {
-      "question": "Lemons Create Quick Drinks",
-      "answer": "L - List Comprehensions: Concise way to create lists\nC - Conditions: Can include conditions to filter items\nQ - Quick: Efficient, single-line expressions\nD - Dynamic: Build lists dynamically\n\n```\nsquares = [x ** 2 for x in range(5)]\n```"
+      "question": "Systems Create New Games",
+      "answer": "Applications of C:\nS - Systems programming uses C\nC - Compilers and language tools are built in C\nN - Networking software like routers are developed in C\nG - Games and game engines are built in C\n\n```\n#include <stdio.h>\n#include <stdlib.h>\nint main() {\n   system(\"ls -l\");  // Executes a shell command in UNIX-like systems\n   return 0;\n}\n```"
     },
     {
-      "question": "Ducks Swim Far Quickly",
-      "answer": "D - Dictionary Comprehensions: Create dictionaries in a concise way\nS - Syntactic: Uses similar syntax to list comprehensions\nF - Filters: Can include filters and conditions\nQ - Quick: Efficient for building dictionaries\n\n```\nsquares_dict = {x: x ** 2 for x in range(5)}\n```"
+      "question": "Efficient Penguins Program Carefully",
+      "answer": "Advantages of C Language:\nE - Efficient: C is known for its high performance\nP - Portable: C programs can run on different platforms\nP - Pointers: C allows direct memory access\nC - Compact: C has a rich set of standard libraries\n\n```\n#include <stdio.h>\n\nint main() {\n    int x = 10;\n    printf(\"Hello, World! The value of x is: %d\\n\", x);\n    return 0;\n}\n```"
     },
     {
-      "question": "Snakes Move Silently Always",
-      "answer": "S - String Manipulation: Modify strings using methods like replace(), upper(), and lower()\nM - Methods: Common methods include split(), join(), and strip()\nS - Slicing: Slice strings like lists\nA - Attributes: Strings are immutable\n\n```\nmy_string = \"Hello, World\"\nprint(my_string.lower())\n```"
+      "question": "Memory Errors Occur Often",
+      "answer": "Drawbacks of C Language:\nM - Manual Memory Management: Developers must handle memory allocation\nE - Error Handling: No built-in exception handling\nO - Object-Oriented: Lacks OOP features\nO - Oversight: No automatic garbage collection\n\n```\n#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\n    int *ptr = (int*) malloc(sizeof(int));\n    *ptr = 42;\n    printf(\"Allocated value: %d\\n\", *ptr);\n    free(ptr);\n    return 0;\n}\n```"
     },
     {
-      "question": "Bears Know Many Facts",
-      "answer": "B - Basic Sequence Functions: Use len() for length, max() and min() for max/min values\nK - Keys: Useful for lists, tuples, and other sequences\nM - Methods: len(), max(), and min() are common\nF - Flexible: These functions work on most sequences\n\n```\nmy_list = [1, 2, 3]\nprint(len(my_list), max(my_list), min(my_list))\n```"
+      "question": "Operating Systems Create Network Programs",
+      "answer": "Applications of C Language:\nO - Operating Systems: C is used for OS development\nS - System Software: C is used for system-level programming\nC - Compilers: C is used to develop compilers\nN - Networking: C is used for network software\nP - Portable: C is used for cross-platform software\n\n```\n#include <stdio.h>\n\nint main() {\n    printf(\"C is used for Operating Systems, Compilers, and Networking software!\\n\");\n    return 0;\n}\n```"
     },
     {
-      "question": "Eagles Zip Through Valleys",
-      "answer": "E - Enumerate: Returns index and value when looping through sequences\nZ - Zip: Combines elements from multiple iterables\nT - Tuples: zip() returns tuples of paired elements\nV - Versatile: Works with lists, tuples, etc\n\n```\nmy_list = ['a', 'b', 'c']\nfor i, value in enumerate(my_list):\n    print(i, value)\n\nnumbers = [1, 2, 3]\nletters = ['a', 'b', 'c']\nprint(list(zip(numbers, letters)))\n```"
+      "question": "Include Main Code Please",
+      "answer": "Getting Started with C Programming (Structure):\nI - Include: Add necessary header files\nM - Main: Every C program starts with the main function\nC - Code: Organize code into functions\nP - Proper Ending: Return 0 in the main function\n\n```\n#include <stdio.h>\n\nint main() {\n    printf(\"Getting started with C programming!\\n\");\n    return 0;\n}\n```"
+    },
+    {
+      "question": "Functions Call Other Routines",
+      "answer": "Functions in C:\nF - Functions: Organize logic into reusable blocks\nC - Call by Value: Functions receive copies of arguments\nO - Organize: Functions help modularize the code\nR - Return: Functions can return values\n\n```\n#include <stdio.h>\n\nint add(int a, int b) {\n    return a + b;\n}\n\nint main() {\n    int sum = add(5, 10);\n    printf(\"Sum: %d\\n\", sum);\n    return 0;\n}\n```"
     }
   ],
 

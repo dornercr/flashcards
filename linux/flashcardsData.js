@@ -340,10 +340,13 @@ const flashcardsData = {
     {
         "question": "Tigers Use Very Powerful Senses",
         "answer": "/tmp: Temporary file storage\n/usr: User system resources and applications\n/var: Variable data like logs and databases\n/proc: Process and hardware information\n/sys: System devices and hardware configuration\n\n[Rest of the content remains the same as in the original]"
-    },
+    }
+    ],
     linuxPlusModule1: [
-    
-]
+    {
+        "question": "Tigers Use Very Powerful Senses",
+        "answer": "/tmp: Temporary file storage\n/usr: User system resources and applications\n/var: Variable data like logs and databases\n/proc: Process and hardware information\n/sys: System devices and hardware configuration\n\n[Rest of the content remains the same as in the original]"
+    },
 ]
 
 
