@@ -18,139 +18,139 @@ const topicTitles = {
 const flashcardsData = {
   intro: [
     {
-      "question": "WDML: What Does Machine Learning Do?",
+      "question": "WDML: Whales Dive, Machines Learn",
       "answer": "W - Work: Machine learning allows computers to perform tasks without explicit programming\nD - Data: Machine learning relies on data to learn patterns\nM - Model: The algorithm that processes the data to make predictions\nL - Learn: The model improves its performance based on experience\n\n```\nmodel.fit(X_train, y_train)\n```"
     },
     {
-      "question": "STML: Steps To Machine Learning",
+      "question": "STML: Squirrels Take Many Leaps",
       "answer": "S - Select: Select the appropriate algorithm based on your task\nT - Train: Train the model on your data\nM - Measure: Measure the performance of the model\nL - Learn: The model improves as it learns from more data\n\n```\nmodel = SomeModel()\nmodel.fit(X_train, y_train)\n```"
     },
     {
-      "question": "FTML: Fields That Use Machine Learning",
+      "question": "FTML: Frogs Travel Many Lands",
       "answer": "F - Finance: Predicting stock prices or credit scores\nT - Transportation: Autonomous vehicles and route optimization\nM - Medicine: Disease diagnosis and treatment recommendations\nL - Logistics: Predicting demand and managing supply chains\n\nMachine learning is used in various fields to solve real-world problems."
     },
     {
-      "question": "TPML: Types of Problems Machine Learning Solves",
+      "question": "TPML: Turtles Pace Many Laps",
       "answer": "T - Classification: Sorting data into categories\nP - Prediction: Predicting future outcomes based on historical data\nM - Clustering: Grouping similar data points\nL - Anomaly Detection: Detecting outliers or unusual patterns\n\nMachine learning models solve these types of problems."
     },
     {
-      "question": "SKML: Supervised vs. Unsupervised Machine Learning",
+      "question": "SKML: Snakes Know Many Lessons",
       "answer": "S - Supervised: Learns from labeled data (input-output pairs)\nK - Known: Labels are known for the training data\nM - Model: Model learns a mapping from input to output\nL - Labels: Supervised learning relies on labels to train the model\n\n```\nfrom sklearn.model_selection import train_test_split\nX_train, X_test, y_train, y_test = train_test_split(X, y)\n```"
     },
     {
-      "question": "UMSA: Unsupervised Machine Learning Algorithms",
+      "question": "UMSA: Unicorns Move Swiftly Always",
       "answer": "U - Unlabeled: Learns from unlabeled data\nM - Model: The model discovers hidden patterns or structures in the data\nS - Segmentation: Common use case like customer segmentation\nA - Algorithms: Clustering (k-Means), Dimensionality Reduction (PCA)\n\n```\nfrom sklearn.cluster import KMeans\nmodel = KMeans(n_clusters=3)\n```"
     },
     {
-      "question": "TPST: The Process of Supervised Training",
+      "question": "TPST: Tigers Prowl Slowly Today",
       "answer": "T - Train: The model is trained using labeled data\nP - Predict: The model predicts based on input data\nS - Score: Evaluate the model’s predictions using metrics\nT - Tune: Hyperparameters are tuned to improve performance\n\n```\nmodel.fit(X_train, y_train)\nmodel.score(X_test, y_test)\n```"
     },
     {
-      "question": "DMST: Data Must Be Structured",
+      "question": "DMST: Dogs Must Stay Trained",
       "answer": "D - Data: The foundation of machine learning\nM - Must: Data must be prepared and cleaned\nS - Structured: Organize data in a structured format (rows and columns)\nT - Transform: Feature engineering can transform raw data\n\n```\nfrom sklearn.preprocessing import StandardScaler\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X)\n```"
     },
     {
-      "question": "ELML: Evaluating Learning Models",
+      "question": "ELML: Eagles Learn Many Lessons",
       "answer": "E - Evaluate: Test the model on unseen data\nL - Loss: Loss function measures the error\nM - Metrics: Accuracy, Precision, Recall, and F1 Score are common metrics\nL - Learn: Model improves through feedback from performance evaluation\n\n```\nfrom sklearn.metrics import accuracy_score\nprint(accuracy_score(y_test, y_pred))\n```"
     },
     {
-      "question": "TTSM: Train-Test Split Method",
+      "question": "TTSM: Turtles Teach Snails Movement",
       "answer": "T - Train: Data is split into a training set to train the model\nT - Test: Data is also split into a test set to evaluate the model\nS - Split: Splitting helps prevent overfitting\nM - Model: The model is trained on training data and evaluated on test data\n\n```\nfrom sklearn.model_selection import train_test_split\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)\n```"
     },
     {
-      "question": "OTFL: Overfitting vs. Underfitting",
-      "answer": "O - Overfitting: The model memorizes training data and fails on new data\nT - Training: Happens when the model performs too well on training data\nF - Fit: The model is too complex and 'fits' the noise in the data\nL - Learn: Overfitting can be reduced by simplifying the model\n\n```\nmodel = DecisionTreeClassifier(max_depth=3)\n```"
+      "question": "OTFL: Owls Take Flight Low",
+      "answer": "O - Overfitting: The model memorizes training data and fails on new data\nT - Training: Happens when the model performs too well on training data\nF - Fit: The model is too complex and 'fits' the noise in the data\nL - Learn: Overfitting can be reduced by simplifying the model\n\n```python\nmodel = DecisionTreeClassifier(max_depth=3)\n```"
     },
     {
-      "question": "FMLC: Features in Machine Learning",
+      "question": "FMLC: Foxes Make Life Clear",
       "answer": "F - Features: Input variables used to make predictions\nM - Model: The model processes features to generate output\nL - Label: The output the model tries to predict in supervised learning\nC - Cleaning: Feature cleaning ensures data quality\n\n```\nX = data.drop(columns=['target'])\ny = data['target']\n```"
     },
     {
-      "question": "MMRL: Model Must Reduce Loss",
+      "question": "MMRL: Mice Must Run Lightly",
       "answer": "M - Model: The goal of machine learning models is to reduce error\nM - Minimize: The model minimizes loss using optimization techniques\nR - Regularization: Helps prevent overfitting and reduces loss\nL - Loss Function: Measures the difference between predicted and actual values\n\n```\nfrom sklearn.metrics import mean_squared_error\nloss = mean_squared_error(y_true, y_pred)\n```"
     },
     {
-      "question": "CVES: Cross Validation for Evaluation",
+      "question": "CVES: Cats Verify Every Step",
       "answer": "C - Cross-Validation: A method for evaluating model performance\nV - Validation: Splits the data into several folds for validation\nE - Evaluation: Models are evaluated across multiple test sets\nS - Score: Final performance score is averaged from all folds\n\n```\nfrom sklearn.model_selection import cross_val_score\nscores = cross_val_score(model, X, y, cv=5)\n```"
     },
     {
-      "question": "KBKF: K-Means Basics",
+      "question": "KBKF: Kangaroos Bounce, Kittens Follow",
       "answer": "K - K-Means: A clustering algorithm for unsupervised learning\nB - Centroid: The mean of points in a cluster\nK - k: The number of clusters defined by the user\nF - Fitting: The algorithm assigns points to the nearest centroid\n\n```\nfrom sklearn.cluster import KMeans\nmodel = KMeans(n_clusters=3)\n```"
     },
     {
-      "question": "PCLS: Principal Component Analysis",
+      "question": "PCLS: Penguins Climb Large Steps",
       "answer": "P - Principal: Principal Component Analysis (PCA) is used for dimensionality reduction\nC - Components: Principal components are linear combinations of the original features\nL - Linear: A linear transformation of the data\nS - Simplify: Simplifies data while preserving as much variance as possible\n\n```\nfrom sklearn.decomposition import PCA\npca = PCA(n_components=2)\n```"
     },
     {
-      "question": "LMCV: Linear Models and Cross Validation",
+      "question": "LMCV: Lions Make Careful Visits",
       "answer": "L - Linear: Linear models assume a linear relationship between inputs and outputs\nM - Model: Linear regression, logistic regression, and more\nC - Cross Validation: Helps avoid overfitting and ensures model robustness\nV - Validate: Cross-validation helps measure model performance on unseen data\n\n```\nfrom sklearn.linear_model import LinearRegression\nmodel = LinearRegression()\n```"
     },
     {
-      "question": "SCSM: Support Vector Machines",
+      "question": "SCSM: Seals Catch Salty Minnows",
       "answer": "S - Support: SVMs use support vectors to define the decision boundary\nC - Classification: SVMs are used for classification problems\nS - Separability: Can handle linearly and non-linearly separable data\nM - Margin: SVM maximizes the margin between classes\n\n```\nfrom sklearn.svm import SVC\nmodel = SVC(kernel='linear')\n```"
     },
     {
-      "question": "NNBP: Neural Networks Basics",
+      "question": "NNBP: New Neurons Build Power",
       "answer": "N - Neural: Neural networks simulate the brain’s neurons\nN - Networks: Layers of neurons connected by weights\nB - Backpropagation: Algorithm used to update the weights\nP - Predict: Neural networks are used for both classification and regression\n\n```\nmodel = Sequential()\nmodel.add(Dense(128, activation='relu'))\n```"
     },
     {
-      "question": "FFNR: Features of a Good Model",
+      "question": "FFNR: Ferrets Find New Routes",
       "answer": "F - Fit: The model should fit the data well without overfitting\nF - Fast: Training and prediction should be efficient\nN - Noisy: Robust against noisy or missing data\nR - Regularized: Helps avoid overfitting through techniques like Lasso or Ridge\n\n```\nfrom sklearn.linear_model import Ridge\nmodel = Ridge(alpha=1.0)\n```"
     },
     {
-      "question": "GBEM: Gradient Boosting Explained",
+      "question": "GBEM: Goats Build Every Mountain",
       "answer": "G - Gradient: Optimizes the model by minimizing the gradient of the loss function\nB - Boosting: Combines weak learners to create a strong model\nE - Ensemble: An ensemble method for better accuracy\nM - Model: Typically uses decision trees as base learners\n\n```\nfrom sklearn.ensemble import GradientBoostingClassifier\nmodel = GradientBoostingClassifier()\n```"
     },
     {
-      "question": "RFSE: Random Forest Overview",
+      "question": "RFSE: Rabbits Find Sweet Edibles",
       "answer": "R - Random: Random subsets of features are used to train each tree\nF - Forest: A forest of decision trees forms the model\nS - Split: Data is split at each node based on a feature\nE - Ensemble: Combines the predictions of many trees\n\n```\nfrom sklearn.ensemble import RandomForestClassifier\nmodel = RandomForestClassifier()\n```"
     },
     {
-      "question": "KNNS: k-Nearest Neighbors Simplified",
+      "question": "KNNS: Kangaroos Need No Supervision",
       "answer": "K - k-Nearest Neighbors: A simple algorithm that classifies based on the nearest data points\nN - Neighbors: Data points that are closest to the input point\nN - Non-parametric: Does not assume any underlying data distribution\nS - Supervised: Uses labeled training data\n\n```\nfrom sklearn.neighbors import KNeighborsClassifier\nmodel = KNeighborsClassifier(n_neighbors=3)\n```"
     },
     {
-      "question": "LRCS: Logistic Regression",
+      "question": "LRCS: Lemurs Run Carefully Still",
       "answer": "L - Logistic Regression: A classification algorithm\nR - Regression: Maps inputs to predicted probabilities for binary classification\nC - Classify: Used to predict binary outcomes (0 or 1)\nS - Sigmoid: Uses the sigmoid function to map predictions\n\n```\nfrom sklearn.linear_model import LogisticRegression\nmodel = LogisticRegression()\n```"
     },
     {
-      "question": "DMFS: Decision Trees and Feature Splitting",
+      "question": "DMFS: Deer Move Fast Swiftly",
       "answer": "D - Decision Trees: A tree structure to classify data\nM - Model: The tree model is used for both classification and regression\nF - Feature: Splits the data based on the most important features\nS - Splitting: Nodes are split based on the Gini index or information gain\n\n```\nfrom sklearn.tree import DecisionTreeClassifier\nmodel = DecisionTreeClassifier()\n```"
     },
     {
-      "question": "ADBM: AdaBoost Model",
+      "question": "ADBM: All Ducks Build Models",
       "answer": "A - AdaBoost: A boosting algorithm for supervised learning\nD - Decision Trees: Typically uses decision trees as weak learners\nB - Boosting: Combines multiple weak learners into a strong model\nM - Model: Sequentially improves model performance by focusing on errors\n\n```\nfrom sklearn.ensemble import AdaBoostClassifier\nmodel = AdaBoostClassifier()\n```"
     },
     {
-      "question": "FFAF: Features Affect Accuracy",
+      "question": "FFAF: Flamingos Fly Above Forests",
       "answer": "F - Features: The quality of input features directly impacts model accuracy\nF - Feature Engineering: Transforming features can improve model performance\nA - Accuracy: High-quality features increase accuracy\nF - Fit: Models fit better when features are well-processed\n\n```\nX = pd.get_dummies(X, columns=['category'])\n```"
     },
     {
-      "question": "GNBP: Gaussian Naive Bayes Basics",
+      "question": "GNBP: Giraffes Nibble Big Plants",
       "answer": "G - Gaussian: Assumes a normal distribution of data\nN - Naive: Assumes independence between features\nB - Bayes: Uses Bayes' Theorem for classification\nP - Probabilities: Outputs probabilities for each class\n\n```\nfrom sklearn.naive_bayes import GaussianNB\nmodel = GaussianNB()\n```"
     },
     {
-      "question": "SBSV: Supervised Learning Basics",
+      "question": "SBSV: Swans Balance Small Vessels",
       "answer": "S - Supervised Learning: The model learns from labeled data\nB - Bias: Occurs when the model oversimplifies the data\nS - Split: Data is split into train and test sets\nV - Validation: A validation set helps tune the model\n\n```\nfrom sklearn.model_selection import train_test_split\nX_train, X_test, y_train, y_test = train_test_split(X, y)\n```"
     },
     {
-      "question": "UBLK: Unsupervised Learning Basics",
+      "question": "UBLK: Unicorns Balance Large Kites",
       "answer": "U - Unsupervised Learning: The model learns patterns from unlabeled data\nB - Clustering: A common task for unsupervised learning\nL - Learn: The model learns to group similar data points\nK - k-Means: One of the most popular clustering algorithms\n\n```\nfrom sklearn.cluster import KMeans\nmodel = KMeans(n_clusters=3)\n```"
     },
     {
-      "question": "MLER: Machine Learning Evaluation",
+      "question": "MLER: Monkeys Leap Every Ridge",
       "answer": "M - Metrics: Accuracy, precision, recall, and F1-score are common evaluation metrics\nL - Loss: The error between predicted and actual values\nE - Evaluation: Evaluate the model on unseen data\nR - ROC Curve: A common evaluation tool for binary classifiers\n\n```\nfrom sklearn.metrics import f1_score, roc_curve\n```"
     },
     {
-      "question": "SSNL: Semi-Supervised Learning",
+      "question": "SSNL: Snakes See Night Lights",
       "answer": "S - Semi-Supervised: Combines labeled and unlabeled data for training\nS - Supervised: Uses a small amount of labeled data\nN - Not Labeled: Most data is unlabeled\nL - Learning: The model learns from both labeled and unlabeled data\n\nSemi-supervised learning is useful when acquiring labeled data is expensive."
     },
     {
-      "question": "BDSC: Bias and Data in Supervised Classification",
+      "question": "BDSC: Beavers Dig Strong Channels",
       "answer": "B - Bias: Models may learn biases from the data\nD - Data: High-quality labeled data is critical for supervised learning\nS - Supervised: The model learns from labeled data\nC - Classification: Assigning data points to predefined classes\n\n```\nfrom sklearn.model_selection import train_test_split\nX_train, X_test, y_train, y_test = train_test_split(X, y)\n```"
     },
     {
-      "question": "RLCS: Reinforcement Learning Concept",
+      "question": "RLCS: Raccoons Learn Clever Skills",
       "answer": "R - Reinforcement: The model learns by receiving rewards or penalties\nL - Learn: The model learns to optimize its actions\nC - Control: Commonly used for control tasks like game-playing\nS - States: The model interacts with its environment and learns from it\n\nReinforcement learning is used in game playing and robotics."
     }
 ],
