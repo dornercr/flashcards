@@ -152,6 +152,26 @@ const flashcardsData = {
     {
       "question": "RLCS: Raccoons Learn Clever Skills",
       "answer": "R - Reinforcement: The model learns by receiving rewards or penalties\nL - Learn: The model learns to optimize its actions\nC - Control: Commonly used for control tasks like game-playing\nS - States: The model interacts with its environment and learns from it\n\nReinforcement learning is used in game playing and robotics."
+    },
+    {
+      "question": "Supervised Learning (Classification): Lazy Neighbors Keep Staying Lazy",
+      "answer": "L - Logistic Regression (LR): A model used for binary classification\nN - Naive Bayes (NB): A probabilistic classifier based on Bayes' Theorem\nK - K-Nearest Neighbor (K-NN): Assigns labels based on the closest labeled data points\nS - Support Vector Machine (SVM): Finds a hyperplane that best separates data classes\nL - Linear Regression (LR): Models the relationship between a dependent variable and independent variables\n\n```\nExample:\nLogistic Regression - Email spam detection\nNaive Bayes - Text classification\nK-Nearest Neighbor - Image recognition\nSupport Vector Machine - Speech recognition\nLinear Regression - Stock market prediction\n```"
+    },
+    {
+      "question": "Supervised Learning (Regression): Runners Often Stretch",
+      "answer": "R - Ridge Regression (RR): A regularization technique that reduces overfitting in linear models\nO - Ordinary Least Squares (OLS): Minimizes the sum of the squared differences between observed and predicted values\nS - Stepwise Regression (SR): Adds or removes predictors based on a set criterion to optimize the model\n\n```\nExample:\nRidge Regression - Predicting housing prices\nOrdinary Least Squares - Economic forecasting\nStepwise Regression - Determining significant factors affecting rainfall prediction\n```"
+    },
+    {
+      "question": "Unsupervised Learning (Clustering): Kids Keep Helping Everyone Progress",
+      "answer": "K - K-means: Clustering algorithm that partitions data into K clusters\nK - K-median: Similar to K-means but minimizes the sum of distances to the median\nH - Hierarchical Clustering: Builds a tree of clusters either by merging or splitting them\nE - Expectation Maximization (EM): A probabilistic model used to find clusters\nP - Principal Component Analysis (PCA): Reduces the number of features in a dataset while retaining important information\n\n```\nExample:\nK-means - Identifying fake news\nK-median - Customer segmentation\nHierarchical Clustering - Document analysis\nExpectation Maximization - Image segmentation\nPrincipal Component Analysis - DNA microarray data analysis\n```"
+    },
+    {
+      "question": "Unsupervised Learning (Association and Dimensionality Reduction): All Elephants Find Features Fast",
+      "answer": "A - APRIORI: Algorithm used to mine frequent itemsets and association rules\nE - Eclat: A depth-first search algorithm for finding frequent itemsets\nF - FP-Growth: A faster alternative to APRIORI that uses a tree structure to represent itemsets\nF - Feature Extraction: Dimensionality reduction technique, like PCA, to reduce the dataset's features\nF - Feature Selection: Techniques to select the most relevant features for model performance\n\n```\nExample:\nAPRIORI - Market basket analysis\nEclat - Discovering product associations\nFP-Growth - Grocery store shopping analysis\nFeature Extraction - Text analysis\nFeature Selection - Selecting important genes in bioinformatics\n```"
+    },
+    {
+      "question": "Reinforcement Learning (Model-Free and Model-Based): Quick Horses Practice Learning Games",
+      "answer": "Q - Q-Learning: A reinforcement learning algorithm that seeks to find the best action to take based on the current state\nH - Hybrid: Combines model-free and model-based approaches\nP - Policy Optimization: Improves the policy that an agent follows to maximize rewards\nL - Learn the Model: The agent creates a model of the environment to make decisions\nG - Given the Model: The agent is provided a pre-existing model of the environment to make decisions\n\n```\nExample:\nQ-Learning - Game AI for Chess\nHybrid - Policy optimization in complex simulations\nPolicy Optimization - Robotics motion control\nLearn the Model - Autonomous vehicle navigation\nGiven the Model - Multi-agent systems for traffic management\n```"
     }
 ],
   mlBasics: [

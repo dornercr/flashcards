@@ -5,6 +5,7 @@ const studyGuides = [
     { id: 'machine_learning', title: 'Machine Learning', path: './machine_learning/index.html' },
     { id: 'python', title: 'Python', path: './python/index.html' },
     { id: 'python_expert', title: 'Python Expert', path: './python_expert/index.html' },
+    { id: 'sql', title: 'SQL', path: './sql/index.html' },
     { id: 'vim', title: 'VIM', path: './vim/index.html' },
     // Add more study guides here
 ];
