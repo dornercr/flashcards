@@ -18,43 +18,43 @@ const flashcardsData = {
   pythonBasics: [
     {
       "question": "IEND: Iguanas Eat New Ducks",
-      "answer": "I - Interpreted: Python is an interpreted language with dynamic typing, meaning you don't need to declare types\nE - Execution: Code is executed line by line\nN - No Compile: Python doesn't need compilation\nD - Dynamic: Variables can change types during runtime\n\n```\nx = 5  # int\nx = \"Hello\"  # str (dynamic typing)\nprint(x)\n```"
+      "answer": "I - Interpreted: Python runs without compiling\nE - Execution: Code runs line by line\nN - No Compile: No separate compilation needed\nD - Dynamic: Variables can change types during runtime\n\n```\nx = 5\nx = \"Hello\"\nprint(x)\n```"
     },
     {
       "question": "SITS: Snakes Indent To Survive",
-      "answer": "S - Syntax: Python uses indentation (tabs or spaces) to define blocks of code\nI - Indentation: Indentation level must be consistent\nT - Tabs or Spaces: Python accepts both, but don't mix\nS - Structure: Block structures like loops and conditionals rely on indentation\n\n```\nif True:\n    print(\"Indented Block\")\n```"
+      "answer": "S - Syntax: Python uses indentation for blocks\nI - Indentation: Must be consistent\nT - Tabs or Spaces: Don’t mix them\nS - Structure: Controls loops/conditionals\n\n```\nif True:\n    print(\"Indented Block\")\n```"
     },
     {
       "question": "VDBF: Vultures Dance Before Flight",
-      "answer": "V - Variables: Store data values\nD - Data Types: Python handles int, float, str, and bool types\nB - Booleans: True or False\nF - Float: Decimal numbers\n\n```\nx = 10  # int\ny = 3.14  # float\nname = \"Alice\"  # str\nactive = True  # bool\n```"
+      "answer": "V - Variables: Store data\nD - Data Types: int, float, str, bool\nB - Booleans: True/False values\nF - Float: Decimal numbers\n\n```\nx = 10\ny = 3.14\nactive = True\n```"
     },
     {
       "question": "CDNE: Cats Draw Neat Explanations",
-      "answer": "C - Comments: Use # to add explanations for the code\nD - Documentation: Use \"\"\" \"\"\" for multi-line documentation\nN - Notes: Comments don't affect code execution\nE - Explain: Keep your code understandable with comments\n\n```\n# This is a single-line comment\n\"\"\"\nThis is a multi-line comment\nused for documentation.\n\"\"\"\n```"
+      "answer": "C - Comments: Use # for single-line comments\nD - Documentation: Use \"\"\" for multi-line\nN - Notes: Comments don't run as code\nE - Explain: Keep code clear\n\n```\n# Single-line comment\n\"\"\"\nMulti-line comment\n\"\"\"\n```"
     },
     {
       "question": "PBIN: Penguins Bring Input Nicely",
-      "answer": "P - Print: Use print() to display information\nB - Basic I/O: Input is gathered with input()\nI - Input: Input is always treated as a string\nN - Nicely Output: Use print statements to format outputs\n\n```\nname = input(\"Enter your name: \")\nprint(f\"Hello, {name}\")\n```"
+      "answer": "P - Print: Use print() for output\nB - Basic I/O: input() collects data\nI - Input: Always returns string\nN - Nicely Output: Format outputs with print\n\n```\nname = input(\"Enter name: \")\nprint(f\"Hello, {name}\")\n```"
     },
     {
       "question": "AOEW: Apples Oranges Eat Well",
-      "answer": "A - Arithmetic: Python supports basic math operations like +, -, *, and /\nO - Operations: Arithmetic operators like +, -, *, and /\nE - Exponent: Use ** for exponentiation\nW - Whole Division: Use // for integer division\n\n```\na = 10 + 5\nb = 10 ** 2  # Exponentiation\nc = 9 // 2  # Integer division\n```"
+      "answer": "A - Arithmetic: +, -, *, /\nO - Operations: Handles math expressions\nE - Exponent: Use ** for powers\nW - Whole Division: Use // for integer division\n\n```\na = 10 + 5\nb = 10 ** 2\nc = 9 // 2\n```"
     },
     {
       "question": "CLOM: Cats Love Oranges More",
-      "answer": "C - Comparison: Operators like ==, !=, <, and > compare values\nL - Logical: Combine conditions with and, or, not\nO - Operators: == checks equality, > checks greater than\nM - More Conditions: Logical operators help with combining conditions\n\n```\na = 5\nprint(a > 3 and a < 10)  # True\n```"
+      "answer": "C - Comparison: ==, !=, <, >\nL - Logical: Combine with and, or, not\nO - Operators: Compare values\nM - More: Multiple conditions\n\n```\na = 5\nprint(a > 3 and a < 10)\n```"
     },
     {
       "question": "IEEC: If Elsa Eats Cookies",
-      "answer": "I - If: Executes a block of code if a condition is True\nE - Elif: Checks another condition if the previous if condition was False\nE - Else: Executes if all previous conditions were False\nC - Compare: Use comparison operators within conditionals\n\n```\nx = 7\nif x > 10:\n    print(\"Big\")\nelif x > 5:\n    print(\"Medium\")\nelse:\n    print(\"Small\")\n```"
+      "answer": "I - If: Runs code if condition is True\nE - Elif: Runs if previous conditions are False\nE - Else: Executes if all conditions are False\nC - Compare: Use ==, >, < in conditions\n\n```\nx = 7\nif x > 10:\n    print(\"Big\")\nelif x > 5:\n    print(\"Medium\")\nelse:\n    print(\"Small\")\n```"
     },
     {
       "question": "LWTC: Lions Walk To Catch",
-      "answer": "L - Loops: Python uses loops to repeat code\nW - While: Loops that run as long as a condition is True\nT - Times: Use for loops to iterate a set number of times or over sequences\nC - Continue: Use loops to control flow and repetition\n\n```\nfor i in range(5):\n    print(i)\nwhile i < 5:\n    i += 1\n```"
+      "answer": "L - Loops: Repeat code blocks\nW - While: Runs while condition is True\nT - Times: Use for loop to repeat\nC - Continue: Control loop flow\n\n```\nfor i in range(5):\n    print(i)\n```"
     },
     {
       "question": "BCPC: Bunnies Can Play Calmly",
-      "answer": "B - Break: Stop the loop early\nC - Continue: Skip the current iteration\nP - Pass: Do nothing, just move on\nC - Control: Use break, continue, and pass to manage loop flow\n\n```\nfor i in range(5):\n    if i == 2:\n        continue\n    if i == 4:\n        break\n    print(i)\n```"
+      "answer": "B - Break: Stops the loop\nC - Continue: Skips to next iteration\nP - Pass: Does nothing\nC - Control: Manages loop behavior\n\n```\nfor i in range(5):\n    if i == 2:\n        continue\n    if i == 4:\n        break\n    print(i)\n```"
     }
 
   ],
@@ -62,140 +62,170 @@ const flashcardsData = {
   pythonDataStructures: [
     {
       "question": "Lions Chase Smart Monkeys",
-      "answer": "L - Lists: Mutable, ordered collection of items. Supports indexing, slicing, and various methods\nC - Creation: Use square brackets to create\nS - Slicing: Extract sub-lists using list[start:end]\nM - Methods: Common methods include append(), remove(), and sort()\n\n```\nmy_list = [1, 2, 3]\nmy_list.append(4)  # Adds 4 to the list\nprint(my_list[1:3])  # Slicing\n```"
+      "answer": "L - Lists: Mutable, ordered collections\nC - Creation: Use [] to create\nS - Slicing: Extract sub-lists\nM - Methods: append(), remove(), sort()\n\n```\nmy_list = [1, 2, 3]\nmy_list.append(4)\nprint(my_list[1:3])\n```"
     },
     {
       "question": "Tigers Inhabit Only Trees",
-      "answer": "T - Tuples: Immutable, ordered collection of items\nI - Immutability: Cannot change after creation\nO - Ordered: Items remain in the order they were added\nT - Tuple Creation: Use parentheses to create a tuple\n\n```\nmy_tuple = (1, 2, 3)\nprint(my_tuple[0])\n```"
+      "answer": "T - Tuples: Immutable, ordered collections\nI - Immutability: Cannot be changed\nO - Ordered: Keeps item order\nT - Tuple Creation: Use ()\n\n```\nmy_tuple = (1, 2, 3)\nprint(my_tuple[0])\n```"
     },
     {
       "question": "Dogs Know Many Secrets",
-      "answer": "D - Dictionaries: Key-value pairs, unordered collection\nK - Keys: Unique identifiers for each item\nM - Methods: Common methods include get(), items(), and keys()\nS - Search: Access values using their keys\n\n```\nmy_dict = {\"name\": \"Alice\", \"age\": 25}\nprint(my_dict.get(\"name\"))\n```"
+      "answer": "D - Dictionaries: Key-value pairs\nK - Keys: Unique identifiers\nM - Methods: get(), keys()\nS - Search: Access via keys\n\n```\nmy_dict = {\"name\": \"Alice\", \"age\": 25}\nprint(my_dict.get(\"name\"))\n```"
     },
     {
       "question": "Squirrels Operate Mysteriously Often",
-      "answer": "S - Sets: Unordered collection with no duplicates\nO - Operations: Union (|), intersection (&), and difference (-)\nM - Methods: Common methods include add(), remove(), and clear()\nO - Objects: Sets only store unique items\n\n```\nmy_set = {1, 2, 3}\nmy_set.add(4)\n```"
+      "answer": "S - Sets: Unordered, unique items\nO - Operations: Union, intersection\nM - Methods: add(), remove()\nO - Objects: No duplicates\n\n```\nmy_set = {1, 2, 3}\nmy_set.add(4)\n```"
     },
     {
       "question": "Lemons Create Quick Drinks",
-      "answer": "L - List Comprehensions: Concise way to create lists\nC - Conditions: Can include conditions to filter items\nQ - Quick: Efficient, single-line expressions\nD - Dynamic: Build lists dynamically\n\n```\nsquares = [x ** 2 for x in range(5)]\n```"
+      "answer": "L - List Comprehension: Create lists concisely\nC - Conditions: Filter items\nQ - Quick: One-line expressions\nD - Dynamic: Build lists efficiently\n\n```\nsquares = [x ** 2 for x in range(5)]\n```"
     },
     {
       "question": "Ducks Swim Far Quickly",
-      "answer": "D - Dictionary Comprehensions: Create dictionaries in a concise way\nS - Syntactic: Uses similar syntax to list comprehensions\nF - Filters: Can include filters and conditions\nQ - Quick: Efficient for building dictionaries\n\n```\nsquares_dict = {x: x ** 2 for x in range(5)}\n```"
+      "answer": "D - Dict Comprehension: Build dictionaries concisely\nS - Syntactic: Similar to list comprehension\nF - Filters: Apply filters\nQ - Quick: Efficient dictionary creation\n\n```\nsquares_dict = {x: x ** 2 for x in range(5)}\n```"
     },
     {
       "question": "Snakes Move Silently Always",
-      "answer": "S - String Manipulation: Modify strings using methods like replace(), upper(), and lower()\nM - Methods: Common methods include split(), join(), and strip()\nS - Slicing: Slice strings like lists\nA - Attributes: Strings are immutable\n\n```\nmy_string = \"Hello, World\"\nprint(my_string.lower())\n```"
+      "answer": "S - String Manipulation: Modify strings\nM - Methods: split(), join(), strip()\nS - Slicing: Strings can be sliced\nA - Attributes: Strings are immutable\n\n```\nmy_string = \"Hello\"\nprint(my_string.lower())\n```"
     },
     {
       "question": "Bears Know Many Facts",
-      "answer": "B - Basic Sequence Functions: Use len() for length, max() and min() for max/min values\nK - Keys: Useful for lists, tuples, and other sequences\nM - Methods: len(), max(), and min() are common\nF - Flexible: These functions work on most sequences\n\n```\nmy_list = [1, 2, 3]\nprint(len(my_list), max(my_list), min(my_list))\n```"
+      "answer": "B - Basic Functions: len(), max(), min()\nK - Keys: Lists, tuples, etc.\nM - Methods: Common sequence functions\nF - Flexible: Apply to multiple sequences\n\n```\nmy_list = [1, 2, 3]\nprint(len(my_list), max(my_list))\n```"
     },
     {
       "question": "Eagles Zip Through Valleys",
-      "answer": "E - Enumerate: Returns index and value when looping through sequences\nZ - Zip: Combines elements from multiple iterables\nT - Tuples: zip() returns tuples of paired elements\nV - Versatile: Works with lists, tuples, etc\n\n```\nmy_list = ['a', 'b', 'c']\nfor i, value in enumerate(my_list):\n    print(i, value)\n\nnumbers = [1, 2, 3]\nletters = ['a', 'b', 'c']\nprint(list(zip(numbers, letters)))\n```"
+      "answer": "E - Enumerate: Loop with index\nZ - Zip: Combine iterables\nT - Tuples: zip() returns pairs\nV - Versatile: Works with many iterables\n\n```\nnumbers = [1, 2, 3]\nletters = ['a', 'b', 'c']\nprint(list(zip(numbers, letters)))\n```"
     }
   ],
 
   functions: [
     {
       "question": "Dogs Run Very Fast",
-      "answer": "D - Defining Functions: Use `def` to define a function, and `return` to output a value\nR - Return: Send data back from the function\nV - Values: Functions can return multiple values\nF - Function Body: Indentation is required to structure the function's body\n\nUse Case: Functions are used to organize code, make it reusable, and break down complex tasks into smaller, manageable parts.\n\n```\ndef calculate_rectangle_area(length, width):\n    return length * width\n\narea = calculate_rectangle_area(5, 3)\nprint(f\"The area is {area} square units\")\n# Output: The area is 15 square units\n```"
+      "answer": "D - Defining: Use `def` to define a function\nR - Return: Send back results\nV - Values: Functions can return multiple values\nF - Function Body: Structured by indentation\n\n```\ndef calc_area(length, width):\n    return length * width\n\nprint(calc_area(5, 3))\n```"
     },
     {
       "question": "Penguins Keep Position Steady",
-      "answer": "P - Parameters: Variables in a function definition\nK - Keyword Arguments: Specify argument names when calling a function\nP - Positional Arguments: Arguments passed based on position\nS - Syntax: Positional arguments come before keyword arguments\n\nUse Case: Keyword arguments improve readability and allow for default values, while positional arguments are useful for required parameters.\n\n```\ndef greet(name, greeting=\"Hello\", punctuation=\"!\"):\n    return f\"{greeting}, {name}{punctuation}\"\n\nprint(greet(\"Alice\"))\nprint(greet(\"Bob\", greeting=\"Hi\", punctuation=\".\"))\n# Output:\n# Hello, Alice!\n# Hi, Bob.\n```"
+      "answer": "P - Parameters: Variables in a function\nK - Keyword: Arguments passed with names\nP - Positional: Passed in order\nS - Syntax: Positional first, keyword second\n\n```\ndef greet(name, greeting=\"Hello\"):\n    return f\"{greeting}, {name}!\"\n\nprint(greet(\"Alice\"))\n```"
     },
     {
       "question": "Vultures Guard Little Snacks",
-      "answer": "V - Variable Scope: Variables inside functions are local by default\nG - Global Variables: Accessible anywhere in the code\nL - Local Variables: Defined within a function and only accessible there\nS - Scope: The location where a variable can be accessed\n\nUse Case: Understanding scope helps prevent naming conflicts and manages data access across your program.\n\n```\nglobal_var = 10\n\ndef modify_global():\n    global global_var\n    global_var = 20\n\ndef use_local():\n    local_var = 30\n    print(f\"Local variable: {local_var}\")\n\nprint(f\"Before: {global_var}\")\nmodify_global()\nprint(f\"After: {global_var}\")\nuse_local()\n# Output:\n# Before: 10\n# After: 20\n# Local variable: 30\n```"
+      "answer": "V - Variable Scope: Local inside functions\nG - Global: Accessible throughout code\nL - Local: Defined within a function\nS - Scope: Where variables can be accessed\n\n```\nglobal_var = 10\n\ndef modify_global():\n    global global_var\n    global_var = 20\n\nmodify_global()\nprint(global_var)\n```"
     },
     {
       "question": "Ducks Prefer Nearby Baths",
-      "answer": "D - Default Parameters: Assign default values to parameters in a function\nP - Parameters: Passed values\nN - Nearby: Suggests the close relationship between parameters and their default values\nB - Baths: Implies a natural, built-in feature (like default parameters in functions)\n\nUse Case: Default parameters allow functions to have optional arguments, making them more flexible and easier to use.\n\n```\ndef power(base, exponent=2):\n    return base ** exponent\n\nprint(power(3))     # Uses default exponent\nprint(power(3, 3))  # Overrides default exponent\n# Output:\n# 9\n# 27\n```"
+      "answer": "D - Default: Assign default parameter values\nP - Parameters: Passed to functions\nN - Nearby: Default values close to function\nB - Baths: Implies flexibility\n\n```\ndef power(base, exp=2):\n    return base ** exp\n\nprint(power(3))\n```"
     },
     {
       "question": "Anteaters Knead Extra Waffles",
-      "answer": "A - *args: Collect multiple positional arguments into a tuple\nK - **kwargs: Collect multiple keyword arguments into a dictionary\nE - Extra: Used when you don't know the number of arguments\nW - Waffles: Implies flexibility (like how *args and **kwargs allow flexible argument passing)\n\nUse Case: *args and **kwargs are useful when you need to write functions that can accept a variable number of arguments or keyword arguments.\n\n```\ndef flexible_function(*args, **kwargs):\n    print(f\"Positional arguments: {args}\")\n    print(f\"Keyword arguments: {kwargs}\")\n\nflexible_function(1, 2, 3, name=\"Alice\", age=30)\n# Output:\n# Positional arguments: (1, 2, 3)\n# Keyword arguments: {'name': 'Alice', 'age': 30}\n```"
+      "answer": "A - *args: Collect positional arguments\nK - **kwargs: Collect keyword arguments\nE - Extra: Handle unknown argument count\nW - Waffles: Implies flexibility\n\n```\ndef flex_func(*args, **kwargs):\n    print(args, kwargs)\n\nflex_func(1, 2, name=\"Alice\")\n```"
     },
     {
       "question": "Little Acrobats Flip Amazingly",
-      "answer": "L - Lambda Functions: Anonymous, inline functions using `lambda`\nA - Acrobats: Represents the versatility of lambda functions\nF - Flip: Suggests quick, one-line operations\nA - Amazingly: Implies the impressive capability despite their simplicity\n\nUse Case: Lambda functions are great for simple operations, especially when used with higher-order functions like map(), filter(), or sort().\n\n```\nnumbers = [1, 2, 3, 4, 5]\nsquared = list(map(lambda x: x**2, numbers))\nprint(squared)\n\neven_numbers = list(filter(lambda x: x % 2 == 0, numbers))\nprint(even_numbers)\n# Output:\n# [1, 4, 9, 16, 25]\n# [2, 4]\n```"
+      "answer": "L - Lambda: Anonymous, inline functions\nA - Acrobats: Versatile one-liners\nF - Flip: Simple, quick operations\nA - Amazingly: Despite simplicity\n\n```\nsquares = list(map(lambda x: x**2, [1, 2, 3]))\nprint(squares)\n```"
     },
     {
       "question": "Horses Make Farmers Rich",
-      "answer": "H - Higher-order Functions: Functions that accept other functions as arguments\nM - map(): Apply a function to each item in an iterable\nF - filter(): Filter items based on a condition\nR - reduce(): Apply a function cumulatively to reduce an iterable to a single value\n\nUse Case: Higher-order functions allow for more concise and functional programming styles, often replacing traditional loops.\n\n```\nfrom functools import reduce\n\nnumbers = [1, 2, 3, 4, 5]\n\n# map example\ndoubled = list(map(lambda x: x * 2, numbers))\nprint(f\"Doubled: {doubled}\")\n\n# filter example\neven = list(filter(lambda x: x % 2 == 0, numbers))\nprint(f\"Even numbers: {even}\")\n\n# reduce example\nsum_all = reduce(lambda x, y: x + y, numbers)\nprint(f\"Sum of all numbers: {sum_all}\")\n\n# Output:\n# Doubled: [2, 4, 6, 8, 10]\n# Even numbers: [2, 4]\n# Sum of all numbers: 15\n```"
+      "answer": "H - Higher-order: Functions that take other functions\nM - map(): Apply function to items\nF - filter(): Filter items based on condition\nR - reduce(): Reduce to single value\n\n```\nfrom functools import reduce\nsum_all = reduce(lambda x, y: x + y, [1, 2, 3])\nprint(sum_all)\n```"
     }
   ],
 
   oop: [
     {
       "question": "Cats Create Objects Beautifully",
-      "answer": "C - Classes: Blueprints for creating objects\nC - Create: Classes are used to instantiate objects\nO - Objects: Instances of a class\nB - Beautifully: Represents the elegant design of classes\n\n```\nclass Cat:\n    def __init__(self, name):\n        self.name = name\n    \n    def meow(self):\n        return f\"{self.name} says meow!\"\n\nfluffy = Cat(\"Fluffy\")\nprint(fluffy.meow())\n# Output: Fluffy says meow!\n```"
+      "answer": "C - Classes: Blueprints for objects\nC - Create: Instantiate objects from classes\nO - Objects: Instances of classes\nB - Beautifully: Elegant design\n\n```\nclass Cat:\n    def __init__(self, name):\n        self.name = name\n    \n    def meow(self):\n        return f\"{self.name} says meow!\"\n\nfluffy = Cat(\"Fluffy\")\nprint(fluffy.meow())\n```"
     },
     {
       "question": "Ice Cream Cools Swiftly",
-      "answer": "I - Instance: Variables specific to each object\nC - Class: Variables shared among all instances\nC - Cool: Represents variables storing data\nS - Swiftly: How variables can change quickly\n\n```\nclass IceCream:\n    flavor = \"Vanilla\"  # Class variable\n    \n    def __init__(self, topping):\n        self.topping = topping  # Instance variable\n\nic1 = IceCream(\"Sprinkles\")\nic2 = IceCream(\"Chocolate chips\")\nprint(f\"{ic1.flavor} with {ic1.topping}\")\nprint(f\"{ic2.flavor} with {ic2.topping}\")\n# Output:\n# Vanilla with Sprinkles\n# Vanilla with Chocolate chips\n```"
+      "answer": "I - Instance: Object-specific variables\nC - Class: Variables shared across instances\nC - Cool: Represents data variables\nS - Swiftly: How they can change\n\n```\nclass IceCream:\n    flavor = \"Vanilla\"\n    def __init__(self, topping):\n        self.topping = topping\n\nic1 = IceCream(\"Sprinkles\")\nic2 = IceCream(\"Choco chips\")\nprint(ic1.flavor, ic1.topping)\n```"
     },
     {
       "question": "Monkeys Make Oranges Bounce",
-      "answer": "M - Methods: Functions defined in a class\nM - Make: Methods perform actions\nO - Objects: Instances that methods operate on\nB - Bounce: Represents the behavior of objects\n\n```\nclass Monkey:\n    def __init__(self, name):\n        self.name = name\n    \n    def throw_orange(self):\n        return f\"{self.name} throws an orange!\"\n\ngeorge = Monkey(\"George\")\nprint(george.throw_orange())\n# Output: George throws an orange!\n```"
+      "answer": "M - Methods: Functions in classes\nM - Make: Methods perform actions\nO - Objects: Instances of classes\nB - Bounce: Represents object behavior\n\n```\nclass Monkey:\n    def __init__(self, name):\n        self.name = name\n    \n    def throw_orange(self):\n        return f\"{self.name} throws an orange!\"\n\ngeorge = Monkey(\"George\")\nprint(george.throw_orange())\n```"
     },
     {
       "question": "Snakes Slither Through Individually",
-      "answer": "S - Self: Refers to the instance of the class\nS - Slither: Moving through the class\nT - Through: Accessing class components\nI - Individually: Each instance is unique\n\n```\nclass Snake:\n    def __init__(self, name):\n        self.name = name\n    \n    def hiss(self):\n        return f\"{self.name} says ssssss!\"\n\npython = Snake(\"Python\")\nprint(python.hiss())\n# Output: Python says ssssss!\n```"
+      "answer": "S - Self: Refers to the instance\nS - Slither: Moves through the class\nT - Through: Accessing components\nI - Individually: Each instance is unique\n\n```\nclass Snake:\n    def __init__(self, name):\n        self.name = name\n    def hiss(self):\n        return f\"{self.name} says ssssss!\"\n\npython = Snake(\"Python\")\nprint(python.hiss())\n```"
     },
     {
       "question": "Cows Create New Ideas",
-      "answer": "C - Constructors: Special methods for object creation\nC - Create: Initializing new objects\nN - New: Fresh instances of a class\nI - Ideas: Represents new instances with unique attributes\n\n```\nclass Cow:\n    def __init__(self, name, sound=\"moo\"):\n        self.name = name\n        self.sound = sound\n    \n    def make_sound(self):\n        return f\"{self.name} says {self.sound}!\"\n\nbessie = Cow(\"Bessie\")\nprint(bessie.make_sound())\n# Output: Bessie says moo!\n```"
+      "answer": "C - Constructors: Special methods for object creation\nC - Create: Initialize new objects\nN - New: Fresh instances\nI - Ideas: Unique attributes per instance\n\n```\nclass Cow:\n    def __init__(self, name, sound=\"moo\"):\n        self.name = name\n        self.sound = sound\n    def make_sound(self):\n        return f\"{self.name} says {self.sound}!\"\n\nbessie = Cow(\"Bessie\")\nprint(bessie.make_sound())\n```"
     },
     {
       "question": "Irresistible Elephants Borrow Carefully",
-      "answer": "I - Inheritance: Deriving attributes and methods from another class\nE - Elephants: Represents parent classes\nB - Borrow: Inheriting traits from parent class\nC - Carefully: Thoughtful use of inherited features\n\n```\nclass Animal:\n    def speak(self):\n        return \"Some sound\"\n\nclass Elephant(Animal):\n    def trumpet(self):\n        return \"Trumpet!\"\n\ndumbo = Elephant()\nprint(dumbo.speak())  # Inherited method\nprint(dumbo.trumpet())  # Own method\n# Output:\n# Some sound\n# Trumpet!\n```"
+      "answer": "I - Inheritance: Deriving attributes and methods from another class\nE - Elephants: Represents parent classes\nB - Borrow: Inheriting traits\nC - Carefully: Thoughtful use of features\n\n```\nclass Animal:\n    def speak(self):\n        return \"Some sound\"\n\nclass Elephant(Animal):\n    def trumpet(self):\n        return \"Trumpet!\"\n\ndumbo = Elephant()\nprint(dumbo.speak())\n```"
     },
     {
       "question": "Parrots Perform Many Operations",
-      "answer": "P - Polymorphism: Same interface for different underlying forms\nP - Perform: Executing methods\nM - Many: Multiple classes can implement the same method\nO - Operations: Actions that objects can perform\n\n```\nclass Animal:\n    def speak(self):\n        pass\n\nclass Dog(Animal):\n    def speak(self):\n        return \"Woof!\"\n\nclass Parrot(Animal):\n    def speak(self):\n        return \"Squawk!\"\n\nanimals = [Dog(), Parrot()]\nfor animal in animals:\n    print(animal.speak())\n# Output:\n# Woof!\n# Squawk!\n```"
+      "answer": "P - Polymorphism: Same interface, different forms\nP - Perform: Executing methods\nM - Many: Multiple classes implement the same method\nO - Operations: Actions objects perform\n\n```\nclass Animal:\n    def speak(self):\n        pass\n\nclass Dog(Animal):\n    def speak(self):\n        return \"Woof!\"\n\nclass Parrot(Animal):\n    def speak(self):\n        return \"Squawk!\"\n\nanimals = [Dog(), Parrot()]\nfor animal in animals:\n    print(animal.speak())\n```"
     },
     {
       "question": "Eggs Protect Insides Vigilantly",
-      "answer": "E - Encapsulation: Bundling of data with methods that operate on that data\nP - Protect: Guarding internal details of a class\nI - Insides: Internal attributes and methods\nV - Vigilantly: Carefully controlling access to class internals\n\n```\nclass Egg:\n    def __init__(self, color):\n        self.__color = color  # Private attribute\n    \n    def get_color(self):\n        return self.__color\n\neaster_egg = Egg(\"Blue\")\nprint(easter_egg.get_color())\n# Output: Blue\n```"
+      "answer": "E - Encapsulation: Bundling data and methods\nP - Protect: Guard internal details\nI - Insides: Private attributes and methods\nV - Vigilantly: Controlled access\n\n```\nclass Egg:\n    def __init__(self, color):\n        self.__color = color\n    def get_color(self):\n        return self.__color\n\neaster_egg = Egg(\"Blue\")\nprint(easter_egg.get_color())\n```"
     },
     {
       "question": "Ants Demonstrate Complex Interactions",
-      "answer": "A - Abstraction: Hiding complex implementation details\nD - Demonstrate: Showing a simplified interface\nC - Complex: Handling intricate systems\nI - Interactions: How objects communicate and operate\n\n```\nfrom abc import ABC, abstractmethod\n\nclass Insect(ABC):\n    @abstractmethod\n    def communicate(self):\n        pass\n\nclass Ant(Insect):\n    def communicate(self):\n        return \"Release pheromones\"\n\nworker = Ant()\nprint(worker.communicate())\n# Output: Release pheromones\n```"
+      "answer": "A - Abstraction: Hides complex details\nD - Demonstrate: Shows simplified interface\nC - Complex: Handles intricate systems\nI - Interactions: How objects communicate\n\n```\nfrom abc import ABC, abstractmethod\nclass Insect(ABC):\n    @abstractmethod\n    def communicate(self):\n        pass\n\nclass Ant(Insect):\n    def communicate(self):\n        return \"Pheromones\"\n\nworker = Ant()\nprint(worker.communicate())\n```"
     },
     {
       "question": "Squirrels Store Many Objects",
-      "answer": "S - Special: Special methods in Python classes\nS - Store: Holding information about the object\nM - Many: Multiple special methods available\nO - Objects: Instances of a class\n\n```\nclass Squirrel:\n    def __init__(self, name, nuts):\n        self.name = name\n        self.nuts = nuts\n    \n    def __str__(self):\n        return f\"{self.name} has {self.nuts} nuts\"\n\nsquirrel = Squirrel(\"Nutkin\", 5)\nprint(squirrel)\n# Output: Nutkin has 5 nuts\n```"
+      "answer": "S - Special: Special methods in classes\nS - Store: Hold object data\nM - Many: Many special methods\nO - Objects: Instances of classes\n\n```\nclass Squirrel:\n    def __init__(self, name, nuts):\n        self.name = name\n        self.nuts = nuts\n    def __str__(self):\n        return f\"{self.name} has {self.nuts} nuts\"\n\nsquirrel = Squirrel(\"Nutkin\", 5)\nprint(squirrel)\n```"
     }
   ],
   sortingAlgorithms: [
     {
       "question": "Bubble Sort: Never Cry, Stay Ready",
-      "answer": "N - Navigate array length\nC - Check adjacent elements\nS - Swap if needed\nR - Return sorted array\n\nPseudo-code:\n```\nfunction bubble_sort(arr)\n    𝑛 ← len(arr)                         # N: Navigate array length\n    for 𝑖 ∈ range(𝑛) do                  # N: Navigate through each element\n        for 𝑗 ∈ range(0, 𝑛 − 𝑖 − 1) do    # C: Check adjacent elements\n            if arr𝑗 > arr𝑗+1 then\n                swap(arr𝑗, arr𝑗+1)       # S: Swap if needed\n            end if\n        end for\n    end for\n    return arr                           # R: Return sorted array\nend function\n```\n\nPython Code:\n```\ndef bubble_sort(arr):\n    n = len(arr)  # N: Navigate array length\n    for i in range(n):  # N: Navigate through each element\n        for j in range(0, n - i - 1):  # C: Check adjacent elements\n            if arr[j] > arr[j + 1]:  # C: If greater, swap\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]  # S: Swap if needed\n    return arr  # R: Return sorted array\n\n# Example\nprint(bubble_sort([64, 34, 25, 12, 22, 11, 90]))  \n# Output: [11, 12, 22, 25, 34, 64, 90]\n```\n\nOptimization:\n- Improvement: Stop the loop early if no elements were swapped, indicating the array is already sorted.\n- Best Case Complexity: O(n) when the array is already sorted.\n- Worst Case Complexity: O(n²) when the array is reversed.\n\nUse Case:\nBubble sort is useful for small datasets or educational purposes but is inefficient for large data."
+      "answer": "N - Navigate array\nC - Check adjacent elements\nS - Swap if needed\nR - Return sorted array\n\nPython Code:\n```\ndef bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr\n```\n\nBest Case: O(n) (already sorted)\nWorst Case: O(n²) (reversed)\nUse: Small datasets, educational purposes"
     },
     {
       "question": "Selection Sort: Identify Small Cats Swiftly Running",
-      "answer": "I - Identify minimum element\nS - Set minimum index\nC - Compare each element\nS - Swap minimum to the start\nR - Return sorted array\n\nPseudo-code:\n```\nfunction selection_sort(arr)\n    for 𝑖 ∈ range(len(arr)) do        # I: Identify the current element\n        min_idx ← 𝑖                   # S: Set the current index as minimum\n        for 𝑗 ∈ range(𝑖 + 1, len(arr)) do # C: Compare with other elements\n            if arr𝑗 < arrmin_idx          # C: If smaller, update min_idx\n                min_idx ← 𝑗\n            end if\n        end for\n        swap(arr𝑖, arrmin_idx)           # S: Swap the smallest element\n    end for\n    return arr                         # R: Return sorted array\nend function\n```\n\nPython Code:\n```\ndef selection_sort(arr):\n    for i in range(len(arr)):  # I: Identify the current element\n        min_idx = i  # S: Set the current index as minimum\n        for j in range(i + 1, len(arr)):  # C: Compare with other elements\n            if arr[j] < arr[min_idx]:  # C: Update min_idx if smaller found\n                min_idx = j\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]  # S: Swap the smallest element\n    return arr  # R: Return sorted array\n\n# Example\nprint(selection_sort([64, 25, 12, 22, 11]))\n# Output: [11, 12, 22, 25, 64]\n```\n\nOptimization:\nSelection sort does n swaps regardless of input, meaning it does not improve with partially sorted arrays.\nTime Complexity: O(n²).\n\nUse Case:\nSelection sort is efficient in terms of the number of swaps, making it suitable when the cost of swapping is high."
+      "answer": "I - Identify minimum element\nS - Set minimum index\nC - Compare elements\nS - Swap to start\nR - Return sorted array\n\nPython Code:\n```\ndef selection_sort(arr):\n    for i in range(len(arr)):\n        min_idx = i\n        for j in range(i + 1, len(arr)):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n    return arr\n```\n\nTime Complexity: O(n²)\nUse: Few swaps needed, swapping is costly"
     },
     {
       "question": "Insertion Sort: Careful Soldiers In Ready Formation",
-      "answer": "C - Choose next element\nS - Slide larger elements\nI - Insert element in correct position\nR - Return sorted array\n\nPseudo-code:\n```\nfunction insertion_sort(arr)\n    for 𝑖 ∈ range(1, len(arr)) do     # C: Choose the next element\n        key ← arr𝑖                    # C: Store the current element as key\n        𝑗 ← 𝑖 − 1\n        while 𝑗 ≥ 0 ∧ key < arr𝑗 do   # S: Slide larger elements\n            arr𝑗+1 ← arr𝑗\n            𝑗 ← 𝑗 − 1\n        end while\n        arr𝑗+1 ← key                  # I: Insert the key into correct position\n    end for\n    return arr                         # R: Return sorted array\nend function\n```\n\nPython Code:\n```\ndef insertion_sort(arr):\n    for i in range(1, len(arr)):  # C: Choose the next element\n        key = arr[i]  # C: Store the current element as key\n        j = i - 1\n        while j >= 0 and key < arr[j]:  # S: Slide larger elements\n            arr[j + 1] = arr[j]\n            j -= 1\n        arr[j + 1] = key  # I: Insert the key into the correct position\n    return arr  # R: Return sorted array\n\n# Example\nprint(insertion_sort([12, 11, 13, 5, 6]))\n# Output: [5, 6, 11, 12, 13]\n```\n\nOptimization:\n- Best Case Complexity: O(n) when the array is already sorted.\n- Worst Case Complexity: O(n²) when the array is reversed.\n\nUse Case:\nEfficient for small data sets or nearly sorted data. Insertion sort is often used in hybrid sorting algorithms like Timsort."
-    },
-    {
-      "question": "Insertion Sort: Dogs Love Catching Mice Swiftly",
-      "answer": "D - Define the function: Define the `insertion_sort` function that takes an array as input\nL - Loop through the array: Loop through the array starting from the second element\nC - Capture the current element as key: Store the current element as the key\nM - Move larger elements: Shift larger elements to the right to make space for the key\nS - Slide the key into its correct position: Insert the key into its correct position\n\n```\ndef insertion_sort(arr):  # D - Define the function\n    for i in range(1, len(arr)):  # L - Loop through the array starting from the second element\n        key = arr[i]  # C - Capture the current element as key\n        j = i - 1  # Initialize j to the previous index\n        while j >= 0 and key < arr[j]:  # M - Move larger elements to the right\n            arr[j + 1] = arr[j]  # Move element to the right\n            j -= 1  # Move to the previous element\n        arr[j + 1] = key  # S - Slide the key into its correct position\n    return arr  # Return the sorted array\n```"
+      "answer": "C - Choose next element\nS - Slide larger elements\nI - Insert in place\nR - Return sorted array\n\nPython Code:\n```\ndef insertion_sort(arr):\n    for i in range(1, len(arr)):\n        key = arr[i]\n        j = i - 1\n        while j >= 0 and key < arr[j]:\n            arr[j + 1] = arr[j]\n            j -= 1\n        arr[j + 1] = key\n    return arr\n```\n\nBest Case: O(n) (sorted)\nWorst Case: O(n²) (reversed)\nUse: Small datasets, nearly sorted"
     },
     {
       "question": "Merge Sort: Divide, Conquer, Combine Swiftly",
-      "answer": "D - Divide the array\nC - Conquer by recursively sorting subarrays\nC - Combine sorted subarrays\nS - Sort the whole array\n\nPseudo-code:\n```\nfunction merge_sort(arr)\n    if len(arr) > 1 then\n        mid ← ⌊len(arr) / 2⌋           # D: Divide the array into halves\n        𝐿 ← [arr𝑖 for 𝑖 ∈ range(mid)]  # D: Left half\n        𝑅 ← [arr𝑖 for 𝑖 ∈ range(mid, len(arr))] # D: Right half\n        merge_sort(𝐿)                   # C: Recursively sort left half\n        merge_sort(𝑅)                   # C: Recursively sort right half\n        merge(𝐿, 𝑅, arr)                # C: Combine the sorted halves\n    end if\n    return arr                          # S: Return sorted array\nend function\n```\n\nPython Code:\n```\ndef merge_sort(arr):\n    if len(arr) > 1:\n        mid = len(arr) // 2  # D: Divide the array into halves\n        L = arr[:mid]  # Left half\n        R = arr[mid:]  # Right half\n\n        merge_sort(L)  # C: Recursively sort left half\n        merge_sort(R)  # C: Recursively sort right half\n\n        i = j = k = 0\n        while i < len(L) and j < len(R):  # C: Combine sorted halves\n            if L[i] < R[j]:\n                arr[k] = L[i]\n                i += 1\n            else:\n                arr[k] = R[j]\n                j += 1\n            k += 1\n        while i < len(L):  # Copy remaining elements from L\n            arr[k] = L[i]\n            i += 1\n            k += 1\n        while j < len(R):  # Copy remaining elements from R\n            arr[k] = R[j]\n            j += 1\n            k += 1\n\n    return arr  # S: Return sorted array\n\n# Example\nprint(merge_sort([38, 27, 43, 3, 9, 82, 10]))\n# Output: [3, 9, 10, 27, 38, 43, 82]\n```\n\nOptimization:\nMerge sort is naturally recursive and performs well with large datasets. It has a guaranteed O(n log n) complexity, but it requires extra space to store temporary arrays.\n\nUse Case:\nSuitable for large datasets and linked lists where random access is expensive."
+      "answer": "D - Divide array\nC - Conquer with recursion\nC - Combine sorted arrays\nS - Sort the array\n\nPython Code:\n```\ndef merge_sort(arr):\n    if len(arr) > 1:\n        mid = len(arr) // 2\n        L = arr[:mid]\n        R = arr[mid:]\n        merge_sort(L)\n        merge_sort(R)\n        i = j = k = 0\n        while i < len(L) and j < len(R):\n            if L[i] < R[j]:\n                arr[k] = L[i]\n                i += 1\n            else:\n                arr[k] = R[j]\n                j += 1\n            k += 1\n        while i < len(L):\n            arr[k] = L[i]\n            i += 1\n            k += 1\n        while j < len(R):\n            arr[k] = R[j]\n            j += 1\n            k += 1\n    return arr\n```\n\nTime Complexity: O(n log n)\nUse: Large datasets, guaranteed performance"
     },
     {
       "question": "Heap Sort: Heapify Maintains Sorted Layers",
-      "answer": "H - Heapify the array\nM - Maximum element is swapped to the end\nS - Sort by extracting the heap\nL - Level order maintained\n\nPseudo-code (with Heapify function):\n```\nfunction heapify(arr, n, i)\n    largest ← 𝑖\n    left ← 2𝑖 + 1\n    right ← 2𝑖 + 2\n    if left < 𝑛 ∧ arrleft > arrlargest then\n        largest ← left\n    end if\n    if right < 𝑛 ∧ arrright > arrlargest then\n        largest ← right\n    end if\n    if largest ≠ 𝑖 then\n        swap(arr𝑖, arrlargest)\n        heapify(arr, 𝑛, largest)\n    end if\nend function\n\nfunction heap_sort(arr)\n    n ← len(arr)\n    for 𝑖 ∈ range(⌊𝑛/2⌋ − 1, −1, −1) do   # H: Heapify the array\n        heapify(arr, 𝑛, 𝑖)\n    end for\n    for 𝑖 ∈ range(𝑛 − 1, 0, −1) do       # M: Maximum element to the end\n        swap(arr0, arr𝑖)\n        heapify(arr, 𝑖, 0)               # S: Sort by extracting the heap\n    end for\n    return arr                            # L: Return sorted array\nend function\n```\n\nPython Code:\n```\ndef heapify(arr, n, i):\n    largest = i  # H: Heapify step\n    left = 2 * i + 1\n    right = 2 * i + 2\n\n    if left < n and arr[i] < arr[left]:\n        largest = left\n\n    if right < n and arr[largest] < arr[right]:\n        largest = right\n\n    if largest != i:\n        arr[i], arr[largest] = arr[largest], arr[i]\n        heapify(arr, n, largest)\n\ndef heap_sort(arr):\n    n = len(arr)\n    for i in range(n // 2 - 1, -1, -1):  # H: Build a max heap\n        heapify(arr, n, i)\n\n    for i in range(n - 1, 0, -1):  # M: Move maximum to the end\n        arr[i], arr[0] = arr[0], arr[i]  # S: Swap max to sorted part\n        heapify(arr, i, 0)  # L: Restore heap property\n\n    return arr\n\n# Example\nprint(heap_sort([12, 11, 13, 5, 6, 7]))\n# Output: [5, 6, 7, 11, 12, 13]\n```\n\nOptimization:\nBest and Worst Case: O(n log n) since heap sort builds a heap in linear time and extracts elements one by one.\n\nUse Case:\nUseful when memory usage is a concern, as it sorts in-place without extra memory."
+      "answer": "H - Heapify array\nM - Move max to end\nS - Sort by extracting heap\nL - Level order maintained\n\nPython Code:\n```\ndef heapify(arr, n, i):\n    largest = i\n    left = 2 * i + 1\n    right = 2 * i + 2\n    if left < n and arr[i] < arr[left]:\n        largest = left\n    if right < n and arr[largest] < arr[right]:\n        largest = right\n    if largest != i:\n        arr[i], arr[largest] = arr[largest], arr[i]\n        heapify(arr, n, largest)\n\ndef heap_sort(arr):\n    n = len(arr)\n    for i in range(n // 2 - 1, -1, -1):\n        heapify(arr, n, i)\n    for i in range(n - 1, 0, -1):\n        arr[i], arr[0] = arr[0], arr[i]\n        heapify(arr, i, 0)\n    return arr\n```\n\nTime Complexity: O(n log n)\nUse: In-place sorting, large datasets"
+    },
+    {
+      "question": "Selection Sort: Always Start Scanning Carefully",
+      "answer": "A - Always search for the smallest element\nS - Swap with the first unsorted element\nS - Sort by repeating the process for the next smallest\nC - Continue until the entire array is sorted\n\nPython Code:\n```\ndef selection_sort(the_list):\n    for i in range(len(the_list)):\n        smallest_index = i\n        for j in range(i + 1, len(the_list)):\n            if the_list[j] < the_list[smallest_index]:\n                smallest_index = j\n        the_list[i], the_list[smallest_index] = the_list[smallest_index], the_list[i]\n```\n\nComplexity:\n- Best Case: O(n²)\n- Worst Case: O(n²)\n- Average Case: O(n²)\n- Space: O(1)\n\nStrengths:\n- Intuitive. It's like packing a suitcase, placing larger items before smaller ones.\n- Space efficient: only requires O(1) extra space.\n\nWeaknesses:\n- Slow: O(n²) time complexity even if the list is already sorted.\n\nHow it works:\n- The algorithm selects the smallest unsorted element and moves it to the front, repeating this process until the list is sorted."
+    },
+    {
+      "question": "Insertion Sort: Inserting In The Right Spot",
+      "answer": "I - Insert element into sorted portion\nS - Shift larger elements to the right\nT - Test each item for correct position\nR - Repeat for each unsorted element\n\nPython Code:\n```\ndef insertion_sort(the_list):\n    for index in range(1, len(the_list)):\n        key = the_list[index]\n        j = index - 1\n        while j >= 0 and key < the_list[j]:\n            the_list[j + 1] = the_list[j]\n            j -= 1\n        the_list[j + 1] = key\n```\n\nTime Complexity: O(n²)\nBest Case: O(n)\nUse: Small data sets, nearly sorted lists"
+    },
+    {
+      "question": "Merge Sort: Merge Sorted Halves",
+      "answer": "M - Merge sorted lists\nS - Split list into halves\nH - Halve until lists are single elements\n\nPython Code:\n```\ndef merge_sort(arr):\n    if len(arr) > 1:\n        mid = len(arr) // 2\n        left = arr[:mid]\n        right = arr[mid:]\n        merge_sort(left)\n        merge_sort(right)\n        i = j = k = 0\n        while i < len(left) and j < len(right):\n            if left[i] < right[j]:\n                arr[k] = left[i]\n                i += 1\n            else:\n                arr[k] = right[j]\n                j += 1\n            k += 1\n        while i < len(left):\n            arr[k] = left[i]\n            i += 1\n            k += 1\n        while j < len(right):\n            arr[k] = right[j]\n            j += 1\n            k += 1\n```\n\nTime Complexity: O(n log n)\nUse: Large data sets"
+    },
+    {
+      "question": "Quick Sort: Partitioning Around A Pivot",
+      "answer": "P - Pick a pivot\nS - Swap elements to the correct side of the pivot\nR - Recursively sort the sublists\n\nPython Code:\n```\ndef partition(arr, low, high):\n    pivot = arr[high]\n    i = low - 1\n    for j in range(low, high):\n        if arr[j] <= pivot:\n            i += 1\n            arr[i], arr[j] = arr[j], arr[i]\n    arr[i + 1], arr[high] = arr[high], arr[i + 1]\n    return i + 1\n\ndef quick_sort(arr, low, high):\n    if low < high:\n        pi = partition(arr, low, high)\n        quick_sort(arr, low, pi - 1)\n        quick_sort(arr, pi + 1, high)\n```\n\nTime Complexity: Best/Average: O(n log n), Worst: O(n²)\nUse: When average case time is acceptable"
+    },
+    {
+      "question": "Heap Sort: Heapify and Extract",
+      "answer": "H - Heapify array\nE - Extract max to end\nS - Swap root and maintain heap\n\nPython Code:\n```\ndef heapify(arr, n, i):\n    largest = i\n    left = 2 * i + 1\n    right = 2 * i + 2\n    if left < n and arr[i] < arr[left]:\n        largest = left\n    if right < n and arr[largest] < arr[right]:\n        largest = right\n    if largest != i:\n        arr[i], arr[largest] = arr[largest], arr[i]\n        heapify(arr, n, largest)\n\ndef heap_sort(arr):\n    n = len(arr)\n    for i in range(n // 2 - 1, -1, -1):\n        heapify(arr, n, i)\n    for i in range(n - 1, 0, -1):\n        arr[i], arr[0] = arr[0], arr[i]\n        heapify(arr, i, 0)\n```\n\nTime Complexity: O(n log n)\nUse: In-place sorting"
+    },
+    {
+      "question": "Counting Sort: Counting Occurrences",
+      "answer": "C - Count occurrences\nA - Accumulate counts\nP - Place elements in correct order\n\nPython Code:\n```\ndef counting_sort(arr, max_val):\n    count = [0] * (max_val + 1)\n    output = [0] * len(arr)\n    for i in arr:\n        count[i] += 1\n    for i in range(1, len(count)):\n        count[i] += count[i - 1]\n    for i in reversed(arr):\n        output[count[i] - 1] = i\n        count[i] -= 1\n    return output\n```\n\nTime Complexity: O(n + k) where k is the range of input\nUse: When input is in a known range"
+    },
+    {
+      "question": "Radix Sort: Sorting by Digits",
+      "answer": "R - Repeat sorting on each digit\nS - Sort by least significant digit\n\nPython Code:\n```\ndef counting_sort(arr, exp):\n    n = len(arr)\n    output = [0] * n\n    count = [0] * 10\n    for i in range(n):\n        index = arr[i] // exp\n        count[index % 10] += 1\n    for i in range(1, 10):\n        count[i] += count[i - 1]\n    i = n - 1\n    while i >= 0:\n        index = arr[i] // exp\n        output[count[index % 10] - 1] = arr[i]\n        count[index % 10] -= 1\n        i -= 1\n    for i in range(len(arr)):\n        arr[i] = output[i]\n\ndef radix_sort(arr):\n    max_val = max(arr)\n    exp = 1\n    while max_val // exp > 0:\n        counting_sort(arr, exp)\n        exp *= 10\n```\n\nTime Complexity: O(nk), where n is the number of elements and k is the number of digits\nUse: Fixed-digit numbers"
+    },
+    {
+      "question": "Which Sorting Algorithm Should I Use?",
+      "answer": "Q - Quicksort: Fast but risks O(n²) in worst cases.\nH - Heapsort: Guarantees O(n log n) with low space cost.\nM - Merge Sort: Stable and great for large datasets.\nR - Radix Sort: Fast with O(n), but hidden constants may slow it down.\nC - Counting Sort: Efficient for small, distinct value ranges.\n\nExplanation:\n- Quicksort: Best for general use with average O(n log n) time. Avoid large worst-case inputs.\n- Heapsort: Best for low space needs with consistent O(n log n) time.\n- Merge Sort: Great for stable sorting, handles large datasets well.\n- Radix Sort: Fast for fixed-size numbers, but large hidden constants reduce speed.\n- Counting Sort: Best for sorting when distinct value ranges are small."
     }
+
+
   ],
   mathMLConceptsMnemonics: [
     {

@@ -1,14 +1,14 @@
 const topicTitles = {
   cProgramming : "CC4E Chapter 1",
   cProgrammingOverview: "C Programming Overview",
-  functions : "Python Functions",
-  oop: "Object Oriented Programming",
-  sortingAlgorithms: "Sorting Algorithms",
-  mathMLConceptsMnemonics: "Math ML Concepts Mnemonics",
-  Chapter1_PythonBasicsMnemonics: "Python Basics Mnemonics",
-  pythonBuiltinFunctions: "Python BuiltinFunctions",
-  pandasOperations: "Pandas Operations",
-  numpyOperations: "Numpy Operations",
+  //functions : "Python Functions",
+  //oop: "Object Oriented Programming",
+  //sortingAlgorithms: "Sorting Algorithms",
+  //mathMLConceptsMnemonics: "Math ML Concepts Mnemonics",
+  //Chapter1_PythonBasicsMnemonics: "Python Basics Mnemonics",
+  //pythonBuiltinFunctions: "Python BuiltinFunctions",
+  //pandasOperations: "Pandas Operations",
+  //numpyOperations: "Numpy Operations",
 
 
 
@@ -16,48 +16,48 @@ const topicTitles = {
 
 const flashcardsData = {
   cProgramming: [
-    {
-      "question": "CPDF: Cats Play During Fall",
-      "answer": "1.1 Getting Started\n\nCode: Write the C program.\nExample:\n```\n#include <stdio.h>\nint main() {\n    printf(\"hello, world\\n\");\n    return 0;\n}\n```\n\nPrint: Use printf() to display output.\nExample:\n```\nprintf(\"hello, world\\n\");\n```\n\nDebug: Remove parts of the code to see compiler error messages.\nExample:\n```\n// Removing #include <stdio.h>\nint main() {\n    printf(\"hello, world\\n\");\n    return 0;\n}\n```\n\nFinish: Compile and run the program.\nExample:\n```\ngcc hello.c -o hello\n./hello\n```"
-    },
-    {
-      "question": "VCUP: Very Cool Umbrellas Protect",
-      "answer": "1.2 Variables and Arithmetic\n\nVariables: Declare and initialize variables.\nExample:\n```\nint lower = 0, upper = 300, step = 20;\n```\n\nCalculate: Perform arithmetic calculations like temperature conversion.\nExample:\n```\nfloat fahr = lower;\nfloat celsius = (5.0 / 9.0) * (fahr - 32.0);\n```\n\nUnderstand: Recognize the difference between integer and floating-point division.\nExample:\n```\nint result_int = 5 / 9; // Integer division: 0\nfloat result_float = 5.0 / 9.0; // Floating-point division: 0.555...\n```\n\nPrint: Output formatted results using printf().\nExample:\n```\nprintf(\"%4.0f %6.1f\\n\", fahr, celsius);\n```"
-    },
-    {
-      "question": "LARS: Lions Are Really Strong",
-      "answer": "1.3 The For Statement\n\nLoop: Use the for loop for repeated actions.\nExample:\n```\nfor (int fahr = 0; fahr <= 300; fahr += 20) {\n    printf(\"%4d %6.1f\\n\", fahr, (5.0 / 9.0) * (fahr - 32));\n}\n```\n\nAction: Setup with initialization, condition, and increment.\nExample:\n```\nfor (initialization; condition; increment) {\n    // loop body\n}\n```\n\nReverse: Print in reverse order (Exercise 1-5).\nExample:\n```\nfor (int fahr = 300; fahr >= 0; fahr -= 20) {\n    printf(\"%4d %6.1f\\n\", fahr, (5.0 / 9.0) * (fahr - 32));\n}\n```\n\nStructure: Simplify repeated actions with for loops.\nExample:\n```\nfor (int i = 0; i < 10; i++) {\n    printf(\"%d \", i);\n}\n```"
-    },
-    {
-      "question": "SCNF: Sunny Cookies Never Fail",
-      "answer": "1.4 Symbolic Constants\n\nSymbols: Use #define to declare symbolic constants.\nExample:\n```\n#define LOWER 0\n#define UPPER 300\n#define STEP 20\n```\n\nConstants: Replace \"magic numbers\" with named constants.\nExample:\n```\nfor (int fahr = LOWER; fahr <= UPPER; fahr += STEP)\n```\n\nNames: Give constants meaningful names to improve readability.\nExample:\n```\n#define MAX_ARRAY_SIZE 100\nint arr[MAX_ARRAY_SIZE];\n```\n\nFinalize: Use symbolic constants in your loop.\nExample:\n```\nfor (int fahr = LOWER; fahr <= UPPER; fahr += STEP) {\n    printf(\"%4d %6.1f\\n\", fahr, (5.0 / 9.0) * (fahr - 32));\n}\n```"
-    },
-    {
-      "question": "GPEC: Green Peas Eat Carrots",
-      "answer": "1.5 Character Input and Output\n\nGet: Use getchar() to read a character from input.\nExample:\n```\nint c;\nc = getchar();\n```\n\nPut: Use putchar(c) to output the character read.\nExample:\n```\nputchar(c);\n```\n\nEOF: Read input until EOF (End of File).\nExample:\n```\nwhile ((c = getchar()) != EOF)\n    putchar(c);\n```\n\nCount: Write a program to count blanks, tabs, and newlines (Exercise 1-6).\nExample:\n```\nint blanks = 0, tabs = 0, newlines = 0;\nwhile ((c = getchar()) != EOF) {\n    if (c == ' ') ++blanks;\n    else if (c == '\\t') ++tabs;\n    else if (c == '\\n') ++newlines;\n}\nprintf(\"Blanks: %d, Tabs: %d, Newlines: %d\\n\", blanks, tabs, newlines);\n```"
-    },
-    {
-      "question": "AEHD: Ants Enjoy Happy Days",
-      "answer": "1.6 Arrays\n\nArray: A collection of variables of the same type stored in a contiguous memory location.\nElements: Individual values stored in an array.\nHold: Arrays hold data in sequential order.\nData: Arrays store data like integers, floats, or characters.\n\nExample:\n```\n#include <stdio.h>\n\nint main() {\n    int arr[5] = {1, 2, 3, 4, 5}; // Array declaration and initialization\n    for (int i = 0; i < 5; i++) {\n        printf(\"%d \", arr[i]);  // Accessing array elements\n    }\n    return 0;\n}\n\n// Output: 1 2 3 4 5\n```"
-    },
-    {
-      "question": "FCRV: Friendly Cats Run Valiantly",
-      "answer": "1.7 Functions\n\nFunction: A block of code that performs a task.\nCall: Functions can be called (invoked) in the program.\nReturn: Functions can return a value.\nValues: Functions accept values called arguments.\n\nExample:\n```\n#include <stdio.h>\n\nint square(int x) {   // Function definition\n    return x * x;     // Returning a value\n}\n\nint main() {\n    int result = square(5);  // Function call\n    printf(\"%d\", result);    // Print the result\n    return 0;\n}\n\n// Output: 25\n```"
-    },
-    {
-      "question": "APVS: Apples Pears Vanilla Strawberries",
-      "answer": "1.8 Arguments - Call by Value\n\nArguments: Values passed into functions.\nPass: Arguments are passed by value in C.\nValue: Function gets a copy of the argument, not the original.\nSafely: Original values are not modified.\n\nExample:\n```\n#include <stdio.h>\n\nvoid modify(int x) {  // Function accepting argument by value\n    x = x + 10;       // Modifies the local copy of x\n}\n\nint main() {\n    int num = 5;\n    modify(num);      // Passes value of num (5), not the reference\n    printf(\"%d\", num); // Original num remains unchanged\n    return 0;\n}\n\n// Output: 5\n```"
-    },
-    {
-      "question": "CFSF: Cheery Friends Smile Freely",
-      "answer": "1.9 Character Arrays\n\nCharacters: Arrays of characters are used to form strings.\nForm: Strings are formed using character arrays.\nStrings: A sequence of characters terminated by a null character.\nFast: Operations on character arrays are fast and efficient.\n\nExample:\n```\n#include <stdio.h>\n\nint main() {\n    char str[] = \"Hello\";    // Character array (string)\n    printf(\"%s\", str);       // Printing the string\n    return 0;\n}\n\n// Output: Hello\n```"
-    },
-    {
-      "question": "GVSA: Good Vets Save Animals",
-      "answer": "1.10 Scope; External Variables\n\nGlobal: External variables are declared outside any function.\nVariables: Global variables are accessible across multiple functions.\nStay: Global variables remain in memory for the program's lifetime.\nAccessible: They are accessible from any function in the file.\n\nExample:\n```\n#include <stdio.h>\n\nint globalVar = 10;  // Global variable\n\nvoid printGlobal() {\n    printf(\"%d\", globalVar);  // Access global variable\n}\n\nint main() {\n    printGlobal();  // Function call\n    return 0;\n}\n\n// Output: 10\n```"
-    }
-
-  ],
+    dataStructuresAndAlgorithms: [
+  {
+    question: "CPDF: Cats Play During Fall",
+    answer: "1.1 Getting Started\n\nWrite a C program and display output using printf().\nExample:\n```\n#include <stdio.h>\nint main() {\n    printf(\"hello, world\\n\");\n    return 0;\n}\n```\n\nCompile and run:\n```\ngcc hello.c -o hello\n./hello\n```"
+  },
+  {
+    question: "VCUP: Very Cool Umbrellas Protect",
+    answer: "1.2 Variables and Arithmetic\n\nDeclare variables and perform calculations.\nExample:\n```\nint lower = 0;\nfloat fahr = lower, celsius = (5.0 / 9.0) * (fahr - 32.0);\nprintf(\"%4.0f %6.1f\\n\", fahr, celsius);\n```"
+  },
+  {
+    question: "LARS: Lions Are Really Strong",
+    answer: "1.3 The For Statement\n\nUse for loops for repeated actions.\nExample:\n```\nfor (int fahr = 0; fahr <= 300; fahr += 20) {\n    printf(\"%4d %6.1f\\n\", fahr, (5.0 / 9.0) * (fahr - 32));\n}\n```"
+  },
+  {
+    question: "SCNF: Sunny Cookies Never Fail",
+    answer: "1.4 Symbolic Constants\n\nUse #define for symbolic constants.\nExample:\n```\n#define LOWER 0\n#define UPPER 300\n#define STEP 20\nfor (int fahr = LOWER; fahr <= UPPER; fahr += STEP) {\n    printf(\"%4d %6.1f\\n\", fahr, (5.0 / 9.0) * (fahr - 32));\n}\n```"
+  },
+  {
+    question: "GPEC: Green Peas Eat Carrots",
+    answer: "1.5 Character Input and Output\n\nUse getchar() and putchar().\nExample:\n```\nint c;\nwhile ((c = getchar()) != EOF)\n    putchar(c);\n```"
+  },
+  {
+    question: "AEHD: Ants Enjoy Happy Days",
+    answer: "1.6 Arrays\n\nStore and access data in arrays.\nExample:\n```\nint arr[5] = {1, 2, 3, 4, 5};\nfor (int i = 0; i < 5; i++) {\n    printf(\"%d \", arr[i]);\n}\n```"
+  },
+  {
+    question: "FCRV: Friendly Cats Run Valiantly",
+    answer: "1.7 Functions\n\nDefine and call functions, return values.\nExample:\n```\nint square(int x) { return x * x; }\nint main() {\n    int result = square(5);\n    printf(\"%d\", result);\n    return 0;\n}\n```"
+  },
+  {
+    question: "APVS: Apples Pears Vanilla Strawberries",
+    answer: "1.8 Arguments - Call by Value\n\nPass arguments by value, original remains unchanged.\nExample:\n```\nvoid modify(int x) { x = x + 10; }\nint main() {\n    int num = 5;\n    modify(num);\n    printf(\"%d\", num); // Output: 5\n}\n```"
+  },
+  {
+    question: "CFSF: Cheery Friends Smile Freely",
+    answer: "1.9 Character Arrays\n\nUse character arrays to form strings.\nExample:\n```\nchar str[] = \"Hello\";\nprintf(\"%s\", str);\n```"
+  },
+  {
+    question: "GVSA: Good Vets Save Animals",
+    answer: "1.10 Scope; External Variables\n\nUse global variables accessible across functions.\nExample:\n```\nint globalVar = 10;\nvoid printGlobal() { printf(\"%d\", globalVar); }\n```"
+  }
+],
 
   cProgrammingOverview: [
     {
