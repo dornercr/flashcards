@@ -403,6 +403,102 @@ const flashcardsData = {
 
   supervisedLearning: [
     {
+      question: "What is Supervised Learning?",
+      answer: "Algorithms learn from labeled data to predict outcomes.\n\nExample: Email spam classification."
+    },
+    {
+      question: "Why is Supervised Learning important?",
+      answer: "Powers AI tasks like spam detection, recommendation systems, and medical diagnosis.\n\nExample: Predicting customer churn."
+    },
+    {
+      question: "What are the two types of Supervised Learning?",
+      answer: "Classification (categorizes) and Regression (predicts continuous values).\n\nExample: Classifying emails, predicting house prices."
+    },
+    {
+      question: "What are the main components of Supervised Learning?",
+      answer: "Input features (data variables) and target labels (predicted outcomes).\n\nCode Example:\n```python\nX = data[['age', 'income']]\ny = data['purchase']\n```"
+    },
+    {
+      question: "What are the key steps in the Supervised Learning process?",
+      answer: "Collect data, split, train, evaluate, deploy.\n\nExample: Splitting dataset for training and testing.\nCode Example:\n```python\nfrom sklearn.model_selection import train_test_split\nX_train, X_test, y_train, y_test = train_test_split(X, y)\n```"
+    },
+    {
+      question: "What's the difference between Classification and Regression?",
+      answer: "Classification: categories. Regression: continuous values.\n\nExample: Classify emails, predict stock prices."
+    },
+    {
+      question: "Name some popular Supervised Learning algorithms.",
+      answer: "Logistic Regression, Decision Trees, Random Forests, SVM.\n\nCode Example:\n```python\nfrom sklearn.ensemble import RandomForestClassifier\nmodel = RandomForestClassifier()\nmodel.fit(X_train, y_train)\n```"
+    },
+    {
+      question: "What is Data Preprocessing in Supervised Learning?",
+      answer: "Cleans and transforms raw data for training (handles missing values, scales features).\n\nCode Example:\n```python\nfrom sklearn.preprocessing import StandardScaler\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X)\n```"
+    },
+    {
+      question: "What is Feature Engineering?",
+      answer: "Creates new features to improve model performance.\n\nExample: Combining age and income into a new feature.\nCode Example:\n```python\ndata['age_income_ratio'] = data['age'] / data['income']\n```"
+    },
+    {
+      question: "What are common metrics for evaluating models?",
+      answer: "Accuracy, precision, recall, F1-score, confusion matrix.\n\nCode Example:\n```python\nfrom sklearn.metrics import accuracy_score\naccuracy = accuracy_score(y_test, y_pred)\n```"
+    },
+    {
+      question: "What are some challenges in Supervised Learning?",
+      answer: "Data quality, overfitting, imbalanced data.\n\nExample: Handling missing values or overfitting with too much data."
+    },
+    {
+      question: "What are some future trends in Supervised Learning?",
+      answer: "Transfer learning, AutoML, fairness in AI.\n\nExample: Using pre-trained models to speed up learning."
+    },
+    {
+      question: "What is Logistic Regression used for in supervised learning?",
+      answer: "Used for binary classification, modeling probability of input belonging to one of two classes.\n\nExample: Spam or not spam.\nCode Example:\n```python\nfrom sklearn.linear_model import LogisticRegression\nmodel = LogisticRegression()\nmodel.fit(X_train, y_train)\n```"
+    },
+    {
+      question: "How do Decision Trees work in supervised learning?",
+      answer: "Splits data into subsets based on features, forming a tree for predictions in classification and regression.\n\nExample: Predicting loan approval.\nCode Example:\n```python\nfrom sklearn.tree import DecisionTreeClassifier\nmodel = DecisionTreeClassifier()\nmodel.fit(X_train, y_train)\n```"
+    },
+    {
+      question: "What are Random Forests and how do they improve predictions?",
+      answer: "An ensemble method that combines multiple decision trees to improve accuracy and reduce overfitting.\n\nExample: Predicting customer churn.\nCode Example:\n```python\nfrom sklearn.ensemble import RandomForestClassifier\nmodel = RandomForestClassifier()\nmodel.fit(X_train, y_train)\n```"
+    },
+    {
+      question: "What is the purpose of Linear Regression?",
+      answer: "Used for regression tasks, predicting continuous values by modeling the relationship between features and the target as a straight line.\n\nExample: Predicting house prices.\nCode Example:\n```python\nfrom sklearn.linear_model import LinearRegression\nmodel = LinearRegression()\nmodel.fit(X_train, y_train)\n```"
+    },
+    {
+      question: "What is the goal of Support Vector Machines (SVM) in supervised learning?",
+      answer: "Finds the optimal boundary (hyperplane) to separate classes in a high-dimensional space.\n\nExample: Image classification.\nCode Example:\n```python\nfrom sklearn.svm import SVC\nmodel = SVC()\nmodel.fit(X_train, y_train)\n```"
+    },
+    {
+      question: "What is Naive Bayes used for and what assumption does it make?",
+      answer: "Used for classification, assumes input features are independent of each other.\n\nExample: Spam detection.\nCode Example:\n```python\nfrom sklearn.naive_bayes import GaussianNB\nmodel = GaussianNB()\nmodel.fit(X_train, y_train)\n```"
+    },
+    {
+      question: "How does K-Nearest Neighbors (KNN) work in supervised learning?",
+      answer: "Classifies a data point based on the majority class of its nearest neighbors. Can also be used for regression.\n\nExample: Classifying customer behavior.\nCode Example:\n```python\nfrom sklearn.neighbors import KNeighborsClassifier\nmodel = KNeighborsClassifier()\nmodel.fit(X_train, y_train)\n```"
+    },
+    {
+      question: "What is Polynomial Regression and when is it used?",
+      answer: "Used when the relationship between features and target is non-linear, fits a polynomial curve.\n\nExample: Modeling complex growth trends.\nCode Example:\n```python\nfrom sklearn.preprocessing import PolynomialFeatures\npoly = PolynomialFeatures(degree=2)\nX_poly = poly.fit_transform(X)\n```"
+    },
+    {
+      question: "What problem does Ridge Regression address?",
+      answer: "Addresses multicollinearity in linear regression by adding a penalty term to shrink coefficients and stabilize the model.\n\nExample: Predicting sales with correlated features.\nCode Example:\n```python\nfrom sklearn.linear_model import Ridge\nmodel = Ridge(alpha=1.0)\nmodel.fit(X_train, y_train)\n```"
+    },
+    {
+      question: "How are Neural Networks used in supervised learning?",
+      answer: "Used for both classification and regression tasks, consists of multiple layers of neurons learning complex patterns in data.\n\nExample: Handwriting recognition.\nCode Example:\n```python\nfrom keras.models import Sequential\nfrom keras.layers import Dense\nmodel = Sequential()\nmodel.add(Dense(128, input_dim=10, activation='relu'))\nmodel.compile(loss='binary_crossentropy', optimizer='adam')\n```"
+    },
+    {
+      question: "What is the role of K-Means in supervised learning?",
+      answer: "Primarily unsupervised, but can be used in pipelines for initial data clustering to improve classification or regression.\n\nExample: Clustering customer segments.\nCode Example:\n```python\nfrom sklearn.cluster import KMeans\nmodel = KMeans(n_clusters=3)\nmodel.fit(X)\n```"
+    },
+    {
+      question: "What are ensemble methods like Bagging and Boosting used for?",
+      answer: "Combines models to improve accuracy. Bagging reduces variance, Boosting reduces bias by focusing on misclassified instances.\n\nExample: Improving accuracy in predictive modeling.\nCode Example:\n```python\nfrom sklearn.ensemble import GradientBoostingClassifier\nmodel = GradientBoostingClassifier()\nmodel.fit(X_train, y_train)\n```"
+    },
+    {
       "question": "SLDT: Sheep Learn Decision Trees",
       "answer": "S - Supervised Learning: Learning from labeled data\nL - Labels: Known outputs provided for training\nD - Decision Trees: A common model in supervised learning\nT - Training: Learning process of adjusting model parameters\n\n```\nfrom sklearn.tree import DecisionTreeClassifier\nmodel = DecisionTreeClassifier()\n```"
     },

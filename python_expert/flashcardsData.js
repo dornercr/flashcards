@@ -197,27 +197,27 @@ const flashcardsData = {
       "answer": "A - Always search for the smallest element\nS - Swap with the first unsorted element\nS - Sort by repeating the process for the next smallest\nC - Continue until the entire array is sorted\n\nPython Code:\n```\ndef selection_sort(the_list):\n    for i in range(len(the_list)):\n        smallest_index = i\n        for j in range(i + 1, len(the_list)):\n            if the_list[j] < the_list[smallest_index]:\n                smallest_index = j\n        the_list[i], the_list[smallest_index] = the_list[smallest_index], the_list[i]\n```\n\nComplexity:\n- Best Case: O(n²)\n- Worst Case: O(n²)\n- Average Case: O(n²)\n- Space: O(1)\n\nStrengths:\n- Intuitive. It's like packing a suitcase, placing larger items before smaller ones.\n- Space efficient: only requires O(1) extra space.\n\nWeaknesses:\n- Slow: O(n²) time complexity even if the list is already sorted.\n\nHow it works:\n- The algorithm selects the smallest unsorted element and moves it to the front, repeating this process until the list is sorted."
     },
     {
-      "question": "Insertion Sort: Inserting In The Right Spot",
+      "question": "Insertion Sort: Items Slide To Right Spot",
       "answer": "I - Insert element into sorted portion\nS - Shift larger elements to the right\nT - Test each item for correct position\nR - Repeat for each unsorted element\n\nPython Code:\n```\ndef insertion_sort(the_list):\n    for index in range(1, len(the_list)):\n        key = the_list[index]\n        j = index - 1\n        while j >= 0 and key < the_list[j]:\n            the_list[j + 1] = the_list[j]\n            j -= 1\n        the_list[j + 1] = key\n```\n\nTime Complexity: O(n²)\nBest Case: O(n)\nUse: Small data sets, nearly sorted lists"
     },
     {
-      "question": "Merge Sort: Merge Sorted Halves",
-      "answer": "M - Merge sorted lists\nS - Split list into halves\nH - Halve until lists are single elements\n\nPython Code:\n```\ndef merge_sort(arr):\n    if len(arr) > 1:\n        mid = len(arr) // 2\n        left = arr[:mid]\n        right = arr[mid:]\n        merge_sort(left)\n        merge_sort(right)\n        i = j = k = 0\n        while i < len(left) and j < len(right):\n            if left[i] < right[j]:\n                arr[k] = left[i]\n                i += 1\n            else:\n                arr[k] = right[j]\n                j += 1\n            k += 1\n        while i < len(left):\n            arr[k] = left[i]\n            i += 1\n            k += 1\n        while j < len(right):\n            arr[k] = right[j]\n            j += 1\n            k += 1\n```\n\nTime Complexity: O(n log n)\nUse: Large data sets"
+      "question": "Merge Sort: Merging Several Halves",
+      "answer": "M - Merge sorted lists\nS - Split into halves\nH - Halve until lists are single elements\n\nPython Code:\n```\ndef merge_sort(arr):\n    if len(arr) > 1:\n        mid = len(arr) // 2\n        left = arr[:mid]\n        right = arr[mid:]\n        merge_sort(left)\n        merge_sort(right)\n        i = j = k = 0\n        while i < len(left) and j < len(right):\n            if left[i] < right[j]:\n                arr[k] = left[i]\n                i += 1\n            else:\n                arr[k] = right[j]\n                j += 1\n            k += 1\n        while i < len(left):\n            arr[k] = left[i]\n            i += 1\n            k += 1\n        while j < len(right):\n            arr[k] = right[j]\n            j += 1\n            k += 1\n```\n\nTime Complexity: O(n log n)\nUse: Large data sets"
     },
     {
-      "question": "Quick Sort: Partitioning Around A Pivot",
+      "question": "Quick Sort: Pivot Sort Recursively",
       "answer": "P - Pick a pivot\nS - Swap elements to the correct side of the pivot\nR - Recursively sort the sublists\n\nPython Code:\n```\ndef partition(arr, low, high):\n    pivot = arr[high]\n    i = low - 1\n    for j in range(low, high):\n        if arr[j] <= pivot:\n            i += 1\n            arr[i], arr[j] = arr[j], arr[i]\n    arr[i + 1], arr[high] = arr[high], arr[i + 1]\n    return i + 1\n\ndef quick_sort(arr, low, high):\n    if low < high:\n        pi = partition(arr, low, high)\n        quick_sort(arr, low, pi - 1)\n        quick_sort(arr, pi + 1, high)\n```\n\nTime Complexity: Best/Average: O(n log n), Worst: O(n²)\nUse: When average case time is acceptable"
     },
     {
-      "question": "Heap Sort: Heapify and Extract",
+      "question": "Heap Sort: Heapify Extract Swap",
       "answer": "H - Heapify array\nE - Extract max to end\nS - Swap root and maintain heap\n\nPython Code:\n```\ndef heapify(arr, n, i):\n    largest = i\n    left = 2 * i + 1\n    right = 2 * i + 2\n    if left < n and arr[i] < arr[left]:\n        largest = left\n    if right < n and arr[largest] < arr[right]:\n        largest = right\n    if largest != i:\n        arr[i], arr[largest] = arr[largest], arr[i]\n        heapify(arr, n, largest)\n\ndef heap_sort(arr):\n    n = len(arr)\n    for i in range(n // 2 - 1, -1, -1):\n        heapify(arr, n, i)\n    for i in range(n - 1, 0, -1):\n        arr[i], arr[0] = arr[0], arr[i]\n        heapify(arr, i, 0)\n```\n\nTime Complexity: O(n log n)\nUse: In-place sorting"
     },
     {
-      "question": "Counting Sort: Counting Occurrences",
+      "question": "Counting Sort: Count Accumulate Place",
       "answer": "C - Count occurrences\nA - Accumulate counts\nP - Place elements in correct order\n\nPython Code:\n```\ndef counting_sort(arr, max_val):\n    count = [0] * (max_val + 1)\n    output = [0] * len(arr)\n    for i in arr:\n        count[i] += 1\n    for i in range(1, len(count)):\n        count[i] += count[i - 1]\n    for i in reversed(arr):\n        output[count[i] - 1] = i\n        count[i] -= 1\n    return output\n```\n\nTime Complexity: O(n + k) where k is the range of input\nUse: When input is in a known range"
     },
     {
-      "question": "Radix Sort: Sorting by Digits",
+      "question": "Radix Sort: Repeatedly Sort Digits",
       "answer": "R - Repeat sorting on each digit\nS - Sort by least significant digit\n\nPython Code:\n```\ndef counting_sort(arr, exp):\n    n = len(arr)\n    output = [0] * n\n    count = [0] * 10\n    for i in range(n):\n        index = arr[i] // exp\n        count[index % 10] += 1\n    for i in range(1, 10):\n        count[i] += count[i - 1]\n    i = n - 1\n    while i >= 0:\n        index = arr[i] // exp\n        output[count[index % 10] - 1] = arr[i]\n        count[index % 10] -= 1\n        i -= 1\n    for i in range(len(arr)):\n        arr[i] = output[i]\n\ndef radix_sort(arr):\n    max_val = max(arr)\n    exp = 1\n    while max_val // exp > 0:\n        counting_sort(arr, exp)\n        exp *= 10\n```\n\nTime Complexity: O(nk), where n is the number of elements and k is the number of digits\nUse: Fixed-digit numbers"
     },
     {
