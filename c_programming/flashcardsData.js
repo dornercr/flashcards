@@ -16,7 +16,6 @@ const topicTitles = {
 
 const flashcardsData = {
   cProgramming: [
-    dataStructuresAndAlgorithms: [
   {
     question: "CPDF: Cats Play During Fall",
     answer: "1.1 Getting Started\n\nWrite a C program and display output using printf().\nExample:\n```\n#include <stdio.h>\nint main() {\n    printf(\"hello, world\\n\");\n    return 0;\n}\n```\n\nCompile and run:\n```\ngcc hello.c -o hello\n./hello\n```"
