@@ -1,6 +1,7 @@
 const topicTitles = {
   Chapter1_Set_Notation_and_Relations: "Chapter 1 Set Notation and Relations",
-  setNotation: "Chapter 1.1 Set Notation"
+  setNotation: "Chapter 1.1 Set Notation",
+  Chapter_1_Review: "Chapter_1_1_Review"
 };
 
 const flashcardsData = {
@@ -108,7 +109,7 @@ const flashcardsData = {
 
 ],
 
-  setNotation: [
+  "setNotation": [
     {
       "id": 1,
       "question": "x ∈ A",
@@ -670,5 +671,138 @@ const flashcardsData = {
       "answer": "Definition: general or ad−bc\nExample: [1 2/3 4] => -2\nRemember: determinant"
     }
 
+],
+
+  "Chapter_1_Review": [
+    {
+      "id": 1,
+      "question": "What is the intuitive definition of a set?",
+      "answer": "A set is a collection of distinct objects (elements)."
+    },
+    {
+      "id": 2,
+      "question": "How do we denote membership and non-membership for an element x in a set A?",
+      "answer": "Write x ∈ A if x is in A.\nWrite x ∉ A if x is not (sometimes shown as x ∈/ A)."
+    },
+    {
+      "id": 3,
+      "question": "How can we enumerate sets using braces (give examples)?",
+      "answer": "List elements inside braces.\nExample: B = {0, 1}, D = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}."
+    },
+    {
+      "id": 4,
+      "question": "The text repeats the examples for enumerating sets with braces; what are those repeated examples?",
+      "answer": "They appear twice:\nB = {0, 1}\nD = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}."
+    },
+    {
+      "id": 5,
+      "question": "How can we enumerate sets using ellipses (…)?",
+      "answer": "Use ellipses when the pattern is clear but not fully listed.\nExamples: A = {a, b, c, …, x, y, z}, G = {1, 2, …, 99, 100}, {1, 2, 3, …}."
+    },
+    {
+      "id": 6,
+      "question": "Which sets are considered common, and how are they denoted?",
+      "answer": "N = {0, 1, 2, …} (natural numbers including 0)\nExample: 0, 1, 10 ∈ N\nZ = {…, −2, −1, 0, 1, 2, …} (integers)\nExample: −5, 0, 7 ∈ Z\nQ (rationals)\nExample: 1/2, −3/7, 4 ∈ Q\nR (reals)\nExample: √2, π, −1.23 ∈ R\nC (complex numbers)\nExample: i, 3 + 2i, −1.2 ∈ C\nP = {1, 2, 3, …} (positive integers)\nExample: 1, 5, 100 ∈ P."
+    },
+    {
+      "id": 7,
+      "question": "What is set-builder notation, and how is it generally used?",
+      "answer": "It specifies a form for the elements plus a condition.\nExample: Q = {a/b | a,b ∈ Z, b ≠ 0}."
+    },
+    {
+      "id": 8,
+      "question": "Explain the meaning of the symbol '∣' (vertical bar) in set-builder notation.",
+      "answer": "It is read as “such that.”\nSometimes a colon (:) is used."
+    },
+    {
+      "id": 9,
+      "question": "How do we usually interpret commas in set-builder notation statements like 'a, b ∈ Z'?",
+      "answer": "Commas mean “and.”\nSo 'a, b ∈ Z' means 'a and b are integers.'"
+    },
+    {
+      "id": 10,
+      "question": "What is the definition of a finite set?",
+      "answer": "A set is finite if it has a specific number of elements.\nOtherwise, it is infinite."
+    },
+    {
+      "id": 11,
+      "question": "What does the term 'cardinality' refer to for a set A?",
+      "answer": "For a finite set A, |A| is the number of its elements."
+    },
+    {
+      "id": 12,
+      "question": "What is a subset, and how is the notation A ⊆ B interpreted?",
+      "answer": "A ⊆ B means every element of A is in B.\nWe say “A is a subset of B.”"
+    },
+    {
+      "id": 13,
+      "question": "Give an example of a subset relationship using A = {3, 5, 8} and B = {3, 5, 8, 2, 6}.",
+      "answer": "All elements of A are in B,\nso A ⊆ B."
+    },
+    {
+      "id": 14,
+      "question": "What is the chain of subsets represented by N ⊆ Z ⊆ Q ⊆ R ⊆ C?",
+      "answer": "N (naturals) ⊆ Z (integers) ⊆ Q (rationals) ⊆ R (reals) ⊆ C (complexes)."
+    },
+    {
+      "id": 15,
+      "question": "What does it mean for two sets A and B to be equal?",
+      "answer": "A = B if A ⊆ B and B ⊆ A,\nmeaning they have the same elements."
+    },
+    {
+      "id": 16,
+      "question": "Give examples showing that order and repetition in set notation do not matter.",
+      "answer": "{3, 5, 8} = {5, 3, 8} (order doesn’t matter)\n{1, 5, 3, 5} = {1, 5, 3} (repetition doesn’t matter)."
+    },
+    {
+      "id": 17,
+      "question": "What is the empty set, and why is it unique?",
+      "answer": "The empty set (∅) has no elements.\nIt is a subset of every set, making it unique."
+    },
+    {
+      "id": 18,
+      "question": "What is the difference between a proper subset and an improper subset?",
+      "answer": "A proper subset of A is any subset not equal to A.\nThe improper subset is A itself."
+    },
+    {
+      "id": 19,
+      "question": "How does ∅ (the empty set) fit into the idea of proper subsets?",
+      "answer": "∅ is a proper subset of any nonempty set.\nSome texts differ on whether to always call it proper."
+    },
+    {
+      "id": 20,
+      "question": "Why do some texts differ on whether ∅ is considered a proper subset?",
+      "answer": "They use different definitions.\nSome exclude ∅ from “proper subsets,” others include it."
+    },
+    {
+      "id": 21,
+      "question": "List four elements of each given set (and explain how to find them).",
+      "answer": "1) {k ∈ P ∣ k−1 is a multiple of 7}\n   - How to solve: Set k − 1 = 7m. Then k = 7m + 1.\n   - Four sample elements: 1 (m=0), 8 (m=1), 15 (m=2), 22 (m=3), …\n\n2) {x ∣ x is a fruit and its skin is normally eaten}\n   - How to solve: Consider common fruits eaten with skin.\n   - Four sample elements: Apple, Pear, Grape, Plum, …\n\n3) {x ∈ Q ∣ 1/x ∈ Z}\n   - How to solve: If 1/x = n (where n ∈ Z), then x = 1/n.\n   - Four sample elements: 1 (reciprocal 1), −1 (reciprocal −1), 1/2 (reciprocal 2), −1/2 (reciprocal −2), etc.\n\n4) {2^n ∣ n ∈ Z, n < 0}\n   - How to solve: For negative n, 2^n is 1 / (2^(|n|)).\n   - Four sample elements: 1/2, 1/4, 1/8, 1/16, …\n\n5) {s ∣ s = 1 + 2 + … + n for some n ∈ P}\n   - How to solve: These are triangular numbers T_n = n(n+1)/2, but easier to recall as partial sums.\n   - Four sample elements: 1 (n=1), 3 (n=2), 6 (n=3), 10 (n=4), …"
+    },
+    {
+      "id": 22,
+      "question": "List all elements of the given sets.",
+      "answer": "1) {1/n : n ∈ {3,4,5,6}}\n   - Substitute n=3,4,5,6 to get {1/3, 1/4, 1/5, 1/6}.\n\n2) {α ∈ the alphabet ∣ α precedes F}\n   - Letters before “F” in English: {A, B, C, D, E}.\n\n3) {x ∈ Z ∣ x = x + 1}\n   - Solve x = x + 1 ⇒ 0 = 1, which is impossible. No integer satisfies this. The set is ∅.\n\n4) {n^2 ∣ n = −2,−1,0,1,2}\n   - Calculate squares: (−2)^2=4, (−1)^2=1, 0^2=0, 1^2=1, 2^2=4.\n   - Duplicates merge, so the set is {0,1,4}.\n\n5) {n ∈ P ∣ n is a factor of 24}\n   - List all positive divisors of 24: {1,2,3,4,6,8,12,24}."
+    },
+    {
+      "id": 23,
+      "question": "Describe the following sets using set-builder notation.",
+      "answer": "1) {5, 7, 9, …, 77, 79}\n   - Observation: Odd integers from 5 to 79.\n   - Set-builder: {2n + 1 ∣ n ∈ Z, 5 ≤ 2n + 1 ≤ 79} or {2k + 1 ∣ k = 2,3,…,39}.\n\n2) Rational numbers strictly between −1 and 1\n   - Set-builder: {x ∈ Q ∣ −1 < x < 1}.\n\n3) Even integers\n   - Set-builder: {2k ∣ k ∈ Z}.\n\n4) {−18, −9, 0, 9, 18, 27, …}\n   - Observation: Multiples of 9 (…, −18, −9, 0, 9, 18, 27, …).\n   - If it goes infinitely in both directions: {9k ∣ k ∈ Z}.\n   - If it starts at −18 and keeps going: {9k ∣ k ∈ Z, k ≥ −2}."
+    },
+    {
+      "id": 24,
+      "question": "Use set-builder notation to describe the following sets.",
+      "answer": "1) {1,2,3,4,5,6,7}\n   - Set-builder: {n ∈ P ∣ 1 ≤ n ≤ 7}.\n\n2) {1,10,100,1000,10000}\n   - Set-builder: {10^k ∣ k ∈ {0,1,2,3,4}}.\n\n3) {1, 1/2, 1/3, 1/4, 1/5}\n   - Set-builder: {1/n ∣ n ∈ {1,2,3,4,5}}.\n\n4) {0}\n   - Set-builder: {n ∈ Z ∣ n = 0} or simply {0}."
+    },
+    {
+      "id": 25,
+      "question": "Determine the truth of each statement (with A = {0,2,3}, B = {2,3}, C = {1,5,9}).",
+      "answer": "• 3 ∈ A ⇒ True (3 is listed in A).\n• {3} ∈ A ⇒ False ({3} is a set containing 3; A lists the number 3, not the set {3}).\n• {3} ⊆ A ⇒ True (every element of {3}—just 3—is in A).\n• B ⊆ A ⇒ True (B = {2,3}, both 2 and 3 are in A).\n• A ⊆ B ⇒ False (A has 0, which is not in B).\n• ∅ ⊆ C ⇒ True (the empty set is a subset of every set).\n• ∅ ∈ A ⇒ False (the empty set is not listed as an element of A).\n• A ⊆ A ⇒ True (every set is a subset of itself)."
+    },
+    {
+      "id": 26,
+      "question": "What is Russell’s Paradox?",
+      "answer": "Russell’s Paradox considers the set R = {x ∣ x ∉ x}. If we ask “Does R ∈ R?” we get a contradiction:\n• If R ∈ R, then by definition R should not contain itself.\n• If R ∉ R, then by definition it should contain itself.\nThis shows that naive set theory (allowing all conceivable sets) leads to a paradox, demonstrating the need for more precise axiomatic systems."
+    }
   ]
 };
